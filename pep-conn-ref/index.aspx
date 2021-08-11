@@ -92,6 +92,9 @@
                 </aside>
             
        <%-- </form>--%>
+        <section>
+            <h3>Main Content</h3>
+        </section>
 
         <footer>
             <p>&copy; 2021 - Positive Education Program</p>
