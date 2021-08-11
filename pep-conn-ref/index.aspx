@@ -28,73 +28,88 @@
                         <h2>PEP Referral System</h2>
                         <!-- Sidebar user panel -->
                         <div class="user-panel">
-                            <i class="fas fa-user-circle"></i>
-                            <div class="user-info">
-                                <a href="#" class="user-link">Guest User</a>
+                            
+                            <div class="login-link">
+                                <a href="#" class="user-login">Log In</a>
                             </div>
                         </div>
                     </div>
                 </nav>
             <!-- / Navbar -->
 
-		    <!-- Main Sidebar Container -->
-                <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <div class="wrapper">
+
+        
+
+		        <!-- Main Sidebar Container -->
+                    <aside class="main-sidebar sidebar-dark-primary elevation-4">
    
 
-                    <!-- Sidebar -->
-                    <div class="sidebar">
+                        <!-- Sidebar -->
+                        <div class="sidebar">
                         
 
-		                 <!-- Sidebar Menu -->
-                        <nav class="nav-sidebar">
-                            <ul class="sidebar-list" role="menu" data-accordion="false">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <!-- <i class="nav-icon fa fa-home"></i> -->
-                                        <p>Connections Home</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link ">
-                                        <!--<i class="nav-icon fas fa-th"></i>-->
-                                        <p>Latest News</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        <!--<i class="nav-icon fas fa-th"></i>-->
-                                        <p>Admission Criteria</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                       <!-- <i class="nav-icon fas fa-th"></i>-->
-                                        <p>Staff</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <!--<i class="nav-icon fas fa-th"></i>-->
-                                        <p>Online Referral</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <!--<i class="nav-icon fas fa-th"></i>-->
-                                        <p>Contact Us</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- /Sidebar-menu -->
-                    </div>
-                    <!-- /Sidebar -->
-                </aside>
+		                     <!-- Sidebar Menu -->
+                            <nav class="nav-sidebar">
+                                <ul class="sidebar-list" role="menu" data-accordion="false">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <!-- <i class="nav-icon fa fa-home"></i> -->
+                                            <p>Connections Home</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link ">
+                                            <!--<i class="nav-icon fas fa-th"></i>-->
+                                            <p>Latest News</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link active">
+                                            <!--<i class="nav-icon fas fa-th"></i>-->
+                                            <p>Admission Criteria</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                           <!-- <i class="nav-icon fas fa-th"></i>-->
+                                            <p>Staff</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <!--<i class="nav-icon fas fa-th"></i>-->
+                                            <p>Online Referral</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <!--<i class="nav-icon fas fa-th"></i>-->
+                                            <p>Contact Us</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- /Sidebar-menu -->
+                        </div>
+                        <!-- /Sidebar -->
+                    </aside>
             
-       <%-- </form>--%>
-        <section>
-            <h3>Main Content</h3>
-        </section>
+           <%-- </form>--%>
+            <section class="main-content">
+                <h3>Welcome to <span class="red">P</span>ositive <span class="red">E</span>ducation <span class="red">P</span>rogram's online referral system for Connections.</h3>
+                <p>PEP Connections coordinates services for children and youth who are experiencing serious emotional difficulties and are determined to be 
+                at-risk for deeper system involvement and/or returning home or to the community from out of home placement.</p>
+                <p>PEP Connections works with the child and everyone involved in his or her life to create a plan of care aimed 
+                at helping the child access community supports and begin on a path to success.</p>
+                <p>For referrals, please call 216-361-2441 or click on the Online Referral link in the menu to the left. Click <a href="pepcleve.org">here</a> to visit PEP's website.</p>
+                <p>In our efforts to improve compliance with the  requirements for protecting client information, Positive Education 
+                Program has removed identifying information from our email communications for Connections referrals and replaced them 
+                with an assigned tracking number.  When you are signed into the referral website, the associated client name will be  
+                visibly paired with the tracking number for your reference.  Please continue to use this tracking number in email 
+                communications regarding your submitted referral.</p>
+            </section>
+        </div>
 
         <footer>
             <p>&copy; 2021 - Positive Education Program</p>

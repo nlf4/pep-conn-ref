@@ -18,11 +18,26 @@
     box-shadow: -4px 4px 5px 1px rgba(0,0,0,0.33);
 }
 
+.logo-container {
+    width: 30%;
+}
+
 .header-container {
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header-container h2{
+    /*justify-self: center;*/
+}
+
+.user-panel {
+    /*justify-self: right;*/
+    padding-right: 20px;
 }
 
 .nav-sidebar a {
@@ -34,7 +49,7 @@
     text-decoration: none;
     color: gray;
     line-height: 18px;
-    width: 200px;
+    width: 100%;
     padding: 3px 0;
     transition: 0.3s;
     border-bottom: 1px solid #7C92C6;
@@ -61,18 +76,19 @@ nav ul {
 
 
 .main-sidebar {
-    width: 200px;
+    width: 20%;
     background-color: #E4F0FF;
     margin: 6px 0;
 }
 
-.user-link {
+.user-login {
     text-decoration: none;
     color: floralwhite;
 }
 
 aside {
     float: left;
+    
 }
 
 ul {
@@ -90,5 +106,55 @@ footer {
 }
 
 footer p {
+    
+}
+
+/**********MAIN CONTENT************/
+
+.red {
+    color: red;
+}
+
+.main-content {
+    margin: 15px;
+    width: 80%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/*******************MEDIA BREAKPOINTS********************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 715px) {
+    .main-header {
+        
+        flex-direction: column;
+        height: 140px;
+        align-items: center;
+        
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
     
 }
