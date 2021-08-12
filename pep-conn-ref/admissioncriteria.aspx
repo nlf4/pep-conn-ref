@@ -99,18 +99,15 @@
             <section class="main-content">
                 <div class="main-text">
                     <h2>Admission Criteria</h2>
-                    <p>
-
-
-
- 
-
-PEP Connections' highly experienced, well-trained professionals coordinate care for Cuyahoga County children and youth ages 3 through 17* who:
-
-Have been diagnosed with a serious emotional disturbance;
-Have multiple problems and multiple needs resulting from their mental health issues; and
-Are at risk of deeper system involvement and/or returning to their families or the community from placement.
-Services can continue for young adults to age 22 as long as they are enrolled by age 17.</p>
+                    <p>PEP Connections' highly experienced, well-trained professionals coordinate care for Cuyahoga County children and youth ages 3 through 17* who:</p>
+                    <ol>
+                        <li>Have been diagnosed with a serious emotional disturbance;</li>
+                        <li>Have multiple problems and multiple needs resulting from their mental health issues; and</li>
+                        <li>Are at risk of deeper system involvement and/or returning to their families or the community from placement.</li>
+                        
+                    </ol>
+                        
+                    <p>Services can continue for young adults to age 22 as long as they are enrolled by age 17.</p>
                     
                 </div>
                 
