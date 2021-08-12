@@ -92,17 +92,43 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admissioncriteria.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="latestnews.aspx" />
+    <Content Include="onlinereferral.aspx" />
+    <Content Include="staff.aspx" />
     <Content Include="style\all.min.css" />
     <Content Include="style\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admissioncriteria.aspx.designer.vb">
+      <DependentUpon>admissioncriteria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admissioncriteria.aspx.vb">
+      <DependentUpon>admissioncriteria.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.vb">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.vb">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="index.aspx.designer.vb">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.vb">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="latestnews.aspx.designer.vb">
+      <DependentUpon>latestnews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="latestnews.aspx.vb">
+      <DependentUpon>latestnews.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -123,6 +149,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="onlinereferral.aspx.designer.vb">
+      <DependentUpon>onlinereferral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="onlinereferral.aspx.vb">
+      <DependentUpon>onlinereferral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="staff.aspx.designer.vb">
+      <DependentUpon>staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="staff.aspx.vb">
+      <DependentUpon>staff.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

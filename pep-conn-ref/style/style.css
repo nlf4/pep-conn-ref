@@ -33,11 +33,27 @@
 
 .header-container h2{
     /*justify-self: center;*/
+    margin-left: 100px;
 }
 
 .user-panel {
     /*justify-self: right;*/
     padding-right: 20px;
+}
+
+.user-login{
+    border: 1px solid white;
+    padding: 10px;
+    
+    transition: 0.3s;
+}
+
+.user-login:hover {
+    border: 1px solid white;
+    padding: 10px;
+   
+    background-color: white;
+    color: blue;
 }
 
 .nav-sidebar a {
@@ -95,6 +111,7 @@ ul {
     padding-inline-start: 0;
 }
 
+
 footer {
     width: 100vw;
     height: 60px;
@@ -115,14 +132,34 @@ footer p {
     color: red;
 }
 
+.warning {
+    padding: 5px;
+    background-color: #F8D7DA;
+    color: #721C59;
+}
+
 .main-content {
     margin: 15px;
     width: 80%;
+    
 }
+
+.main-text {
+    margin: 20px auto;
+    width: 90%;
+    padding: 10px;
+    line-height: 26px;
+}
+
+.main-text h2 {
+    text-align: center;
+}
+
 
 .wrapper {
     display: flex;
     flex-direction: row;
+    height: 900px;
 }
 
 
