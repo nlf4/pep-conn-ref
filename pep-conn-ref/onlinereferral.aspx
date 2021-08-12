@@ -99,26 +99,65 @@
             <section class="main-content">
                 <div class="main-text">
                     <h2>Make a Referral</h2>
-                    <p>
+                    <p>The online process will allow you to refer a child to the PEP CONNECTIONS program.<br />
+                        All data is submitted through a secure connection, and all information will be held in strict 
+                        confidence. Currently, the referral program only allows Professional/Agency Referrals.<br />
+                        </p>
+                        <ol>
+                            <li>If you are a parent or guardian and would like to refer your child to the Connections program, please contact the Intake Department at <a href="tel:+12163612441">216-361-2441</a>. A staff person will assist you with the referral process.</li>
+                            <li>If you are a professional with a pre-established user name and password, please sign in by filling in the boxes below and then click the sign in button.</li>
+                            <li>If you are new to our system (have not previously registered), please click to Register as one of our users.</li>
+                            <li>If you are a return user but forgot your password or user name, please click the link to reset your password or inquire about you user ID/Name.</li>
+                        </ol>
+                    <p>Please Note - The PEP Connections Referral screens have changed. Please contact PEP's IT Staff at <a href="tel:+12163614400">216-361-4400</a> or the Intake Department at <a href="tel:+12163612441">216-361-2441</a> for any concerns with the new referral screens.</p>
+                        
+                    <div class="form-container">
+                        <form runat="server"> 
+                            <div class="login-input">
+                                <label for="userid">User ID:</label>
+                                <asp:TextBox ID="id" runat="server"></asp:TextBox>
+                            </div>
+
+                            <div class="login-input">
+                                <label for="name">Password:</label>
+                                <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox>
+                            </div>
+
+                            <asp:Button ID="submit_btn" runat="server" Text="Log In" OnClick="handleLogin" />
+                            <asp:ModelErrorMessage
+
+                           <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                           </form>
 
 
 
 
-The online process will allow you to refer a child to the PEP CONNECTIONS program.
 
 
-All data is submitted through a secure connection, and all information will be held in strict confidence. Currently, the referral program only allows Professional/Agency Referrals .
-If you are a parent or guardian and would like to refer your child to the Connections program, please contact the Intake Department at (216) 361-2441. A staff person will assist you with the referral process.
+                       <%-- <form id="login-form" method="post">
+                            <div class="login-input">
+                                <label for="userid">User ID:</label>
+                                <input id="userid" name="userid" type="text" />
+                            </div>
+
+                            <div class="login-input">
+                                <label for="password">Password:</label>
+                                <input id="password" name="password" type="password" />
+                            </div>
+        
+
+                            <button type="submit">Log In</button>
+
+                        </form>--%>
 
 
 
 
 
-If you are a professional with a pre-established user name and password, please sign in by filling in the boxes below and then click the sign in button.
-If you are new to our system (have not previously registered), please click to Register as one of our users.
-If you are a return user but forgot your password or user name, please click the link to reset your password or inquire about you user ID/Name.
 
-Please Note- The PEP Connections Referral screens have changed. Please contact PEP's IT Staff at 216-361-4400 or the Intake Department at 216-361-2441 for any concerns with the new referral screens.</p>
+
+
+
                     
                 </div>
                 

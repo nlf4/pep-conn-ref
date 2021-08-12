@@ -201,6 +201,29 @@ footer p {
     .user-panel {
         padding-right: 0;
     }
+
+    form {
+        width: 200px;
+    }
+    /*#login-form {
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+    }
+
+    .login-input {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #login-form button {
+        width: 100px;
+        margin-top: 20px;
+    }
+*/
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
