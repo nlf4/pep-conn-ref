@@ -97,6 +97,7 @@
     <Content Include="index.aspx" />
     <Content Include="latestnews.aspx" />
     <Content Include="onlinereferral.aspx" />
+    <Content Include="referral.aspx" />
     <Content Include="staff.aspx" />
     <Content Include="style\all.min.css" />
     <Content Include="style\style.css" />
@@ -155,6 +156,13 @@
     </Compile>
     <Compile Include="onlinereferral.aspx.vb">
       <DependentUpon>onlinereferral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="referral.aspx.designer.vb">
+      <DependentUpon>referral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referral.aspx.vb">
+      <DependentUpon>referral.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="staff.aspx.designer.vb">
