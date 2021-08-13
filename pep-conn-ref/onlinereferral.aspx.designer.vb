@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class onlinereferral
 
     '''<summary>
-    '''id control.
+    '''UID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents id As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents UID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''password control.
@@ -32,13 +32,22 @@ Partial Public Class onlinereferral
     Protected WithEvents password As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''submit_btn control.
+    '''submitbtn control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents submit_btn As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents submitbtn As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblErrorMessage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblErrorMessage As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''GridView1 control.

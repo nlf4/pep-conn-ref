@@ -157,6 +157,16 @@ footer p {
     text-align: center;
 }
 
+.main-text a {
+    text-decoration: none;
+}
+
+a{
+    
+    text-decoration: none;
+    
+}
+
 
 .wrapper {
     display: flex;
@@ -204,6 +214,10 @@ footer p {
 
     form {
         width: 200px;
+    }
+
+    #forgot-pwd-link {
+        text-decoration: none;
     }
     /*#login-form {
         display: flex;

@@ -113,19 +113,25 @@
                         
                     <div class="form-container">
                         <form runat="server"> 
-                            <div class="login-input">
-                                <label for="userid">User ID:</label>
+                           <%-- <div class="login-input">
+                                <label for="id">ID:</label>
                                 <asp:TextBox ID="id" runat="server"></asp:TextBox>
+                            </div>--%>
+
+                            <div class="login-input">
+                                <label for="UID">User ID:</label>
+                                <asp:TextBox ID="UID" runat="server"></asp:TextBox>
                             </div>
 
                             <div class="login-input">
-                                <label for="name">Password:</label>
+                                <label for="password">Password:</label>
                                 <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox>
                             </div>
 
-                            <asp:Button ID="submit_btn" runat="server" Text="Log In" OnClick="handleLogin" />
-                            <asp:ModelErrorMessage
+                            <asp:Button ID="submitbtn" runat="server" Text="Log In"  />
+                            <asp:Label ID="lblErrorMessage" runat="server" Text="Incorrect user credentials"></asp:Label><br />
 
+                            <p><a id="forgot-pwd-link" href="forgot_password.aspx">I forgot my password/user ID</a></p>
                            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
                            </form>
 
