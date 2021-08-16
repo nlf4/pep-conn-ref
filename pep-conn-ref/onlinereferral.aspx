@@ -53,37 +53,37 @@
                             <nav class="nav-sidebar">
                                 <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="/index.aspx" class="nav-link">
                                             <!-- <i class="nav-icon fa fa-home"></i> -->
                                             <p>Connections Home</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link ">
+                                        <a href="/latestnews.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Latest News</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link active">
+                                        <a href="/admissioncriteria.aspx" class="nav-link active">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="/staff.aspx" class="nav-link">
                                            <!-- <i class="nav-icon fas fa-th"></i>-->
                                             <p>Staff</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="#" class="nav-link active">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="/contact.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Contact Us</p>
                                         </a>

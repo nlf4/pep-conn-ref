@@ -98,6 +98,10 @@ ul {
     margin: 6px 0;
 }
 
+.active {
+    background-color: #7C92C6;
+}
+
 .user-login {
     text-decoration: none;
     color: floralwhite;
