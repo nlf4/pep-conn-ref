@@ -15,15 +15,16 @@ Public Class onlinereferral
             Me.lblMsg.Text = validateUser(Me.UID.Text, Me.password.Text)
             If Me.lblMsg.Text = "" Then Response.Redirect("referral.aspx")
         End If
-        ds = requestDT("exec usp_ConnWebContent_getList 'SIGNON' ,'DESC'")
-        For i = 0 To ds.Rows.Count - 1
-            If i = 0 Then
-                Me.lblContent.Text = ds.Rows(i)("Contents")
-            Else
-                Me.lblContent.Text = Me.lblContent.Text & "<BR><br>" & ds.Rows(i)("Contents")
-            End If
-        Next
-        Me.lblContent.Text = Me.lblContent.Text & "<br><br>"
+        'ds = requestDT("exec usp_ConnWebContent_getList 'SIGNON' ,'DESC'")
+        'For i = 0 To ds.Rows.Count - 1
+        '    If i = 0 Then
+        '        Me.lblContent.Text = ds.Rows(i)("Contents")
+        '    Else
+        '        Me.lblContent.Text = Me.lblContent.Text & "<BR><br>" & ds.Rows(i)("Contents")
+        '    End If
+        'Next
+        'Me.lblContent.Text = Me.lblContent.Text & "<br><br>"
+
         'Me.lblLeftLink.Text = getSideLink("REFF")
     End Sub
 
