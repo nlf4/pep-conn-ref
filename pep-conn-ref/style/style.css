@@ -23,11 +23,11 @@
 }
 
 .header-container {
-    width: 70%;
+    width: 80.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
 
@@ -35,8 +35,26 @@
     margin-left: 100px;
 }
 
+.title-panel {
+    width: 65%;
+    justify-content: center;
+    display: flex;
+}
+
+.menu-panel {
+    width: 5%;
+}
+
+.menu-panel i {
+    font-size: 18px;
+    height: 20px;
+}
+
 .user-panel {
+    width: 30%;
     padding-right: 20px;
+    justify-content: center;
+    display: flex;
 }
 
 .user-login {
