@@ -9,6 +9,7 @@
 		    <!-- Font Awesome -->
 		    <link rel="stylesheet" href="style/all.min.css">
             <link rel="stylesheet" href="style/font-awesome.min.css">
+            <link rel="stylesheet" href="style/font-awesome.css">
     </head>
     <body>
         <%--<form id="form1" runat="server">--%>
@@ -36,8 +37,8 @@
                                 </div>
                             </div>
                             <div class="menu-panel">
-                                <i class="fas fa-bars"></i>
-                                <i class="fas fa-bars"></i>
+                                <%--<i class="fas fa-bars"></i>--%>
+                                
                             </div>
                         </div>
                 </nav>

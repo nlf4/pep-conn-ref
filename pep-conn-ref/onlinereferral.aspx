@@ -25,15 +25,20 @@
                        <%-- <a href="#" class="brand-link">
                             &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
                         <div class="header-container">
-                        <h2>PEP Referral System</h2>
-                        <!-- Sidebar user panel -->
-                        <div class="user-panel">
+                            <div class="title-panel">
+                                <h2>PEP Referral System</h2>
+                            </div>
                             
-                            <div class="login-link">
-                                <a href="#" class="user-login">Log In</a>
+                            <div class="user-panel">
+                                <div class="login-link">
+                                    <a href="/onlinereferral.aspx" class="user-login">Log In</a>
+                                </div>
+                            </div>
+                            <div class="menu-panel">
+                                <%--<i class="fas fa-bars"></i>--%>
+                                
                             </div>
                         </div>
-                    </div>
                 </nav>
             <!-- / Navbar -->
 

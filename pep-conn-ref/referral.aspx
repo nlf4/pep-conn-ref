@@ -22,18 +22,21 @@
                             </a>
                         </div>
                         
-                       <%-- <a href="#" class="brand-link">
-                            &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
                         <div class="header-container">
-                        <h2>PEP Referral System</h2>
-                        <!-- Sidebar user panel -->
-                        <div class="user-panel">
+                            <div class="title-panel">
+                                <h2>PEP Referral System</h2>
+                            </div>
                             
-                            <div class="login-link">
-                                <a href="#" class="user-login">Log In</a>
+                            <div class="user-panel">
+                                <div class="login-link">
+                                    <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
+                                </div>
+                            </div>
+                            <div class="menu-panel">
+                                <%--<i class="fas fa-bars"></i>--%>
+                                
                             </div>
                         </div>
-                    </div>
                 </nav>
             <!-- / Navbar -->
 
@@ -51,39 +54,39 @@
 
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
-                                <ul class="sidebar-list" role="menu" data-accordion="false">
+                               <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="/index.aspx" class="nav-link">
                                             <!-- <i class="nav-icon fa fa-home"></i> -->
                                             <p>Connections Home</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link ">
+                                        <a href="#" class="nav-link active">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Latest News</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link active">
+                                        <a href="/admissioncriteria.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="/staff.aspx" class="nav-link">
                                            <!-- <i class="nav-icon fas fa-th"></i>-->
                                             <p>Staff</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="/onlinereferral.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="/contact.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Contact Us</p>
                                         </a>
@@ -98,7 +101,23 @@
            <%-- </form>--%>
             <section class="main-content">
                 <div class="main-text">
-                    <h2>Referral Page</h2>
+                    <h2>Referrals</h2>
+
+                    <form class="refForm" runat="server"> 
+                        <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral"/>
+                        <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile"/>
+                    </form>
+
+                    <asp:Table runat="server" ID="refTable">
+                        <asp:TableHeaderRow ID="headerRow">
+                            <asp:TableHeaderCell>Child's Name (Tracking #)</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Draft Date</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Submit Date</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Status</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Print</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Delete</asp:TableHeaderCell>
+                        </asp:TableHeaderRow>
+                    </asp:Table>
                     
                 </div>
                 
@@ -110,4 +129,3 @@
         </footer>
     </body>
 </html>
-

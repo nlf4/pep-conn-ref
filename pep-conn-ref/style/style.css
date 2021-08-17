@@ -28,11 +28,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
 .header-container h2{
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 .title-panel {
@@ -52,8 +51,7 @@
 
 .user-panel {
     width: 30%;
-    padding-right: 20px;
-    justify-content: center;
+    justify-content: flex-end;
     display: flex;
 }
 
@@ -117,7 +115,8 @@ ul {
 }
 
 .active {
-    background-color: #7C92C6;
+    background-color:red ;
+    color: red;
 }
 
 .user-login {
@@ -164,8 +163,8 @@ footer {
 }
 
 .main-text {
-    margin: 20px auto;
-    width: 90%;
+    margin: 20px 100px 20px 44px;
+    width: 70%;
     padding: 10px;
     line-height: 26px;
 }
@@ -188,6 +187,48 @@ a{
     flex-direction: row;
     height: 900px;
 }
+
+/*******************REFERRAL PAGE********************/
+
+.ref-buttons {
+    border: 1px solid #0260B3;
+    padding: 8px 19px;
+    transition: 0.25s;
+    border-radius: 16px;
+    background-color: #0260B3;
+    color: floralwhite;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.ref-buttons:hover {
+    background-color: white;
+    color: #0260B3;
+    cursor: pointer;
+}
+
+.refForm {
+    display: flex;
+    justify-content: center;
+}
+
+#refTable {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 700px;
+}
+
+#headerRow {
+    border: 1px solid blue;
+}
+
+tr {
+    border: 1px solid blue;
+}
+
+
 
 
 

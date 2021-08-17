@@ -418,10 +418,10 @@ Public Module mobUtil
         cn.Close()
         Return ""
     End Function
-    Function myDRTostring(ByRef dr As DataRow, ByVal idx As Integer) As String
-        If dr.IsNull(idx) Then Return ""
-        Return dr(idx) & ""
-    End Function
+    'Function myDRTostring(ByRef dr As DataRow, ByVal idx As Integer) As String
+    '    If dr.IsNull(idx) Then Return ""
+    '    Return dr(idx) & ""
+    'End Function
     Function myDRTostring(ByRef dr As DataRow, ByVal idx As String) As String
         If dr.IsNull(idx) Then Return ""
         Return dr(idx) & ""

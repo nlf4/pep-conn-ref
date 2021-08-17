@@ -12,4 +12,40 @@ Option Explicit On
 
 
 Partial Public Class referral
+
+    '''<summary>
+    '''newReferralBtn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents newReferralBtn As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''viewProfileBtn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents viewProfileBtn As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''refTable control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents refTable As Global.System.Web.UI.WebControls.Table
+
+    '''<summary>
+    '''headerRow control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents headerRow As Global.System.Web.UI.WebControls.TableHeaderRow
 End Class
