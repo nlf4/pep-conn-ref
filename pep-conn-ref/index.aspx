@@ -20,7 +20,7 @@
                         <!-- Brand Logo -->
                         <div class="logo-container">
                             <a href="index.aspx" class="brand-link">
-                                <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3" style="opacity: .9">
+                                <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3">
                             </a>
                         </div>
                         
@@ -55,7 +55,7 @@
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
                                 <ul class="sidebar-list" role="menu" data-accordion="false">
-                                    <li class="nav-item">
+                                    <li class="nav-item active">
                                         <a href="#" class="nav-link">
                                             <!-- <i class="nav-icon fa fa-home"></i> -->
                                             <p>Connections Home</p>

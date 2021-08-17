@@ -18,7 +18,7 @@
                         <!-- Brand Logo -->
                         <div class="logo-container">
                             <a href="index.aspx" class="brand-link">
-                                <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3" style="opacity: .9">
+                                <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3">
                             </a>
                         </div>
                         
@@ -62,7 +62,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link active">
+                                        <a href="#" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Latest News</p>
                                         </a>
@@ -79,7 +79,7 @@
                                             <p>Staff</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item active">
                                         <a href="/onlinereferral.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>
@@ -105,7 +105,7 @@
 
                     <form class="refForm" runat="server"> 
                         <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral"/>
-                        <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile"/>
+                        <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>
                     </form>
 
                     <asp:Table runat="server" ID="refTable">

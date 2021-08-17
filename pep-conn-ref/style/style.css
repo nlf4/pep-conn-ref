@@ -115,8 +115,12 @@ ul {
 }
 
 .active {
-    background-color:red ;
-    color: red;
+    background-color: #7C92C6;
+   
+}
+
+.active a {
+    color: floralwhite;
 }
 
 .user-login {
@@ -228,6 +232,83 @@ tr {
     border: 1px solid blue;
 }
 
+/*******************PROFILE PAGE********************/
+
+.user-details {
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid gray;*/
+    width: 760px;
+    background-color: #E4F0FF;
+   /* box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.33);*/
+    border-radius: 15px;
+    color: gray;
+}
+
+.user-details form {
+    display: flex;
+    flex-direction: row;
+    width: 760px;
+    padding: 25px;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+}
+
+.user-details input {
+    flex: 2;
+    border-radius: 19px;
+    line-height: 35px;
+    border: none;
+    box-shadow: -0.5px 0.5px 1px 0px rgb(0 0 0 / 15%);
+}
+
+.user-details label {
+    flex: 1;
+    line-height: 35px;
+}
+
+.details-col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.details-col-2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#updateBtn {
+    border: 1px solid #0260B3;
+    padding: 8px 19px;
+    transition: 0.25s;
+    border-radius: 16px;
+    background-color: #0260B3;
+    color: floralwhite;
+    font-size: 18px;
+    margin: 10px;
+    width: 100px;
+    margin-left: 245px;
+    line-height: 20px;
+}
+
+#updateBtn:focus {
+    
+    border-radius: 16px;
+    
+}
+
+#updateBtn:hover {
+    background-color: white;
+    color: #0260B3;
+    cursor: pointer;
+}
 
 
 
@@ -292,25 +373,7 @@ tr {
         box-shadow: none;
     }
 
-    /*#login-form {
-        display: flex;
-        flex-direction: column;
-        width: 220px;
-    }
-
-    .login-input {
-        margin-top: 15px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #login-form button {
-        width: 100px;
-        margin-top: 20px;
-    }
-*/
+   
    
 }
 

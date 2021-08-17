@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="staff.aspx.vb" Inherits="pep_conn_ref.staff" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="profile.aspx.vb" Inherits="pep_conn_ref.profile" %>
 
 <!DOCTYPE html>
 
@@ -44,15 +44,19 @@
 
         <div class="wrapper">
 
+        
+
 		        <!-- Main Sidebar Container -->
                     <aside class="main-sidebar sidebar-dark-primary elevation-4">
    
+
                         <!-- Sidebar -->
                         <div class="sidebar">
                         
+
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
-                                <ul class="sidebar-list" role="menu" data-accordion="false">
+                               <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item">
                                         <a href="/index.aspx" class="nav-link">
                                             <!-- <i class="nav-icon fa fa-home"></i> -->
@@ -60,7 +64,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/latestnews.aspx" class="nav-link">
+                                        <a href="#" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Latest News</p>
                                         </a>
@@ -71,8 +75,8 @@
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item active">
-                                        <a href="#" class="nav-link">
+                                    <li class="nav-item">
+                                        <a href="/staff.aspx" class="nav-link">
                                            <!-- <i class="nav-icon fas fa-th"></i>-->
                                             <p>Staff</p>
                                         </a>
@@ -99,9 +103,57 @@
            <%-- </form>--%>
             <section class="main-content">
                 <div class="main-text">
-                    <h2>Meet the Connections
+                    <h2>USER PROFILE</h2>
+                    <div class="user-details">
+                        <form runat="server">
+                            <div class="details-col-1">
+                                <div class="input-row">
+                                    <label for="UID">User ID:</label>
+                                    <asp:TextBox ID="UID" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-row">
+                                <label for="firstname">First Name:</label>
+                                    <asp:TextBox ID="firstname" runat="server"></asp:TextBox>
+                                </div>
+                                    <div class="input-row">
+                                    <label for="salutation">Salutation:</label>
+                                    <asp:TextBox ID="salutation" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-row">
+                                    <label for="phone">Phone:</label>
+                                    <asp:TextBox ID="phone" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-row">
+                                    <label for="fax">Fax:</label>
+                                    <asp:TextBox ID="fax" runat="server"></asp:TextBox>
+                                </div>
 
-Diagnostic Assessment/Intake Staff</h2>
+                            </div>
+                            <div class="details-col-2">
+                                <div class="input-row">
+                                <label for="profname">Full Name:</label>
+                                    <asp:TextBox ID="profname" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-row">
+                                    <label for="lastname">Last Name:</label>
+                                    <asp:TextBox ID="lastname" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-row">
+                                    <label for="title">Title:</label>
+                                    <asp:TextBox ID="title" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-row">
+                                    <label for="mobile">Mobile Phone:</label>
+                                    <asp:TextBox ID="mobile" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-row">
+                                    <label for="email">Email:</label>
+                                    <asp:TextBox ID="email" runat="server"></asp:TextBox>
+                                </div>
+                                <asp:Button ID="updateBtn" runat="server" Text="Update" PostBackUrl="profile.aspx"/>
+                            </div>
+                        </form>
+                    </div>
                     
                 </div>
                 

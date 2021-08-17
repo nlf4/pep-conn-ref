@@ -18,7 +18,7 @@
                         <!-- Brand Logo -->
                         <div class="logo-container">
                             <a href="index.aspx" class="brand-link">
-                                <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3" style="opacity: .9">
+                                <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3">
                             </a>
                         </div>
                         
@@ -87,8 +87,8 @@
                                             <p>Online Referral</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link active">
+                                    <li class="nav-item active">
+                                        <a href="#" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Contact Us</p>
                                         </a>
