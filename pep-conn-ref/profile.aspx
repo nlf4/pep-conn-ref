@@ -31,7 +31,7 @@
                             
                             <div class="user-panel">
                                 <div class="login-link">
-                                    <a href="/onlinereferral.aspx" class="user-login">Log In</a>
+                                    <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
                                 </div>
                             </div>
                             <div class="menu-panel">

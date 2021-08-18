@@ -64,7 +64,7 @@
 
 .user-login:hover {
     background-color: white;
-    color: blue;
+    color: #0260B3;
 }
 
 .nav-sidebar a {
@@ -232,15 +232,72 @@ tr {
     border: 1px solid blue;
 }
 
-/*******************PROFILE PAGE********************/
+.login-input {
+    display: flex;
+    flex-direction: row;
+}
 
+.login-input input {
+    flex: 2;
+    border-radius: 19px;
+    line-height: 35px;
+    border: none;
+    box-shadow: -0.5px 0.5px 1px 0px rgb(0 0 0 / 15%);
+    margin: 10px;
+}
+
+.login-input label {
+    flex: 1;
+    line-height: 35px;
+    margin: 10px;
+}
+
+.login-form-container {
+    background-color: #E4F0FF;
+    width: 50%;
+    margin: 30px auto 15px;
+    border-radius: 15px;
+}
+
+#loginForm {
+    padding: 10px;
+}
+
+#submitBtn {
+    border: 1px solid #0260B3;
+    padding: 8px 19px;
+    transition: 0.25s;
+    border-radius: 16px;
+    background-color: #0260B3;
+    color: floralwhite;
+    font-size: 18px;
+    margin-left: 250px;
+    margin-top: 10px;
+    width: 100px;
+    line-height: 20px;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    background-color: #468ac7;
+    border: 1px solid #468ac7;
+}
+
+#forgot-pwd-link {
+    margin-left: 70px;
+    color: #0260B3;
+}
+
+#forgot-pwd-link:hover {
+    color: #468ac7;
+}
+
+/*******************PROFILE PAGE********************/
 .user-details {
     display: flex;
     flex-direction: row;
-    /*border: 1px solid gray;*/
     width: 760px;
     background-color: #E4F0FF;
-   /* box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.33);*/
     border-radius: 15px;
     color: gray;
 }
@@ -298,10 +355,12 @@ tr {
     line-height: 20px;
 }
 
-#updateBtn:focus {
-    
+.user-details input:focus {
     border-radius: 16px;
-    
+}
+
+#updateBtn:focus {
+    border-radius: 16px;
 }
 
 #updateBtn:hover {
@@ -373,6 +432,34 @@ tr {
         box-shadow: none;
     }
 
+    .main-text {
+        text-align: center;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    /*OnlineReferral*/
+
+    .login-form-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #forgot-pwd-link {
+        margin-left: 0px;
+    }
+
+    #loginForm {
+        width: 100%;
+    }
+
+    #submitBtn {
+       
+        margin-left: 200px;
+       
+    }
    
    
 }

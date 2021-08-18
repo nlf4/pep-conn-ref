@@ -32,6 +32,15 @@ Partial Public Class onlinereferral
     Protected WithEvents lblContent As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''loginForm control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents loginForm As Global.System.Web.UI.HtmlControls.HtmlForm
+
+    '''<summary>
     '''UID control.
     '''</summary>
     '''<remarks>
@@ -50,13 +59,13 @@ Partial Public Class onlinereferral
     Protected WithEvents password As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''submitbtn control.
+    '''submitBtn control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents submitbtn As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents submitBtn As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lblErrorMessage control.

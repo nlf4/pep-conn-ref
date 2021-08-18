@@ -44,16 +44,12 @@
 
         <div class="wrapper">
 
-        
-
 		        <!-- Main Sidebar Container -->
                     <aside class="main-sidebar sidebar-dark-primary elevation-4">
    
-
                         <!-- Sidebar -->
                         <div class="sidebar">
                         
-
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
                                 <ul class="sidebar-list" role="menu" data-accordion="false">
@@ -102,8 +98,8 @@
             
            <%-- </form>--%>
             <section class="main-content">
-                <asp:Label ID="lblMsg" runat="server" Text="">LabelMsg</asp:Label><br />
-                <asp:label id="lblContent" runat="server"  Width="588px" Font-Size="Larger">LabelContent</asp:label>
+                <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label><br />
+                <asp:label id="lblContent" runat="server"  Width="588px" Font-Size="Larger"></asp:label>
                 <div class="main-text">
                     <h2>Make a Referral</h2>
                     <p>The online process will allow you to refer a child to the PEP CONNECTIONS program.<br />
@@ -118,12 +114,8 @@
                         </ol>
                     <p>Please Note - The PEP Connections Referral screens have changed. Please contact PEP's IT Staff at <a href="tel:+12163614400">216-361-4400</a> or the Intake Department at <a href="tel:+12163612441">216-361-2441</a> for any concerns with the new referral screens.</p>
                         
-                    <div class="form-container">
-                        <form runat="server"> 
-                           <%-- <div class="login-input">
-                                <label for="id">ID:</label>
-                                <asp:TextBox ID="id" runat="server"></asp:TextBox>
-                            </div>--%>
+                    <div class="login-form-container">
+                        <form id="loginForm" runat="server"> 
 
                             <div class="login-input">
                                 <label for="UID">User ID:</label>
@@ -135,43 +127,15 @@
                                 <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox>
                             </div>
 
-                            <asp:Button ID="submitbtn" runat="server" Text="Log In"  />
-                            <asp:Label ID="lblErrorMessage" runat="server" Text="Incorrect user credentials"></asp:Label><br />
+                            <asp:Button ID="submitBtn" runat="server" Text="Log In"  />
+                            <asp:Label ID="lblErrorMessage" runat="server" Text=""></asp:Label><br />
 
                             <p><a id="forgot-pwd-link" href="forgot_password.aspx">I forgot my password/user ID</a></p>
                            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
                            </form>
 
-
-
-
-
-
-                       <%-- <form id="login-form" method="post">
-                            <div class="login-input">
-                                <label for="userid">User ID:</label>
-                                <input id="userid" name="userid" type="text" />
-                            </div>
-
-                            <div class="login-input">
-                                <label for="password">Password:</label>
-                                <input id="password" name="password" type="password" />
-                            </div>
-        
-
-                            <button type="submit">Log In</button>
-
-                        </form>--%>
-
-
-
-
-
-
-
                         </div>
 
-                    
                 </div>
                 
             </section>
