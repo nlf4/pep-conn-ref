@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class referral
 
     '''<summary>
+    '''lblUser control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblErrMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblErrMsg As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''newReferralBtn control.
     '''</summary>
     '''<remarks>
@@ -30,6 +48,15 @@ Partial Public Class referral
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents viewProfileBtn As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''DataGrid1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DataGrid1 As Global.System.Web.UI.WebControls.DataGrid
 
     '''<summary>
     '''refTable control.

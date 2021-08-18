@@ -30,6 +30,7 @@
                             </div>
                             
                             <div class="user-panel">
+                                <asp:label id="lblUser" runat="server"></asp:label>
                                 <div class="login-link">
                                     <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
                                 </div>
