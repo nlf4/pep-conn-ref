@@ -97,9 +97,10 @@ Public Class onlinereferral
         'Response.End()
         'Exit Function
         'End If
+        Dim UFullName = dt.Rows(0)("UName")
         Session("UID") = dt.Rows(0)("UID")
         Session("IID") = dt.Rows(0)("ID")
-        Session("UName") = dt.Rows(0)("UName")
+        Session("UName") = Trim(Split(UFullName, ",")(1)) & " " & Trim(Split(UFullName, ",")(0))
         Session("AgencyName") = dt.Rows(0)("AgencyName")
         Session("DaysPWDExpired") = dt.Rows(0)("DaysPWDExpired")
         Return ""

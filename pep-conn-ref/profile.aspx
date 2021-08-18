@@ -104,9 +104,11 @@
            <%-- </form>--%>
             <section class="main-content">
                 <div class="main-text">
+                    <asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
+                    <asp:literal id="hiddenFormList" runat="server"></asp:literal>
                     <h2>USER PROFILE</h2>
                     <div class="user-details">
-                        <form runat="server">
+                        <%--<form runat="server">
                             <div class="details-col-1">
                                 <div class="input-row">
                                     <label for="UID">User ID:</label>
@@ -153,7 +155,66 @@
                                 </div>
                                 <asp:Button ID="updateBtn" runat="server" Text="Update" PostBackUrl="profile.aspx"/>
                             </div>
-                        </form>
+                        </form>--%>
+                        <form id="frm" method="post" runat="server">
+										<asp:literal id="Literal1" runat="server"></asp:literal>
+										<table class="bodytext" width="100%">
+											<tr>
+												<td class="LabelLeftReq">User ID:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXUID" runat="server" ReadOnly="True"></asp:textbox></td>
+												<td class="LabelLeftReq">Professional Name:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXProfessionName" runat="server"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">First Name:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXFirstName" runat="server"></asp:textbox></td>
+												<td class="LabelLeftReq">Last Name:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXLastName" runat="server"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Salutation:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXSolutation" runat="server"></asp:textbox></td>
+												<td class="LabelLeftReq">
+												Title:&nbsp;
+												<td><asp:textbox id="frmXXTitle" runat="server"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Phone:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXPhone" runat="server"></asp:textbox></td>
+												<td class="LabelLeftReq">Mobile Phone:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXCell" runat="server"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Fax:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXFax" runat="server"></asp:textbox></td>
+												<td class="LabelLeftReq">eMail Address:&nbsp;
+												</td>
+												<td><asp:textbox id="frmXXeMail" runat="server"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Licensure:&nbsp;
+												</td>
+												<td ><asp:textbox id="frmXXLicensure" runat="server" Width="415px"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td align="right" >&nbsp;&nbsp;
+                                                    <input class="btn" type="submit" value="Update" name="Update"/>
+												</td>
+											</tr>
+											<tr>
+												<td align="left" >Please be sure to complete all the information on the 
+													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</td>
+											</tr>
+										</table>
+									</form>
                     </div>
                     
                 </div>
