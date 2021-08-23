@@ -68,15 +68,6 @@ Partial Public Class profile
     Protected WithEvents frmXXUID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXProfessionName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXProfessionName As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''frmXXFirstName control.
     '''</summary>
     '''<remarks>
@@ -84,15 +75,6 @@ Partial Public Class profile
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents frmXXFirstName As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''frmXXLastName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXLastName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''frmXXSolutation control.
@@ -104,15 +86,6 @@ Partial Public Class profile
     Protected WithEvents frmXXSolutation As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXTitle control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXTitle As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''frmXXPhone control.
     '''</summary>
     '''<remarks>
@@ -120,15 +93,6 @@ Partial Public Class profile
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents frmXXPhone As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''frmXXCell control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXCell As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''frmXXFax control.
@@ -140,15 +104,6 @@ Partial Public Class profile
     Protected WithEvents frmXXFax As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXeMail control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXeMail As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''frmXXLicensure control.
     '''</summary>
     '''<remarks>
@@ -156,4 +111,49 @@ Partial Public Class profile
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents frmXXLicensure As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXProfessionName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXProfessionName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXLastName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXLastName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXTitle As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXCell control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXCell As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXeMail control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXeMail As Global.System.Web.UI.WebControls.TextBox
 End Class

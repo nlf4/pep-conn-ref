@@ -107,7 +107,7 @@
 
                     <%--<p><asp:label id="lblUser" runat="server">Label</asp:label></p>--%>
                     <form class="refForm" runat="server"> 
-                        <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral"/>
+                        <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral" PostBackUrl="referralclient.aspx"/>
                         <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>
                     </form>
 

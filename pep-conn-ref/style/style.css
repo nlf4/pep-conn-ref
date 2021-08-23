@@ -252,6 +252,7 @@ tr {
     border: none;
     box-shadow: -0.5px 0.5px 1px 0px rgb(0 0 0 / 15%);
     margin: 10px;
+    padding-left: 15px;
 }
 
 .login-input label {
@@ -313,7 +314,7 @@ tr {
 .user-details form {
     display: flex;
     flex-direction: row;
-    width: 760px;
+    width: 700px;
     padding: 25px;
 }
 
@@ -330,6 +331,8 @@ tr {
     line-height: 35px;
     border: none;
     box-shadow: -0.5px 0.5px 1px 0px rgb(0 0 0 / 15%);
+    padding-left: 15px;
+
 }
 
 .user-details label {

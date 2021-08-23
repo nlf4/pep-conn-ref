@@ -94,11 +94,13 @@
   <ItemGroup>
     <Content Include="admissioncriteria.aspx" />
     <Content Include="contact.aspx" />
+    <Content Include="forgetpassword.aspx" />
     <Content Include="index.aspx" />
     <Content Include="latestnews.aspx" />
     <Content Include="onlinereferral.aspx" />
     <Content Include="profile.aspx" />
     <Content Include="referral.aspx" />
+    <Content Include="referralclient.aspx" />
     <Content Include="staff.aspx" />
     <Content Include="style\all.min.css" />
     <Content Include="style\font-awesome.css" />
@@ -118,6 +120,13 @@
     </Compile>
     <Compile Include="contact.aspx.vb">
       <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="forgetpassword.aspx.designer.vb">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgetpassword.aspx.vb">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.vb">
@@ -172,6 +181,13 @@
     </Compile>
     <Compile Include="referral.aspx.vb">
       <DependentUpon>referral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="referralclient.aspx.designer.vb">
+      <DependentUpon>referralclient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referralclient.aspx.vb">
+      <DependentUpon>referralclient.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="staff.aspx.designer.vb">

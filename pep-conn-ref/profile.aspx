@@ -157,66 +157,82 @@
                             </div>
                         </form>--%>
                         <form id="frm" method="post" runat="server">
+                            <div class="details-col-1">
 										<asp:literal id="Literal1" runat="server"></asp:literal>
-										<table class="bodytext" width="100%">
-											<tr>
-												<td class="LabelLeftReq">User ID:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXUID" runat="server" ReadOnly="True"></asp:textbox></td>
-												<td class="LabelLeftReq">Professional Name:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXProfessionName" runat="server"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td class="LabelLeftReq">First Name:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXFirstName" runat="server"></asp:textbox></td>
-												<td class="LabelLeftReq">Last Name:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXLastName" runat="server"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td class="LabelLeftReq">Salutation:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXSolutation" runat="server"></asp:textbox></td>
-												<td class="LabelLeftReq">
-												Title:&nbsp;
-												<td><asp:textbox id="frmXXTitle" runat="server"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td class="LabelLeftReq">Phone:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXPhone" runat="server"></asp:textbox></td>
-												<td class="LabelLeftReq">Mobile Phone:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXCell" runat="server"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td class="LabelLeftReq">Fax:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXFax" runat="server"></asp:textbox></td>
-												<td class="LabelLeftReq">eMail Address:&nbsp;
-												</td>
-												<td><asp:textbox id="frmXXeMail" runat="server"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td class="LabelLeftReq">Licensure:&nbsp;
-												</td>
-												<td ><asp:textbox id="frmXXLicensure" runat="server" Width="415px"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td align="right" >&nbsp;&nbsp;
+										        <div class="input-row">
+                                                    <label>UserID:</label>
+												    <asp:textbox id="frmXXUID" runat="server" ReadOnly="True"></asp:textbox>
+										        </div>
+												
+												
+											    <div class="input-row">
+												<label>First Name:</label>
+												<asp:textbox id="frmXXFirstName" runat="server"></asp:textbox>
+												</div>
+
+											    <div class="input-row">
+                                                <label>Salutation:</label>
+												<asp:textbox id="frmXXSolutation" runat="server"></asp:textbox>
+												</div>
+
+											    <div class="input-row">
+                                                <label>Phone:</label>
+												<asp:textbox id="frmXXPhone" runat="server"></asp:textbox>
+												</div>
+
+                                                <div class="input-row">
+												<label>Fax:</label>
+												<asp:textbox id="frmXXFax" runat="server"></asp:textbox>
+												</div>
+
+											    <div class="input-row">
+                                                <label>Licensure:</label>
+												<asp:textbox id="frmXXLicensure" runat="server" Width="415px"></asp:textbox>
+											    </div>
+                                            </div>
+                                            <div class="details-col-2">
+                                                <div class="input-row">
+                                                <label>Professional Name:</label>
+												<asp:textbox id="frmXXProfessionName" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Last Name:</label>
+												<asp:textbox id="frmXXLastName" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Title:</label>
+												<asp:textbox id="frmXXTitle" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Mobile:</label>
+												<asp:textbox id="frmXXCell" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Email:</label>
+												<asp:textbox id="frmXXeMail" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
                                                     <input class="btn" type="submit" value="Update" name="Update"/>
-												</td>
-											</tr>
-											<tr>
-												<td align="left" >Please be sure to complete all the information on the 
-													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</td>
-											</tr>
-										</table>
+                                                </div>
+                                            
+                                            
+                                            </div>
+												
+                                                    
+												
+											
+												
+											
 									</form>
+                        
                     </div>
-                    
+                    <p>Please be sure to complete all the information on the 
+													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
                 </div>
                 
             </section>

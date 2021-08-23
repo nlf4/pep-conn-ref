@@ -548,7 +548,7 @@ Public Module mobUtil
         Dim DA As New SqlClient.SqlDataAdapter
         '= New SqlClient.SqlDataAdapter()
         DA.SelectCommand = selectCMD
-        'cn.Open()
+        cn.Open()
         Dim ds As DataSet = New DataSet
         DA.Fill(ds, "Table0")
         cn.Close()
