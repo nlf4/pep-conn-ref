@@ -274,6 +274,15 @@
 											<td align="right" colSpan="4"><input class="btn" type="submit" value="Save" name="SaveMe">
 												&nbsp; <input class="btn" type="submit" value="Next" name="NextMe">
 											</td>
+											<nav aria-label="Page navigation example">
+											  <ul class="pagination">
+                        
+												<li class="page-item active"><a class="page-link" href="#">1</a></li>
+												<li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+												<li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+												<li class="page-item"><a class="page-link" href="#">Next</a></li>
+											  </ul>
+											</nav>
 										</tr>
 										<tr>
 											<td align="left" colSpan="4">Save button saves current page. Next button saves and 

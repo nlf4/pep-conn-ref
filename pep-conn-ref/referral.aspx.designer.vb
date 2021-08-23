@@ -57,22 +57,4 @@ Partial Public Class referral
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents DataGrid1 As Global.System.Web.UI.WebControls.DataGrid
-
-    '''<summary>
-    '''refTable control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents refTable As Global.System.Web.UI.WebControls.Table
-
-    '''<summary>
-    '''headerRow control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents headerRow As Global.System.Web.UI.WebControls.TableHeaderRow
 End Class

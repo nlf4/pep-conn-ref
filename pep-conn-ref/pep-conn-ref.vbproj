@@ -99,6 +99,7 @@
     <Content Include="latestnews.aspx" />
     <Content Include="onlinereferral.aspx" />
     <Content Include="profile.aspx" />
+    <Content Include="profilepassword.aspx" />
     <Content Include="referral.aspx" />
     <Content Include="referralclient.aspx" />
     <Content Include="staff.aspx" />
@@ -174,6 +175,13 @@
     </Compile>
     <Compile Include="profile.aspx.vb">
       <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="profilepassword.aspx.designer.vb">
+      <DependentUpon>profilepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profilepassword.aspx.vb">
+      <DependentUpon>profilepassword.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="referral.aspx.designer.vb">

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="referral.aspx.vb" Inherits="pep_conn_ref.referral" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="profilepassword.aspx.vb" Inherits="pep_conn_ref.profilepassword" %>
 
 <!DOCTYPE html>
 
@@ -22,13 +22,15 @@
                             </a>
                         </div>
                         
+                       <%-- <a href="#" class="brand-link">
+                            &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
                         <div class="header-container">
                             <div class="title-panel">
                                 <h2>PEP Referral System</h2>
                             </div>
                             
                             <div class="user-panel">
-                                <p><asp:label id="lblUser" runat="server">Label</asp:label></p>
+                                <asp:label id="lblUser" runat="server"></asp:label>
                                 <div class="login-link">
                                     <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
                                 </div>
@@ -80,7 +82,7 @@
                                             <p>Staff</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item active">
+                                    <li class="nav-item">
                                         <a href="/onlinereferral.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>
@@ -102,52 +104,64 @@
            <%-- </form>--%>
             <section class="main-content">
                 <div class="main-text">
-                    <h2>Referrals</h2>
-                    <asp:Label id="lblErrMsg" runat="server" ForeColor="Red" Visible="False">Label</asp:Label>
-
-                    <%--<p><asp:label id="lblUser" runat="server">Label</asp:label></p>--%>
-                    <form class="refForm" runat="server"> 
-                        <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral" PostBackUrl="referralclient.aspx"/>
-                        <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>
-                    </form>
-
-                    
-                    <asp:DataGrid id="DataGrid1" runat="server" Width="581px" AutoGenerateColumns="False" font-Size="Smaller"
-										font-Names="Arial">
-                        <AlternatingItemStyle font-Size="X-Small" ForeColor="#003399" BackColor="#CCCCFF"></AlternatingItemStyle>
-										<ItemStyle font-Size="X-Small" ForeColor="#330099" BackColor="White"></ItemStyle>
-										<headerStyle font-Size="Larger" font-Names="Arial" font-Bold="true" ForeColor="White" BackColor="DarkBlue"></headerStyle>
-										<Columns>
-											<asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="ReferralClient.aspx?ID={0}"
-												DataTextField="ChildNameID" headerText="Child's Name (Tracking #)">
-												<headerStyle Width="340px"></headerStyle>
-											</asp:HyperLinkColumn>
-											<asp:BoundColumn DataField="DateEntered" headerText="Draft Date" DataFormatString="{0: MMMM d, yyyy}">
-												<headerStyle Width="200px"></headerStyle>
-											</asp:BoundColumn>
-											<asp:BoundColumn DataField="strDateSubmitted" headerText="Submit Date">
-												<headerStyle Width="200px"></headerStyle>
-											</asp:BoundColumn>
-											<asp:BoundColumn DataField="StatusDesc" headerText="Status">
-												<headerStyle Width="160px"></headerStyle>
-											</asp:BoundColumn>
-											<asp:HyperLinkColumn Text="[print]" Target="_blank" DataNavigateUrlField="ID" DataNavigateUrlFormatString="ReferralPrint.aspx?ID={0}"
-												headerText="Print"></asp:HyperLinkColumn>
-											<asp:HyperLinkColumn Text="Delete" DataNavigateUrlField="DelID" DataNavigateUrlFormatString="javascript:deleteMe(&quot;{0}&quot;);"
-												headerText="Delete"></asp:HyperLinkColumn>
-										</Columns>
-                        </asp:DataGrid>
-                    <%--<asp:Table runat="server" ID="refTable">
-                        <asp:TableHeaderRow ID="headerRow">
-                            <asp:TableHeaderCell>Child's Name (Tracking #)</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Draft Date</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Submit Date</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Status</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Print</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Delete</asp:TableHeaderCell>
-                        </asp:TableHeaderRow>
-                    </asp:Table>--%>
-                    
+                   
+                    <table class="bodytext" width="100%">
+							<tr>
+								<td>
+									<table class="bodytext" width="100%">
+										<tr>
+											<td><asp:label id="Label1" runat="server" Height="5px">Label</asp:label></td>
+											<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
+										</tr>
+									</table>
+									<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label></td>
+							</tr>
+							<tr bgColor="blue" height="2">
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<form id="frm" method="post" runat="server">
+										<asp:literal id="hiddenFormList" runat="server"></asp:literal>
+										<table class="bodytext" width="100%">
+											<tr>
+												<td class="LabelLeftReq">Enter current Password:</td>
+												<td><asp:textbox id="frmXXOldPWD" runat="server" TextMode="Password"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Enter New Password:</td>
+												<td><asp:textbox id="frmXXNewPWD1" runat="server" TextMode="Password"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Re-type Password:</td>
+												<td><asp:textbox id="frmXXNewPWD2" runat="server" TextMode="Password"></asp:textbox></td>
+											</tr>
+			                                <tr><td colspan="4"><hr /></td></tr>
+                                <tr><td colspan="4">Password needs to be 8-15 characters.
+                        <br />Password must conatin at least 3 out of 4 basic character groups (Upper case, lower case, number, symbol).
+                        <br />Password cannot be the same as the login and cannot be re-used.</td></tr>
+                                <tr><td colspan="4"><hr /></td></tr>
+                                            								<tr>
+												<td colspan="4" align="right">
+													<INPUT class="btn" type="submit" name="Update" value="Change Password">
+												</td>
+											</tr>
+											<TR>
+												<TD align="left" colSpan="4">To change password, please provide current, new and confirming password then click "change password" button.</TD>
+											</TR>
+										</table>
+									</form>
+								</td>
+							</tr>
+							<tr bgcolor="blue" height="2">
+								<td></td>
+							</tr>
+							<tr>
+								<td><a class="CenterLinks" href='logoff.aspx'>[Log off]</a>&nbsp;&nbsp;<a class="CenterLinks" href='Referral.aspx'>[Back 
+										To Referral]</a></td>
+							</tr>
+						</table>
+                  
                 </div>
                 
             </section>
