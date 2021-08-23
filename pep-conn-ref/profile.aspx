@@ -107,6 +107,19 @@
                     <asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
                     <asp:literal id="hiddenFormList" runat="server"></asp:literal>
                     <h2>USER PROFILE</h2>
+
+                    <ul class="nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="profilepassword.aspx">Password</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Agency Info</a>
+                      </li>
+                    </ul>
+
                     <div class="user-details">
                         <%--<form runat="server">
                             <div class="details-col-1">
