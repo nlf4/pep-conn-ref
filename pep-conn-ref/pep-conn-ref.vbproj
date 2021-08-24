@@ -102,6 +102,8 @@
     <Content Include="profilepassword.aspx" />
     <Content Include="referral.aspx" />
     <Content Include="referralclient.aspx" />
+    <Content Include="referralclientCOMM.aspx" />
+    <Content Include="referralclientMental.aspx" />
     <Content Include="staff.aspx" />
     <Content Include="style\all.min.css" />
     <Content Include="style\font-awesome.css" />
@@ -196,6 +198,20 @@
     </Compile>
     <Compile Include="referralclient.aspx.vb">
       <DependentUpon>referralclient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="referralclientCOMM.aspx.designer.vb">
+      <DependentUpon>referralclientCOMM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referralclientCOMM.aspx.vb">
+      <DependentUpon>referralclientCOMM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="referralclientMental.aspx.designer.vb">
+      <DependentUpon>referralclientMental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referralclientMental.aspx.vb">
+      <DependentUpon>referralclientMental.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="staff.aspx.designer.vb">

@@ -1,6 +1,5 @@
-﻿Public Class referralclient
+﻿Public Class referralclientCOMM
     Inherits System.Web.UI.Page
-
 
     Private Function ValidateInput(ByVal sArea As String) As String
         If Session("REFID") = "" Then Response.Redirect("onlinereferral.aspx")
@@ -9,26 +8,52 @@
         If ds.Rows(0)("RefBy") <> Session("UID") Then Response.Redirect("onlinereferral.aspx")
         Return ValidateData(ds.Rows(0), "CONNWEB:Referral", sArea)
     End Function
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Response.Expires = 0
-        'If Request.QueryString("ID") = "NEW" Then
-        'Session("REFID") = ""
-        'Response.Redirect("ReferralAdmissionCriteria.aspx")
-        'Response.End()
-        'End If
-        If Request.QueryString("ID") > "" Then
-            If Request.QueryString("ID") = "NEW" Then
-                Session("REFID") = ""
-            Else
-                Session("REFID") = Request.QueryString("ID")
+    Private Sub HasPostBack()
+        Dim sProblemARY As String
+        Dim ttt As String
+        For Each ttt In Request.Form
+            If Left(ttt, 2) = "P:" Then
+                If Request.Form(ttt) = "on" Then sProblemARY = sProblemARY & "," & CStr(Mid(ttt, 3))
             End If
-            Response.Redirect("ReferralClient.aspx")
+        Next
+
+        Me.lblMsg.Text = UpdateFromForm(Request, "usp_ConnWebReferral_Update_MENTAL", "", "@ProblemARY", sProblemARY)
+        If Me.lblMsg.Text > "" Then Exit Sub
+        Me.lblMsg.Text = ValidateInput("Mental Health")
+        If Me.lblMsg.Text <> "" Then
+            Me.lblMsg.Text = retSingleValue("Select Contents from ConnWebContent where Area='ONLINE' and ID='BADINPUT'") & "<BR>" & Me.lblMsg.Text
+        Else
+            Me.lblMsg.Text = "Record updated."
         End If
 
+        If Request.Form("PrevMe") <> "" Then Response.Redirect("ReferralClientCOMM.aspx")
+        If Request.Form("SubmitMe") <> "" Then Response.Redirect("ReferralClientFinal.aspx")
+        If Request.Form("NextPage") <> "" Then Response.Redirect("ReferralClient" & Request.Form("NextPage") & ".aspx")
+    End Sub
+    Function paint1Problem(ByRef dr As DataRow, ByRef sProblemAry As String, ByVal bIndent As Integer) As String
+        Return "<tr valign=top><td>" & IIf(bIndent > 0, "", "") _
+            & "<input type=checkbox name=P:" & dr("ID") _
+            & IIf(InStr(sProblemAry, "," & dr("ID") & ",") > 0, " Checked", "") & "></td><td>" & dr("Problems") & "</td></tr>"
+
+    End Function
+
+    Function Paint1Service(ByVal sLabel As String, ByVal sName As String, ByVal sValue As String) As String
+        Return "<tr align=center><td class=labelLeftreq>" & sLabel _
+            & ":&nbsp;</td><td><input type=Radio name='" & sName & "' value='N'" & IIf(sValue = "N", " checked", "") _
+            & "></td><td><input type=Radio name='" & sName & "' value='0'" & IIf(sValue = "0", " checked", "") _
+            & "></td><td><input type=Radio name='" & sName & "' value='1'" & IIf(sValue = "1", " checked", "") _
+            & "></td><td><input type=Radio name='" & sName & "' value='2'" & IIf(sValue = "2", " checked", "") _
+            & "></td><td><input type=Radio name='" & sName & "' value='x'" & IIf(sValue = "x", " checked", "") _
+           & "></td></tr>"
+    End Function
+
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        If Session("REFID") = "" Then Response.Redirect("onlinereferral.aspx")
         Dim ds As DataTable
 
         'Dim x
-        'Dim i As Integer
+        Dim i As Integer
         If getSecurity(Session, "CWAdmin", "CONWEBUSER") <> 0 Then
         Else
             Response.Redirect(ConfigurationSettings.AppSettings("ROOT_DIRECTORY_SECURE") & "/onlinereferral.aspx")
@@ -36,29 +61,70 @@
         If Me.IsPostBack Then
             Call HasPostBack()
         Else
-            'ComboSource(Me.frmXXRace, "exec usp_looupValue_GetList 'CONNREF:Race'", "Add Blank")
-            'ComboSource(Me.frmXXEthnicity, "exec usp_looupValue_GetList 'CONNREF:Ethnicity'", "Add Blank")
-            'ComboSource(Me.frmXXCustody, "select ID,Description from LookupValue where entity='REFF:CUST:WHO' order by seq")
-            ComboSource(Me.frmXXTypeOfCustody, "select ID,Description from LookupValue where entity='REFF:CUST:TYPE' order by seq")
+            'ComboSource(Me.frmXXDistrict, "select DistrictName from ConnReferralDistricts", "Add Blank")
+            'Me.l() 'ComboSource(Me.frmXXEduPlacement, "SELECT EdPlcCode, ConnwebDesc FROM EducationalPlacementType order by DispSeq", "Add Blank")
+            'ComboSource(Me.frmXXGrade, "SELECT EdCode, EdLevel FROM EducationalLevels", "Add Blank")
         End If
-        Me.lblUser.Text = Session("UName")
+        Me.lblUser.Text = Session("UName") & " - " & Session("AgencyName") & " - Referral/Community Information for '" & Session("ClientName") & "'"
         'If Request.QueryString("NEWUSER") = "YES" Then Me.lblUser.Text=Me.lblUser.Text & 
         'Me.lblLeftLink.Text = getSideLink("REFF")
-        'Me.LblTopLink.Text = getTopLink("REFF", "DEMO")
+        'Me.LblTopLink.Text = getTopLink("REFF", "COMM")
         'If Session("IID") > "" Then
         'Me.f()
 
-        If Session("REFID") > "" Then
-            ds = requestDT("exec usp_ConWebReferral_GetRecord " & Session("REFID"))
-            If ds.Rows(0)("RefBy") <> Session("UID") Then Response.Redirect("onlinereferral.aspx")
-            If ds.Rows(0)("Status") & "" <> "Incomplete" Then
-                Response.Redirect("Referral.aspx?MsgCode=AlreadySubmit")
-            End If
-            Call PaintScreen(Me, ds)
-            Me.hiddenFormList.Text = hiddenTag("NextPage", "") & hiddenTag("frmXXID", ds.Rows(0)("ID")) & hiddenTag("frmXXUID", Session("UID"))
-        Else
-            Me.hiddenFormList.Text = hiddenTag("frmXXAdmAnswer", Session("ADMANSWERS")) & hiddenTag("NextPage", "") & hiddenTag("frmXXUID", Session("UID"))
-        End If
+        ds = requestDT("exec usp_ConWebReferral_GetRecord " & Session("REFID"))
+        If ds.Rows(0)("RefBy") <> Session("UID") Then Response.Redirect("onlinereferral.aspx")
+        'If ds.Rows(0).IsNull("EduPlacement") Then
+        'Me.litEduPlacement.Text = rsMulRows(requestDT("select ID,description from lookupValue where entity='IEP'  order by seq"), False, "EduPlacement", "", "", 2)
+        'Else
+        '    Me.litEduPlacement.Text = rsMulRows(requestDT("select ID,description from lookupValue where entity='IEP'  order by seq"), False, "EduPlacement", ds.Rows(0)("EduPlacement"), "", 2)
+        'End If
+
+        Call PaintScreen(Me, ds)
+        '& paint1SYSINV("12", "School in which enrolled", "School", ds.Rows(0), "Contact") _
+
+        'Me.LitSYSINV.Text = _
+        '    paint1SYSINV("1", "CCDCFS", "Worker's&nbsp;Name", ds.Rows(0)) _
+        '   & paint1SYSINV("2", "Ohio Dept. Youth Srv.", "Worker's&nbsp;Name", ds.Rows(0)) _
+        ' & paint1SYSINV("3", "Community Agency", "Agency&nbsp;Name", ds.Rows(0), "Contact") _
+        ' & paint1SYSINV("4", "Juvenile Court", "P&nbsp;O&nbsp;'s&nbsp;Name", ds.Rows(0)) _
+        ' & paint1SYSINV("5", "Juvenile Court Diversion", "Contact's&nbsp;Name", ds.Rows(0)) _
+        '& paint1SYSINV("6", "Board of MR/DD", "Worker's&nbsp;Name", ds.Rows(0)) _
+        ' & paint1SYSINV("7", "Private Hospital/Healthcare Provider", "Contact", ds.Rows(0)) _
+        '& paint1SYSINV("8", "Private MH Professional", "Name", ds.Rows(0)) _
+        '& paint1SYSINV("9", "Mobile Crisis Team", "Contact", ds.Rows(0)) _
+        ' & paint1SYSINV("10", "Alcohol and Drug Addiction Services", "Contact", ds.Rows(0)) _
+        '& paint1SYSINV("11", "Bureau Of Voc Rehab", "Contact", ds.Rows(0)) _
+        '& paint1SYSINV("13", "Guardian ad Litem(GAL)", "Name", ds.Rows(0)) _
+        '& paint1SYSINV("14", "Other", "Other", ds.Rows(0))
+        'Me.litNoPlacement.Text = paint1NoPlacement("1", "Emergency Shelter", ds.Rows(0)) _
+        '& paint1NoPlacement("2", "Foster Home", ds.Rows(0)) _
+        '& paint1NoPlacement("3", "Adoptive Home", ds.Rows(0)) _
+        '& paint1NoPlacement("4", "Detention Home", ds.Rows(0)) _
+        '& paint1NoPlacement("5", "Residential Treatment", ds.Rows(0)) _
+        '& paint1NoPlacement("6", "Psychiatric Hospitalization", ds.Rows(0)) _
+        '& paint1NoPlacement("7", "Group Home", ds.Rows(0)) _
+        '& paint1NoPlacement("8", "Correctional Facility", ds.Rows(0)) _
+        '& paint1NoPlacement("10", "Relative Home", ds.Rows(0)) _
+        '& paint1NoPlacement("9", "Other", ds.Rows(0), " Please specify:")
+        Me.litNoPlacement.Text = paint1NoPlacement("5", "Residential treatment centers", ds.Rows(0)) _
+                & paint1NoPlacement("6", "Inpatient Psychiatric Hospitals", ds.Rows(0)) _
+                & paint1NoPlacement("10", "Relative Home", ds.Rows(0)) _
+                & paint1NoPlacement("3", "Adoptive Home", ds.Rows(0)) _
+                & paint1NoPlacement("2", "Foster Home", ds.Rows(0)) _
+                & paint1NoPlacement("4", "Detention Center", ds.Rows(0)) _
+                & paint1NoPlacement("11", "Crisis Stabilization", ds.Rows(0)) _
+                & paint1NoPlacement("1", "Shelter Care", ds.Rows(0)) _
+                & paint1NoPlacement("12", "Orphanage", ds.Rows(0)) _
+                & paint1NoPlacement("8", "Correctional Facility", ds.Rows(0)) _
+                & paint1NoPlacement("7", "Group Home", ds.Rows(0)) _
+                & paint1NoPlacement("9", "Other", ds.Rows(0)) ', " Please specify:")
+        Me.litNoPlacement.Text += "<tr><td class=labelLeftreq>Other Specify:&nbsp;</td><td>" _
+            & InputTag("Text", "frmXXNoPlacement9SPY", ds.Rows(0)("NoPlacement9SPY") & "", "size=45 maxlength='100'")
+
+
+
+        Me.hiddenFormList.Text = hiddenTag("NextPage", "") & hiddenTag("frmXXID", ds.Rows(0)("ID")) & hiddenTag("frmXXUID", Session("UID"))
     End Sub
     Function ValidateData(ByRef dr As DataRow, ByVal sEntity As String, Optional ByVal sarea As String = "", Optional ByVal iMaxSevereLevel As Integer = 99, Optional ByVal sNewLine As String = "<BR>") As String
         Dim iCurrentLevel As Integer
@@ -315,31 +381,6 @@
         End If
     End Sub
 
-    Private Sub HasPostBack()
-        Dim sIDRet As String
-        'Dim ttt
-        sIDRet = "@IDOut"
-        If Session("REFID") > "" Then
-            Me.lblMsg.Text = UpdateFromForm(Request, "usp_ConnWebReferral_Update_DEMO", "")
-        Else
-            Me.lblMsg.Text = UpdateFromForm(Request, "usp_ConnWebReferral_Update_DEMO", sIDRet)
-            Session("REFID") = sIDRet
-        End If
-        Me.lblMsg.Text = ValidateInput("Demographic")
-
-        If Me.lblMsg.Text <> "" Then
-
-            Me.lblMsg.Text = retSingleValue("Select Contents from ConnWebContent where Area='ONLINE' and ID='BADINPUT'") & "<BR>" & Me.lblMsg.Text
-        Else
-            Me.lblMsg.Text = "Record updated."
-        End If
-        Session("ClientName") = Me.frmXXLName.Text & ", " & Me.frmXXFName.Text
-        'If Me.lblMsg.Text > "" Then Exit Sub
-
-        'addLog("TTT:" & Request.Form("NextPage") & ":" & Request.Form("NextMe"))
-        If Request.Form("NextMe") <> "" Then Response.Redirect("ReferralClientComm.aspx")
-        If Request.Form("NextPage") <> "" Then Response.Redirect("ReferralClient" & Request.Form("NextPage") & ".aspx")
-    End Sub
 
     Public Sub PaintScreen(ByRef pge As System.Web.UI.Page, ByRef dt As DataTable)
         Dim i As Int32
@@ -502,6 +543,30 @@
     Function toGoodSQLArgName(ByVal sV As String) As String
         Return sV
     End Function
+    Private Function paint1NoPlacement(ByVal idx As String, ByVal labelLeft As String, ByVal dr As DataRow, Optional ByVal otherLbl As String = "") As String
+        Dim sRetv As String = "<tr><td class=labelLeftreq>" & labelLeft & ":&nbsp;</td><td>" _
+            & InputTag("Text", "frmXXNoPlacement" & idx, dr("NoPlacement" & idx) & "", "size='2'")
+        If otherLbl & "" > "" Then
+            sRetv += otherLbl & InputTag("Text", "frmXXNoPlacement" & idx & "SPY", dr("NoPlacement" & idx & "SPY") & "", "size=20")
+        End If
+        Return sRetv & "</td></tr>"
+    End Function
+    Public Function InputTag(ByVal sTYpe As String, ByVal sName As String, ByVal sValue As String, ByVal sAddInfo As String, ByVal ParamArray AddInfo() As String) As String
+        Dim sRetv As String = ""
+        Select Case UCase(sTYpe)
+            Case "YN"
+                sRetv = "<input type=radio name=""" & sName & """ value=""Y""" _
+                    & IIf(sValue = "Y", " Checked", "") _
+                    & " " & sAddInfo & ">Yes &nbsp;&nbsp;" _
+                    & "<input type=radio name=""" & sName & """ value=""N""" _
+                    & IIf(sValue = "N", " Checked", "") _
+                    & " " & sAddInfo & ">No"
+            Case "TEXT"
+                sRetv = "<input type=text name=""" & sName & """ value=""" & sValue & """" _
+                    & " " & sAddInfo & ">"
 
+        End Select
+        Return sRetv
+    End Function
 
 End Class
