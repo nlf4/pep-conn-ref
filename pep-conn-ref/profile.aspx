@@ -8,7 +8,15 @@
 		    <link href="style/style.css" type="text/css" rel="stylesheet">
 		    <!-- Font Awesome -->
 		    <link rel="stylesheet" href="style/all.min.css">
+            <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
+    <script language="javascript">
+        $('#myTab a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
     <body>
         <%--<form id="form1" runat="server">--%>
            
@@ -108,67 +116,22 @@
                     <asp:literal id="hiddenFormList" runat="server"></asp:literal>
                     <h2>USER PROFILE</h2>
 
-                    <ul class="nav-tabs">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="profilepassword.aspx">Password</a>
+                        <a class="nav-link" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Agency Info</a>
+                        <a class="nav-link" id="agency-tab" data-toggle="tab" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Agency</a>
                       </li>
                     </ul>
-
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                          
                     <div class="user-details">
-                        <%--<form runat="server">
-                            <div class="details-col-1">
-                                <div class="input-row">
-                                    <label for="UID">User ID:</label>
-                                    <asp:TextBox ID="UID" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-row">
-                                <label for="firstname">First Name:</label>
-                                    <asp:TextBox ID="firstname" runat="server"></asp:TextBox>
-                                </div>
-                                    <div class="input-row">
-                                    <label for="salutation">Salutation:</label>
-                                    <asp:TextBox ID="salutation" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-row">
-                                    <label for="phone">Phone:</label>
-                                    <asp:TextBox ID="phone" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-row">
-                                    <label for="fax">Fax:</label>
-                                    <asp:TextBox ID="fax" runat="server"></asp:TextBox>
-                                </div>
-
-                            </div>
-                            <div class="details-col-2">
-                                <div class="input-row">
-                                <label for="profname">Full Name:</label>
-                                    <asp:TextBox ID="profname" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-row">
-                                    <label for="lastname">Last Name:</label>
-                                    <asp:TextBox ID="lastname" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-row">
-                                    <label for="title">Title:</label>
-                                    <asp:TextBox ID="title" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-row">
-                                    <label for="mobile">Mobile Phone:</label>
-                                    <asp:TextBox ID="mobile" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-row">
-                                    <label for="email">Email:</label>
-                                    <asp:TextBox ID="email" runat="server"></asp:TextBox>
-                                </div>
-                                <asp:Button ID="updateBtn" runat="server" Text="Update" PostBackUrl="profile.aspx"/>
-                            </div>
-                        </form>--%>
+                       
                         <form id="frm" method="post" runat="server">
                             <div class="details-col-1">
 										<asp:literal id="Literal1" runat="server"></asp:literal>
@@ -246,6 +209,16 @@
                     </div>
                     <p>Please be sure to complete all the information on the 
 													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
+                      </div>
+                      <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+                         <h3> PASSWORD PAGE </h3>
+                      </div>
+                      <div class="tab-pane fade" id="agency" role="tabpanel" aria-labelledby="agency-tab">
+                          <h3> AGENCY PAGE </h3>
+                      </div>
+                        
+                    </div>
+
                 </div>
                 
             </section>

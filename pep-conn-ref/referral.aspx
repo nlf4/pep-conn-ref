@@ -10,7 +10,6 @@
 		    <link rel="stylesheet" href="style/all.min.css">
     </head>
     <body>
-        <%--<form id="form1" runat="server">--%>
            
             <!-- Navbar -->
                 <nav class="main-header navbar navbar-expand">
@@ -99,24 +98,23 @@
                         <!-- /Sidebar -->
                     </aside>
             
-           <%-- </form>--%>
             <section class="main-content">
                 <div class="main-text">
                     <h2>Referrals</h2>
                     <asp:Label id="lblErrMsg" runat="server" ForeColor="Red" Visible="False">Label</asp:Label>
 
-                    <%--<p><asp:label id="lblUser" runat="server">Label</asp:label></p>--%>
+                   
                     <form class="refForm" runat="server"> 
                         <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral" PostBackUrl="referralclient.aspx"/>
                         <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>
                     </form>
 
                     
-                    <asp:DataGrid id="DataGrid1" runat="server" Width="581px" AutoGenerateColumns="False" font-Size="Smaller"
+                    <asp:DataGrid id="DataGrid1" runat="server" Width="750px" AutoGenerateColumns="false" font-Size="Smaller"
 										font-Names="Arial">
-                        <AlternatingItemStyle font-Size="X-Small" ForeColor="#003399" BackColor="#CCCCFF"></AlternatingItemStyle>
-										<ItemStyle font-Size="X-Small" ForeColor="#330099" BackColor="White"></ItemStyle>
-										<headerStyle font-Size="Larger" font-Names="Arial" font-Bold="true" ForeColor="White" BackColor="DarkBlue"></headerStyle>
+                        <AlternatingItemStyle font-Size="X-Small" ForeColor="#003399" BackColor="#E4F0FF"></AlternatingItemStyle>
+                                        <ItemStyle font-Size="X-Small" ForeColor="#330099" BackColor="White"></ItemStyle>
+										<headerStyle font-Size="Larger" font-Names="Arial" font-Bold="true" ForeColor="White" BackColor="#0260B3"></headerStyle>
 										<Columns>
 											<asp:HyperLinkColumn DataNavigateUrlField="ID" DataNavigateUrlFormatString="ReferralClient.aspx?ID={0}"
 												DataTextField="ChildNameID" headerText="Child's Name (Tracking #)">

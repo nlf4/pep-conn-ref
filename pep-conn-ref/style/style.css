@@ -201,7 +201,7 @@ a{
 /*******************REFERRAL PAGE********************/
 
 .ref-buttons {
-    border: 1px solid #0260B3;
+    border: 1px solid gray;
     padding: 8px 19px;
     transition: 0.25s;
     border-radius: 16px;
@@ -220,6 +220,7 @@ a{
 .refForm {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 #refTable {
@@ -378,6 +379,10 @@ tr {
     background-color: white;
     color: #0260B3;
     cursor: pointer;
+}
+
+div#profile .active {
+    background-color: white;
 }
 
 

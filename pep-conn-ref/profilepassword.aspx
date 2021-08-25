@@ -8,6 +8,8 @@
 		    <link href="style/style.css" type="text/css" rel="stylesheet">
 		    <!-- Font Awesome -->
 		    <link rel="stylesheet" href="style/all.min.css">
+        <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
     <body>
         <%--<form id="form1" runat="server">--%>
@@ -104,8 +106,30 @@
            <%-- </form>--%>
             <section class="main-content">
                 <div class="main-text">
-                   
-                    <table class="bodytext" width="100%">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="true">Password</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="agency-tab" data-toggle="tab" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Agency</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                          
+                    <div class="user-details">
+                       
+                       
+                    </div>
+                    <p>Please be sure to complete all the information on the 
+													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
+                      </div>
+                      <div class="tab-pane fade show active" id="password" role="tabpanel" aria-labelledby="password-tab">
+                          <table class="bodytext" width="100%">
 							<tr>
 								<td>
 									<table class="bodytext" width="100%">
@@ -162,6 +186,14 @@
 							</tr>
 						</table>
                   
+                      </div>
+                      <div class="tab-pane fade" id="agency" role="tabpanel" aria-labelledby="agency-tab">
+                          <h3> AGENCY PAGE </h3>
+                      </div>
+                        
+                    </div>
+                   
+                   
                 </div>
                 
             </section>
