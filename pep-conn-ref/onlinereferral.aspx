@@ -118,12 +118,12 @@
 
                             <div class="login-input">
                                 <label for="UID">User ID:</label>
-                                <asp:TextBox ID="UID" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="UID" runat="server">Nfurtado</asp:TextBox>
                             </div>
 
                             <div class="login-input">
                                 <label for="password">Password:</label>
-                                <asp:TextBox ID="password" runat="server" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="password" runat="server" TextMode="Password" Text="PipFroMer6!"></asp:TextBox>
                             </div>
 
                             <asp:Button ID="submitBtn" runat="server" Text="Log In"  />

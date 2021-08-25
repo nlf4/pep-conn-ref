@@ -10,13 +10,9 @@
 		    <link rel="stylesheet" href="style/all.min.css">
             <!-- Bootstrap -->
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+            
     </head>
-    <script language="javascript">
-        $('#myTab a').on('click', function (e) {
-            e.preventDefault()
-            $(this).tab('show')
-        })
-    </script>
+ 
     <body>
         <%--<form id="form1" runat="server">--%>
            
@@ -117,14 +113,14 @@
                     <h2>USER PROFILE</h2>
 
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="password-tab" data-bs-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="agency-tab" data-toggle="tab" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Agency</a>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="agency-tab" data-bs-toggle="tab" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Agency</a>
                       </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -220,6 +216,9 @@
                     </div>
 
                 </div>
+
+
+               
                 
             </section>
         </div>
@@ -228,5 +227,9 @@
             <p>&copy; 2021 - Positive Education Program</p>
         </footer>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </html>
 

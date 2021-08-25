@@ -8,6 +8,7 @@
 		    <link href="style/style.css" type="text/css" rel="stylesheet">
 		    <!-- Font Awesome -->
 		    <link rel="stylesheet" href="style/all.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
     <body>
            
@@ -109,6 +110,45 @@
                         <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>
                     </form>
 
+     <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+          </li>
+         <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="newref-tab" data-bs-toggle="tab" href="#newref" role="tab" aria-controls="newref" aria-selected="false">New Referral</a>
+          </li>
+          <li class="nav-item dropdown" role="presentation">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#profile" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" data-toggle="tab" href="#profile">Profile</a>
+              <a class="dropdown-item" data-toggle="tab" href="#password">Password</a>
+              <a class="dropdown-item" data-toggle="tab" href="#agency">Agency</a>
+            </div>
+          </li>
+          
+    </ul>
+
+<div class="container-fluid">
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="overview">
+      <div class="alert alert-info">Overview</div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="newref">
+      <div class="alert alert-info">New Referral</div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="profile">
+      <div class="alert alert-info">Profile</div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="password">
+      <div class="alert alert-info">Password</div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="agency">
+      <div class="alert alert-info">Agency</div>
+    </div>
+    
+  </div>
+</div>
+
                     
                     <asp:DataGrid id="DataGrid1" runat="server" Width="750px" AutoGenerateColumns="false" font-Size="Smaller"
 										font-Names="Arial">
@@ -155,4 +195,8 @@
             <p>&copy; 2021 - Positive Education Program</p>
         </footer>
     </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </html>
