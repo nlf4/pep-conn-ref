@@ -71,7 +71,7 @@
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item active">
+                                    <li class="nav-item active-side">
                                         <a href="#" class="nav-link">
                                            <!-- <i class="nav-icon fas fa-th"></i>-->
                                             <p>Staff</p>

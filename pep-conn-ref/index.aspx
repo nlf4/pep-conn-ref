@@ -55,7 +55,7 @@
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
                                 <ul class="sidebar-list" role="menu" data-accordion="false">
-                                    <li class="nav-item active">
+                                    <li class="nav-item active-side">
                                         <a href="#" class="nav-link">
                                             <!-- <i class="nav-icon fa fa-home"></i> -->
                                             <p>Connections Home</p>

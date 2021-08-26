@@ -32,24 +32,6 @@ Partial Public Class referral
     Protected WithEvents lblErrMsg As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''newReferralBtn control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents newReferralBtn As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''viewProfileBtn control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents viewProfileBtn As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''DataGrid1 control.
     '''</summary>
     '''<remarks>

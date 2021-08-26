@@ -65,7 +65,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/admissioncriteria.aspx" class="nav-link active">
+                                        <a href="/admissioncriteria.aspx" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Admission Criteria</p>
                                         </a>
@@ -76,7 +76,7 @@
                                             <p>Staff</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item active">
+                                    <li class="nav-item active-side">
                                         <a href="#" class="nav-link">
                                             <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>

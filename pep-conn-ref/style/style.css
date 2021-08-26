@@ -121,11 +121,14 @@ ul {
 }
 
 .active {
-    background-color: #7C92C6;
-   
+    background-color: #E4F0FF;
 }
 
-.active a {
+.active-side {
+    background-color: #7C92C6;
+}
+
+.active-side a {
     color: floralwhite;
 }
 
