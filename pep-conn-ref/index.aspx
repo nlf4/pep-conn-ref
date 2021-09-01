@@ -7,12 +7,12 @@
         <title>PEP Referral</title>
 		    <link href="style/style.css" type="text/css" rel="stylesheet">
 		    <!-- Font Awesome -->
-		    <link rel="stylesheet" href="style/all.min.css">
-            <link rel="stylesheet" href="style/font-awesome.min.css">
-            <link rel="stylesheet" href="style/font-awesome.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		    
+        <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
     <body>
-        <%--<form id="form1" runat="server">--%>
            
             <!-- Navbar -->
                 <nav class="main-header navbar navbar-expand">
@@ -44,6 +44,31 @@
                 </nav>
             <!-- / Navbar -->
 
+         <nav id="mainnav" class="navbar navbar-light bg-light navbar-expand-lg"> 
+             <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                 <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
+                    <ul id="collapse-nav-list" class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="les-solutions">Les solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nos-offres">Nos offres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-demo">Contact & Démo</a>
+                        </li>
+                       </ul>
+                </div>
+              </div>
+            </nav>
+
+
+
+
         <div class="wrapper">
 
 		        <!-- Main Sidebar Container -->
@@ -54,6 +79,11 @@
 
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
+                                <div class="container-fluid">
+                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                                         <i class="fas fa-bars"></i>
+                                    </button>
+                                <div class="collapse navbar-collapse text-center" id="collapsibleNavbar1">
                                 <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item active-side">
                                         <a href="#" class="nav-link">
@@ -92,6 +122,8 @@
                                         </a>
                                     </li>
                                 </ul>
+                                </div>
+                              </div>
                             </nav>
                             <!-- /Sidebar-menu -->
                         </div>
@@ -120,5 +152,8 @@
         <footer>
             <p>&copy; 2021 - Positive Education Program</p>
         </footer>
+        <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+       
     </body>
 </html>

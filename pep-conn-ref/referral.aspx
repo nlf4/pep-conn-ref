@@ -161,10 +161,147 @@
                          <h3> ACCOUNT PAGE </h3>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                         <h3> PROFILE PAGE </h3>
+                            
+                            <asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
+                    <asp:literal id="hiddenFormList" runat="server"></asp:literal>
+                    <h2>USER PROFILE</h2>
+
+                   
+                   
+                          
+                    <div class="user-details">
+                       
+                        <form id="frm" method="post" runat="server">
+                            <div class="details-col-1">
+										<asp:literal id="Literal1" runat="server"></asp:literal>
+										        <div class="input-row">
+                                                    <label>UserID:</label>
+												    <asp:textbox id="frmXXUID" runat="server" ReadOnly="True"></asp:textbox>
+										        </div>
+												
+												
+											    <div class="input-row">
+												<label>First Name:</label>
+												<asp:textbox id="frmXXFirstName" runat="server"></asp:textbox>
+												</div>
+
+											    <div class="input-row">
+                                                <label>Salutation:</label>
+												<asp:textbox id="frmXXSolutation" runat="server"></asp:textbox>
+												</div>
+
+											    <div class="input-row">
+                                                <label>Phone:</label>
+												<asp:textbox id="frmXXPhone" runat="server"></asp:textbox>
+												</div>
+
+                                                <div class="input-row">
+												<label>Fax:</label>
+												<asp:textbox id="frmXXFax" runat="server"></asp:textbox>
+												</div>
+
+											    <div class="input-row">
+                                                <label>Licensure:</label>
+												<asp:textbox id="frmXXLicensure" runat="server" Width="415px"></asp:textbox>
+											    </div>
+                                            </div>
+                                            <div class="details-col-2">
+                                                <div class="input-row">
+                                                <label>Professional Name:</label>
+												<asp:textbox id="frmXXProfessionName" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Last Name:</label>
+												<asp:textbox id="frmXXLastName" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Title:</label>
+												<asp:textbox id="frmXXTitle" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Mobile:</label>
+												<asp:textbox id="frmXXCell" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                <label>Email:</label>
+												<asp:textbox id="frmXXeMail" runat="server"></asp:textbox>
+                                                </div>
+
+                                                <div class="input-row">
+                                                    <input class="btn" type="submit" value="Update" name="Update"/>
+                                                </div>
+                                            
+                                            </div>	
+									</form>
+                                </div>
+                              <p>Please be sure to complete all the information on the pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
+
                         </div>
                         <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
-                         <h3> PASSWORD PAGE </h3>
+                            
+                             <table class="bodytext" width="100%">
+							<tr>
+								<td>
+									<table class="bodytext" width="100%">
+										<tr>
+											<td><asp:label id="Label1" runat="server" Height="5px">Label</asp:label></td>
+											<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
+										</tr>
+									</table>
+									<asp:label id="Label2" runat="server" ForeColor="Red"></asp:label></td>
+							</tr>
+							<tr bgColor="blue" height="2">
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<form id="Form1" method="post">
+										<asp:literal id="Literal2" runat="server"></asp:literal>
+										<table class="bodytext" width="100%">
+											<tr>
+												<td class="LabelLeftReq">Enter current Password:</td>
+												<td><asp:textbox id="frmXXOldPWD" runat="server" TextMode="Password"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Enter New Password:</td>
+												<td><asp:textbox id="frmXXNewPWD1" runat="server" TextMode="Password"></asp:textbox></td>
+											</tr>
+											<tr>
+												<td class="LabelLeftReq">Re-type Password:</td>
+												<td><asp:textbox id="frmXXNewPWD2" runat="server" TextMode="Password"></asp:textbox></td>
+											</tr>
+			                                <tr><td colspan="4"><hr /></td></tr>
+                                <tr><td colspan="4">Password needs to be 8-15 characters.
+                        <br />Password must conatin at least 3 out of 4 basic character groups (Upper case, lower case, number, symbol).
+                        <br />Password cannot be the same as the login and cannot be re-used.</td></tr>
+                                <tr><td colspan="4"><hr /></td></tr>
+                                            								<tr>
+												<td colspan="4" align="right">
+													<INPUT class="btn" type="submit" name="Update" value="Change Password">
+												</td>
+											</tr>
+											<TR>
+												<TD align="left" colSpan="4">To change password, please provide current, new and confirming password then click "change password" button.</TD>
+											</TR>
+										</table>
+									</form>
+								</td>
+							</tr>
+							<tr bgcolor="blue" height="2">
+								<td></td>
+							</tr>
+							<tr>
+								<td><a class="CenterLinks" href='logoff.aspx'>[Log off]</a>&nbsp;&nbsp;<a class="CenterLinks" href='Referral.aspx'>[Back 
+										To Referral]</a></td>
+							</tr>
+						</table>
+                  
+                      </div>
+
                         </div>
                         <div class="tab-pane fade" id="agency" role="tabpanel" aria-labelledby="agency-tab">
                          <h3> AGENCY PAGE </h3>

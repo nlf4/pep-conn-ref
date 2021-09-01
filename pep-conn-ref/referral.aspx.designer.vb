@@ -39,4 +39,202 @@ Partial Public Class referral
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents DataGrid1 As Global.System.Web.UI.WebControls.DataGrid
+
+    '''<summary>
+    '''lblMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''hiddenFormList control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hiddenFormList As Global.System.Web.UI.WebControls.Literal
+
+    '''<summary>
+    '''frm control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frm As Global.System.Web.UI.HtmlControls.HtmlForm
+
+    '''<summary>
+    '''Literal1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Literal1 As Global.System.Web.UI.WebControls.Literal
+
+    '''<summary>
+    '''frmXXUID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXUID As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXFirstName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXFirstName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXSolutation control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXSolutation As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXPhone control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXPhone As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXFax control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXFax As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXLicensure control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXLicensure As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXProfessionName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXProfessionName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXLastName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXLastName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXTitle As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXCell control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXCell As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXeMail control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXeMail As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Label1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''LblTopLink control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LblTopLink As Global.System.Web.UI.WebControls.Literal
+
+    '''<summary>
+    '''Label2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Literal2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Literal2 As Global.System.Web.UI.WebControls.Literal
+
+    '''<summary>
+    '''frmXXOldPWD control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXOldPWD As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXNewPWD1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXNewPWD1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXNewPWD2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXNewPWD2 As Global.System.Web.UI.WebControls.TextBox
 End Class
