@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class index
 
     '''<summary>
+    '''MainHeader control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MainHeader As Global.System.Web.UI.UserControl
+
+    '''<summary>
     '''test control.
     '''</summary>
     '''<remarks>
