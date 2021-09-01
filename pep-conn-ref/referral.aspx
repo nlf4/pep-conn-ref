@@ -259,7 +259,7 @@
 							</tr>
 							<tr>
 								<td>
-									<form id="Form1" method="post">
+									<%--<form id="Form1" method="post" runat="server">
 										<asp:literal id="Literal2" runat="server"></asp:literal>
 										<table class="bodytext" width="100%">
 											<tr>
@@ -288,7 +288,7 @@
 												<TD align="left" colSpan="4">To change password, please provide current, new and confirming password then click "change password" button.</TD>
 											</TR>
 										</table>
-									</form>
+									</form>--%>
 								</td>
 							</tr>
 							<tr bgcolor="blue" height="2">

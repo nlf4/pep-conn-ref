@@ -201,40 +201,4 @@ Partial Public Class referral
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Literal2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Literal2 As Global.System.Web.UI.WebControls.Literal
-
-    '''<summary>
-    '''frmXXOldPWD control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXOldPWD As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''frmXXNewPWD1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXNewPWD1 As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''frmXXNewPWD2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXNewPWD2 As Global.System.Web.UI.WebControls.TextBox
 End Class

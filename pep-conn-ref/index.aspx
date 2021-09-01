@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="index.aspx.vb" Inherits="pep_conn_ref.index" %>
-
+<%@Register TagPrefix="footer" TagName="Footer" Src="Shared/footer.ascx" %>
+<%@Register TagPrefix="header" TagName="Header" Src="Shared/header.ascx" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,20 +15,26 @@
     </head>
     <body>
            
-            <!-- Navbar -->
-                <nav class="main-header navbar navbar-expand">
+            <!-- Top Navbar -->
+                <nav class="main-header navbar navbar-light navbar-expand-lg">
                     
                         <!-- Brand Logo -->
                         <div class="logo-container">
                             <a href="index.aspx" class="brand-link">
                                 <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3">
                             </a>
+                           
                         </div>
                         
                        <%-- <a href="#" class="brand-link">
                             &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
                         <div class="header-container">
                             <div class="title-panel">
+                                 
+                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar1">
+                                             <i class="fas fa-bars"></i>
+                                        </button>
+                                    
                                 <h2>PEP Referral System</h2>
                             </div>
                             
@@ -35,41 +42,20 @@
                                 <div class="login-link">
                                     <a href="/onlinereferral.aspx" class="user-login">Log In</a>
                                 </div>
-                            </div>
-                            <div class="menu-panel">
-                                <%--<i class="fas fa-bars"></i>--%>
+                                
                                 
                             </div>
+                            
+                          
                         </div>
                 </nav>
-            <!-- / Navbar -->
-
-         <nav id="mainnav" class="navbar navbar-light bg-light navbar-expand-lg"> 
-             <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                 <i class="fas fa-bars"></i>
-            </button>
-
-            <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
-                    <ul id="collapse-nav-list" class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="les-solutions">Les solutions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nos-offres">Nos offres</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact-demo">Contact & Démo</a>
-                        </li>
-                       </ul>
-                </div>
-              </div>
-            </nav>
-
-
-
+            <!-- / Top Navbar -->
 
         <div class="wrapper">
+            
+                                
+                                    
+                               
 
 		        <!-- Main Sidebar Container -->
                     <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -78,11 +64,8 @@
                         <div class="sidebar">
 
 		                     <!-- Sidebar Menu -->
-                            <nav class="nav-sidebar">
-                                <div class="container-fluid">
-                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                                         <i class="fas fa-bars"></i>
-                                    </button>
+                            
+                                     
                                 <div class="collapse navbar-collapse text-center" id="collapsibleNavbar1">
                                 <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item active-side">
@@ -123,8 +106,7 @@
                                     </li>
                                 </ul>
                                 </div>
-                              </div>
-                            </nav>
+                              
                             <!-- /Sidebar-menu -->
                         </div>
                         <!-- /Sidebar -->
@@ -148,12 +130,6 @@
                 
             </section>
         </div>
-
-        <footer>
-            <p>&copy; 2021 - Positive Education Program</p>
-        </footer>
-        <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+         <footer:Footer id="test" runat="server" />
        
-    </body>
-</html>
+     

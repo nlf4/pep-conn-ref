@@ -12,4 +12,13 @@ Option Explicit On
 
 
 Partial Public Class index
+
+    '''<summary>
+    '''test control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents test As Global.System.Web.UI.UserControl
 End Class
