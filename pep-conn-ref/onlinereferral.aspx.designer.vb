@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class onlinereferral
 
     '''<summary>
+    '''MainHeader control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MainHeader As Global.System.Web.UI.UserControl
+
+    '''<summary>
     '''lblMsg control.
     '''</summary>
     '''<remarks>
@@ -84,4 +93,13 @@ Partial Public Class onlinereferral
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''test control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents test As Global.System.Web.UI.UserControl
 End Class
