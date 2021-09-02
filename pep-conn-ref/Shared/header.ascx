@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> 
     <head runat="server">
         <title>PEP Referral</title>
+        <link rel="icon" type="image/png" href="/images/apple-icon.png">
 	    <link href="../style/style.css" type="text/css" rel="stylesheet">
 	    <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,7 +13,7 @@
     <body>
            
         <!-- Top Navbar -->
-        <nav class="main-header navbar navbar-light navbar-expand-lg">
+        <nav class="main-header navbar navbar-light navbar-expand-md">
                     
             <!-- Brand Logo -->
             <div class="logo-container">
@@ -47,10 +48,10 @@
                     <aside class="main-sidebar sidebar-dark-primary elevation-4">
    
                         <!-- Sidebar -->
-                        <div class="sidebar">
+                        <%--<div class="sidebar">--%>
 
 		                     <!-- Sidebar Menu -->    
-                                <div class="collapse navbar-collapse text-center" id="collapsibleNavbar1">
+                                <div class="collapse navbar-collapse" id="collapsibleNavbar1">
                                     <ul class="sidebar-list" role="menu" data-accordion="false">
                                         <li class="nav-item active-side">
                                             <a href="#" class="nav-link">
@@ -63,7 +64,7 @@
                                             </a>
                                         </li>--%>
                                         <li class="nav-item">
-                                            <a href="/admissioncriteria.aspx" class="nav-link active">
+                                            <a href="/admissioncriteria.aspx" class="nav-link">
                                                 <p>Admission Criteria</p>
                                             </a>
                                         </li>
@@ -85,6 +86,6 @@
                                     </ul>
                                 </div>
                             <!-- /Sidebar-menu -->
-                        </div>
+                        <%--</div>--%>
                         <!-- /Sidebar -->
                     </aside>
