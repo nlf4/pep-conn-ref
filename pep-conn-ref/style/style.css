@@ -34,21 +34,18 @@
     margin-left: 150px;
 }
 
+.login-link {
+    margin-right: 30px;
+}
+
 .title-panel {
     width: 65%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
 }
 
-.menu-panel {
-    width: 0%;
-    
-}
 
-.menu-panel i {
-    font-size: 18px;
-    height: 20px;
-}
+
 
 .user-panel {
     width: 40%;
@@ -409,12 +406,44 @@ div#profile .active {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 715px) {
+    .main-content {
+        margin: 0;
+        width: 100%;
+    }
+
+   .navbar {
+        padding-top: 0 !important;
+    }
+
     .main-header {
         flex-direction: column;
         height: 140px;
         align-items: center;
         box-shadow: none;
+       
     }
+
+    .menu-panel {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+    }
+
+    .title-panel {
+        
+        width: 50%;
+    }
+
+
+   .user-panel {
+       width: 20%;
+       justify-content: center;
+    }
+
+    .login-link {
+        margin-right: 0;
+    }
+
 
     .logo-container {
         width: 100%;
@@ -452,6 +481,7 @@ div#profile .active {
 
     .header-container {
         width: 100%;
+        padding-bottom: 5px;
     }
 
     .user-panel {
@@ -466,10 +496,9 @@ div#profile .active {
         text-decoration: none;
     }
 
-    
-
     .main-text {
         text-align: center;
+        margin: 20px auto;
     }
 
     .main-content {
@@ -504,12 +533,12 @@ div#profile .active {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
 
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
 
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     

@@ -24,10 +24,12 @@
             <%-- <a href="#" class="brand-link">
                 &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
             <div class="header-container">
-                <div class="title-panel">
+                <div class="menu-panel">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar1">
                         <i class="fas fa-bars"></i>
                     </button>
+                </div>
+                <div class="title-panel">
                     <h2>PEP Referral System</h2>
                 </div>
                 <div class="user-panel">
