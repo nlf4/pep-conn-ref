@@ -431,7 +431,7 @@ div#profile .active {
         height: 140px;
         align-items: center;
         box-shadow: none;
-       
+        
     }
 
     .menu-panel {
@@ -461,19 +461,19 @@ div#profile .active {
         display: flex;
         justify-content: center;
     }
-
+   
     .brand-link {
         width: 66%
     }
 
     .logo-image {
         height: 70px;
-        width: 100%;
+        width: 319px;
     }
 
     .wrapper {
         flex-direction: column;
-        min-height: 1600px;
+        min-height: 100vh;
     }
 
     .main-sidebar {
