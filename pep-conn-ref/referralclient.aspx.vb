@@ -42,6 +42,7 @@
             ComboSource(Me.frmXXTypeOfCustody, "select ID,Description from LookupValue where entity='REFF:CUST:TYPE' order by seq")
         End If
         Me.lblUser.Text = Session("UName")
+
         'If Request.QueryString("NEWUSER") = "YES" Then Me.lblUser.Text=Me.lblUser.Text & 
         'Me.lblLeftLink.Text = getSideLink("REFF")
         'Me.LblTopLink.Text = getTopLink("REFF", "DEMO")

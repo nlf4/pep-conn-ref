@@ -4,7 +4,7 @@
     <head runat="server">
         <title>PEP Referral</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/images/apple-icon.png">
+        <link rel="icon" type="image/png" href="/images/app.ico">
 	    <link href="../style/style.css" type="text/css" rel="stylesheet">
 	    <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -75,9 +75,17 @@
                                             </a>
                                         </li>--%>
                                         <li class="nav-item">
-                                            <a href="/onlinereferral.aspx" class="nav-link">
+                                            <a href="#submenu1" class="nav-link" data-bs-toggle="collapse">
                                                 <p>Online Referral</p>
                                             </a>
+                                            <ul class="collapse show nav flex-column ms-1 sidebar-list" id="submenu1" data-bs-parent="#menu">
+                                                <li class="nav-item w-100">
+                                                    <a href="/referral.aspx" class="nav-link px-0">Overview</a>
+                                                </li>
+                                                <li class="nav-item w-100">
+                                                    <a href="/referralclient.aspx" class="nav-link px-0">New Referral</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li class="nav-item">
                                             <a href="/contact.aspx" class="nav-link">

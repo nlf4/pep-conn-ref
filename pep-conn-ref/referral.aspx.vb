@@ -13,6 +13,9 @@ Public Class referral
             Response.Redirect(ConfigurationSettings.AppSettings("ROOT_DIRECTORY_SECURE") & "/onlinereferral.aspx")
         End If
         Me.lblUser.Text = Session("UName")
+        Me.loginPanel.Visible = False
+        Me.logoutPanel.Visible = True
+
         'If IsNumeric(Session("DaysPWDExpired")) Then
         '    DaysPWDExpired = CLng(Session("DaysPWDExpired"))
         '    If DaysPWDExpired < 31 Then
