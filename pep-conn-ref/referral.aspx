@@ -28,8 +28,7 @@
                 </a>
             </div>
                         
-            <%-- <a href="#" class="brand-link">
-                &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
+          
             <div class="header-container">
                 <div class="menu-panel">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar1">
@@ -116,23 +115,7 @@
                         <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>
                     </form>--%>
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="newref-tab" data-bs-toggle="tab" href="#newref" role="tab" aria-controls="newref" aria-selected="false">New Referral</a>
-                </li>     
-                <li class="nav-item dropdown" role="presentation">
-                    <a class="nav-link dropdown-toggle" id="account-tab" data-bs-toggle="dropdown" href="#account" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" data-bs-toggle="tab" href="#profile">Profile</a>
-                  <a class="dropdown-item" data-bs-toggle="tab" href="#password">Password</a>
-                  <a class="dropdown-item" data-bs-toggle="tab" href="#agency">Agency</a>
-                </div>
-          </li>
-          
-    </ul>
+     
 
 <div class="container-fluid">
 
@@ -269,36 +252,7 @@
 							</tr>
 							<tr>
 								<td>
-									<%--<form id="Form1" method="post" runat="server">
-										<asp:literal id="Literal2" runat="server"></asp:literal>
-										<table class="bodytext" width="100%">
-											<tr>
-												<td class="LabelLeftReq">Enter current Password:</td>
-												<td><asp:textbox id="frmXXOldPWD" runat="server" TextMode="Password"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td class="LabelLeftReq">Enter New Password:</td>
-												<td><asp:textbox id="frmXXNewPWD1" runat="server" TextMode="Password"></asp:textbox></td>
-											</tr>
-											<tr>
-												<td class="LabelLeftReq">Re-type Password:</td>
-												<td><asp:textbox id="frmXXNewPWD2" runat="server" TextMode="Password"></asp:textbox></td>
-											</tr>
-			                                <tr><td colspan="4"><hr /></td></tr>
-                                <tr><td colspan="4">Password needs to be 8-15 characters.
-                        <br />Password must conatin at least 3 out of 4 basic character groups (Upper case, lower case, number, symbol).
-                        <br />Password cannot be the same as the login and cannot be re-used.</td></tr>
-                                <tr><td colspan="4"><hr /></td></tr>
-                                            								<tr>
-												<td colspan="4" align="right">
-													<INPUT class="btn" type="submit" name="Update" value="Change Password">
-												</td>
-											</tr>
-											<TR>
-												<TD align="left" colSpan="4">To change password, please provide current, new and confirming password then click "change password" button.</TD>
-											</TR>
-										</table>
-									</form>--%>
+									
 								</td>
 							</tr>
 							<tr bgcolor="blue" height="2">
@@ -318,41 +272,11 @@
                         </div>
                           
 
- <%-- <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="overview">
-      <div class="alert alert-info">Overview</div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="newref">
-      <div class="alert alert-info">New Referral</div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="profile">
-      <div class="alert alert-info">Profile</div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="password">
-      <div class="alert alert-info">Password</div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="agency">
-      <div class="alert alert-info">Agency</div>
-    </div>
-    
-  </div>--%>
+
+  </div>
 </div>
 
-                    
-                    
-                    <%--<asp:Table runat="server" ID="refTable">
-                        <asp:TableHeaderRow ID="headerRow">
-                            <asp:TableHeaderCell>Child's Name (Tracking #)</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Draft Date</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Submit Date</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Status</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Print</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Delete</asp:TableHeaderCell>
-                        </asp:TableHeaderRow>
-                    </asp:Table>--%>
-                    
-                </div>
-                
-            </section>
-       </div>
-    <footer:Footer id="test" runat="server" />
+            </div>  
+        </section>
+    </div>
+<footer:Footer id="test" runat="server" />

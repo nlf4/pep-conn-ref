@@ -4,7 +4,7 @@
     <head runat="server">
         <title>PEP Referral</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/images/app.ico">
+        <link rel="icon" type="image/png" href="/images/pep_apple.png">
 	    <link href="../style/style.css" type="text/css" rel="stylesheet">
 	    <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />

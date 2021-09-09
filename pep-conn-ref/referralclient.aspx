@@ -60,37 +60,31 @@
                                <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item">
                                         <a href="/index.aspx" class="nav-link">
-                                            <!-- <i class="nav-icon fa fa-home"></i> -->
                                             <p>Connections Home</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <%--<li class="nav-item">
                                         <a href="#" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Latest News</p>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/admissioncriteria.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                   <%-- <li class="nav-item">
                                         <a href="/staff.aspx" class="nav-link">
-                                           <!-- <i class="nav-icon fas fa-th"></i>-->
                                             <p>Staff</p>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item active-side">
                                         <a href="/onlinereferral.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/contact.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Contact Us</p>
                                         </a>
                                     </li>
@@ -274,7 +268,7 @@
 											<td align="right" colSpan="4"><input class="btn" type="submit" value="Save" name="SaveMe">
 												&nbsp; <input class="btn" type="submit" value="Next" name="NextMe">
 											</td>
-											<nav aria-label="Page navigation example">
+											<nav aria-label="ref-page-navigation">
 											  <ul class="pagination">
                         
 												<li class="page-item active"><a class="page-link" href="#">1</a></li>

@@ -13,7 +13,6 @@
 
     </head>
     <body>
-        <%--<form id="form1" runat="server">--%>
            
             <!-- Navbar -->
                 <nav class="main-header navbar navbar-expand">
@@ -25,21 +24,33 @@
                             </a>
                         </div>
                         
-                       <%-- <a href="#" class="brand-link">
-                            &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
                         <div class="header-container">
                             <div class="title-panel">
                                 <h2>PEP Referral System</h2>
                             </div>
                             
                             <div class="user-panel">
-                                <asp:label id="lblUser" runat="server"></asp:label>
-                                <div class="login-link">
+                                <asp:label id="lblUser" runat="server" data-bs-toggle="dropdown" role="button" CssClass="dropdown-toggle"></asp:label>
+                                <ul class="dropdown-menu account-dropdown" aria-labelledby="lblUser">
+                                    <li>
+                                        <a class="dropdown-item active" href="/profile.aspx">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/profilepassword.aspx">Password</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Agency</a>
+                                    </li>
+                                </ul>
+                                <asp:Panel ID="loginPanel" runat="server" class="login-link">
+                                    <a href="/onlinereferral.aspx" class="user-login">Log In</a>
+                                </asp:Panel>
+                                <asp:Panel ID="logoutPanel" runat="server" class="login-link">
                                     <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
-                                </div>
-                            </div>
+                                </asp:Panel>
+                    
+                         </div>
                             <div class="menu-panel">
-                                <%--<i class="fas fa-bars"></i>--%>
                                 
                             </div>
                         </div>
@@ -63,37 +74,31 @@
                                <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item">
                                         <a href="/index.aspx" class="nav-link">
-                                            <!-- <i class="nav-icon fa fa-home"></i> -->
                                             <p>Connections Home</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <%--<li class="nav-item">
                                         <a href="#" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Latest News</p>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/admissioncriteria.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <%--<li class="nav-item">
                                         <a href="/staff.aspx" class="nav-link">
-                                           <!-- <i class="nav-icon fas fa-th"></i>-->
                                             <p>Staff</p>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/onlinereferral.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/contact.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Contact Us</p>
                                         </a>
                                     </li>
@@ -108,28 +113,17 @@
             <section class="main-content">
                 <div class="main-text">
 
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" id="password-tab" data-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="true">Password</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="agency-tab" data-toggle="tab" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Agency</a>
-                      </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                   
+                   
                           
                     <div class="user-details">
                        
                        
-                    </div>
+                    
                     <p>Please be sure to complete all the information on the 
 													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
                       </div>
-                      <div class="tab-pane fade show active" id="password" role="tabpanel" aria-labelledby="password-tab">
+                      
                           <table class="bodytext" width="100%">
 							<tr>
 								<td>
@@ -186,13 +180,12 @@
 										To Referral]</a></td>
 							</tr>
 						</table>
+                </div>
                   
-                      </div>
-                      <div class="tab-pane fade" id="agency" role="tabpanel" aria-labelledby="agency-tab">
-                          <h3> AGENCY PAGE </h3>
-                      </div>
+                      
+                     
                         
-                    </div>
+                    
                    
                    
                 </div>

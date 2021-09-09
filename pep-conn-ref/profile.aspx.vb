@@ -15,6 +15,8 @@
             If Me.lblMsg.Text = "" Then Me.lblMsg.Text = "Record updated."
         End If
         Me.lblUser.Text = Session("UName")
+        Me.loginPanel.Visible = False
+        Me.logoutPanel.Visible = True
         'If Request.QueryString("NEWUSER") = "YES" Then Me.lblUser.Text=Me.lblUser.Text & 
         'Me.lblLeftLink.Text = getSideLink("REFF")
         'Me.LblTopLink.Text = getTopLink("PROFILE", "PER")

@@ -67,6 +67,12 @@
     color: #0260B3;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #7C92C6 !important;
+}
+
 .navbar-toggler {
     color: white !important;
     border: none !important;
@@ -157,6 +163,8 @@ ul {
 
 .account-dropdown {
     left: 80% !important;
+    width: 150px;
+    padding:0;
 }
 
 aside {
@@ -359,6 +367,16 @@ tr {
 
 }
 
+.update-profile-btn {
+    background-color: #0260B3 !important;
+    color: white !important;
+}
+
+.update-profile-btn:hover {
+    background-color: #3680c2 !important;
+    color: white !important;
+}
+
 .user-details input {
     flex: 2;
     border-radius: 19px;
@@ -366,7 +384,6 @@ tr {
     border: none;
     box-shadow: -0.5px 0.5px 1px 0px rgb(0 0 0 / 15%);
     padding-left: 15px;
-
 }
 
 .user-details label {
@@ -524,8 +541,7 @@ div#profile .active {
     }
 
     .main-text {
-        text-align: center;
-        margin: 20px auto;
+        width: 80%;
     }
 
     .main-content {
@@ -548,12 +564,17 @@ div#profile .active {
     }
 
     #submitBtn {
-       margin-left: 200px;
+       margin-left: 70%;
     }
 
-
-    .login-form-container {
-        width: 94%;
+    .login-input input {
+        flex: 2;
+        border-radius: 19px;
+        line-height: 35px;
+        border: none;
+        box-shadow: -0.5px 0.5px 1px 0px rgb(0 0 0 / 15%);
+        margin: 5px;
+        padding-left: 10px;
     }
    
 }
@@ -567,13 +588,28 @@ div#profile .active {
 @media only screen and (min-width: 768px) {
     .logo-container {
         width: 19.5%;
-        
+    }
+
+    .login-form-container {
+        width: 100%;
     }
 
     .header-container {
         width: 80.5%;
-        
     }
+
+    .main-text {
+        width: 70%;
+    }
+
+    #loginForm {
+        width: 100%;
+    }
+
+    #submitBtn {
+        margin-left: 70%;
+    }
+
 }
 
 
@@ -588,7 +624,13 @@ div#profile .active {
 }*/
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #loginForm {
+        width: 100%;
+    }
 
+    .login-form-container {
+        width: 70%;
+    }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {

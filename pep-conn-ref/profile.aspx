@@ -13,9 +13,7 @@
             
     </head>
  
-    <body>
-        <%--<form id="form1" runat="server">--%>
-           
+    <body> 
             <!-- Navbar -->
                 <nav class="main-header navbar navbar-expand">
                     
@@ -26,21 +24,27 @@
                             </a>
                         </div>
                         
-                       <%-- <a href="#" class="brand-link">
-                            &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
                         <div class="header-container">
                             <div class="title-panel">
                                 <h2>PEP Referral System</h2>
                             </div>
                             
                             <div class="user-panel">
-                                <asp:label id="lblUser" runat="server"></asp:label>
-                                <div class="login-link">
+                                <asp:label id="lblUser" runat="server" data-bs-toggle="dropdown" role="button" CssClass="dropdown-toggle"></asp:label>
+                                <ul class="dropdown-menu account-dropdown" aria-labelledby="lblUser">
+                                  <a class="dropdown-item active" href="/profile.aspx">Profile</a>
+                                  <a class="dropdown-item" href="/profilepassword.aspx">Password</a>
+                                  <a class="dropdown-item" href="#">Agency</a>
+                                </ul>
+                                <asp:Panel ID="loginPanel" runat="server" class="login-link">
+                                    <a href="/onlinereferral.aspx" class="user-login">Log In</a>
+                                </asp:Panel>
+                                <asp:Panel ID="logoutPanel" runat="server" class="login-link">
                                     <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
-                                </div>
-                            </div>
+                                </asp:Panel>
+                    
+                         </div>
                             <div class="menu-panel">
-                                <%--<i class="fas fa-bars"></i>--%>
                                 
                             </div>
                         </div>
@@ -49,52 +53,42 @@
 
         <div class="wrapper">
 
-        
-
 		        <!-- Main Sidebar Container -->
                     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-   
 
                         <!-- Sidebar -->
                         <div class="sidebar">
                         
-
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
                                <ul class="sidebar-list" role="menu" data-accordion="false">
                                     <li class="nav-item">
                                         <a href="/index.aspx" class="nav-link">
-                                            <!-- <i class="nav-icon fa fa-home"></i> -->
                                             <p>Connections Home</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                   <%-- <li class="nav-item">
                                         <a href="#" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Latest News</p>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/admissioncriteria.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <%--<li class="nav-item">
                                         <a href="/staff.aspx" class="nav-link">
-                                           <!-- <i class="nav-icon fas fa-th"></i>-->
                                             <p>Staff</p>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/onlinereferral.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Online Referral</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/contact.aspx" class="nav-link">
-                                            <!--<i class="nav-icon fas fa-th"></i>-->
                                             <p>Contact Us</p>
                                         </a>
                                     </li>
@@ -104,25 +98,14 @@
                         </div>
                         <!-- /Sidebar -->
                     </aside>
-            
-           <%-- </form>--%>
+
             <section class="main-content">
                 <div class="main-text">
                     <asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
                     <asp:literal id="hiddenFormList" runat="server"></asp:literal>
                     <h2>USER PROFILE</h2>
 
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="password-tab" data-bs-toggle="tab" href="#password" role="tab" aria-controls="password" aria-selected="false">Password</a>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="agency-tab" data-bs-toggle="tab" href="#agency" role="tab" aria-controls="agency" aria-selected="false">Agency</a>
-                      </li>
-                    </ul>
+                    
                     <div class="tab-content" id="myTabContent">
                       <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                           
@@ -135,7 +118,6 @@
                                                     <label>UserID:</label>
 												    <asp:textbox id="frmXXUID" runat="server" ReadOnly="True"></asp:textbox>
 										        </div>
-												
 												
 											    <div class="input-row">
 												<label>First Name:</label>
@@ -161,8 +143,9 @@
                                                 <label>Licensure:</label>
 												<asp:textbox id="frmXXLicensure" runat="server" Width="415px"></asp:textbox>
 											    </div>
-                                            </div>
-                                            <div class="details-col-2">
+                                                </div>
+
+                                                <div class="details-col-2">
                                                 <div class="input-row">
                                                 <label>Professional Name:</label>
 												<asp:textbox id="frmXXProfessionName" runat="server"></asp:textbox>
@@ -189,37 +172,22 @@
                                                 </div>
 
                                                 <div class="input-row">
-                                                    <input class="btn" type="submit" value="Update" name="Update"/>
+                                                    <input class="btn update-profile-btn" type="submit" value="Update" name="Update"/>
                                                 </div>
                                             
-                                            
                                             </div>
-												
-                                                    
-												
-											
-												
-											
+													
 									</form>
                         
                     </div>
                     <p>Please be sure to complete all the information on the 
 													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
                       </div>
-                      <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
-                         <h3> PASSWORD PAGE </h3>
-                      </div>
-                      <div class="tab-pane fade" id="agency" role="tabpanel" aria-labelledby="agency-tab">
-                          <h3> AGENCY PAGE </h3>
-                      </div>
-                        
+                      
                     </div>
 
                 </div>
 
-
-               
-                
             </section>
         </div>
 
@@ -228,8 +196,8 @@
         </footer>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.4/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </html>
 

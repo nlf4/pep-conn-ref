@@ -23,6 +23,24 @@ Partial Public Class profilepassword
     Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''loginPanel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents loginPanel As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''logoutPanel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents logoutPanel As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>
