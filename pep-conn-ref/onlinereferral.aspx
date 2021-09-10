@@ -28,7 +28,7 @@
 
                             <div class="login-input">
                                 <label for="UID">User ID:</label>
-                                <asp:TextBox ID="UID" runat="server">Nfurtado</asp:TextBox>
+                                <asp:TextBox ID="UID" runat="server">Lfurtado</asp:TextBox>
                             </div>
 
                             <div class="login-input">

@@ -33,13 +33,13 @@
                                 <asp:label id="lblUser" runat="server" data-bs-toggle="dropdown" role="button" CssClass="dropdown-toggle"></asp:label>
                                 <ul class="dropdown-menu account-dropdown" aria-labelledby="lblUser">
                                     <li>
-                                        <a class="dropdown-item active" href="/profile.aspx">Profile</a>
+                                        <a class="dropdown-item" href="/profile.aspx">Profile</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/profilepassword.aspx">Password</a>
+                                        <a class="dropdown-item active" href="/profilepassword.aspx">Password</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">Agency</a>
+                                        <a class="dropdown-item" href="/profileagency.aspx">Agency</a>
                                     </li>
                                 </ul>
                                 <asp:Panel ID="loginPanel" runat="server" class="login-link">
@@ -59,15 +59,11 @@
 
         <div class="wrapper">
 
-        
-
 		        <!-- Main Sidebar Container -->
                     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-   
 
                         <!-- Sidebar -->
                         <div class="sidebar">
-                        
 
 		                     <!-- Sidebar Menu -->
                             <nav class="nav-sidebar">
@@ -109,21 +105,11 @@
                         <!-- /Sidebar -->
                     </aside>
             
-           <%-- </form>--%>
             <section class="main-content">
                 <div class="main-text">
 
-                   
-                   
-                          
                     <div class="user-details">
                        
-                       
-                    
-                    <p>Please be sure to complete all the information on the 
-													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
-                      </div>
-                      
                           <table class="bodytext" width="100%">
 							<tr>
 								<td>
@@ -133,9 +119,10 @@
 											<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
 										</tr>
 									</table>
-									<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label></td>
+									<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
+                                </td>
 							</tr>
-							<tr bgColor="blue" height="2">
+							<tr bgcolor="blue" height="2">
 								<td></td>
 							</tr>
 							<tr>
@@ -156,18 +143,18 @@
 												<td><asp:textbox id="frmXXNewPWD2" runat="server" TextMode="Password"></asp:textbox></td>
 											</tr>
 			                                <tr><td colspan="4"><hr /></td></tr>
-                                <tr><td colspan="4">Password needs to be 8-15 characters.
-                        <br />Password must conatin at least 3 out of 4 basic character groups (Upper case, lower case, number, symbol).
-                        <br />Password cannot be the same as the login and cannot be re-used.</td></tr>
-                                <tr><td colspan="4"><hr /></td></tr>
-                                            								<tr>
-												<td colspan="4" align="right">
-													<INPUT class="btn" type="submit" name="Update" value="Change Password">
-												</td>
+                                            <tr><td colspan="4">Password needs to be 8-15 characters.
+                                            <br />Password must conatin at least 3 out of 4 basic character groups (Upper case, lower case, number, symbol).
+                                            <br />Password cannot be the same as the login and cannot be re-used.</td></tr>
+                                            <tr><td colspan="4"><hr /></td></tr>
+                                            <tr>
+											<td colspan="4" align="right">
+												<input class="btn" type="submit" name="Update" value="Change Password" />
+											</td>
 											</tr>
-											<TR>
-												<TD align="left" colSpan="4">To change password, please provide current, new and confirming password then click "change password" button.</TD>
-											</TR>
+											<tr>
+												<td align="left" colspan="4">To change password, please provide current, new and confirming password then click "change password" button.</td>
+											</tr>
 										</table>
 									</form>
 								</td>
@@ -180,16 +167,10 @@
 										To Referral]</a></td>
 							</tr>
 						</table>
-                </div>
-                  
-                      
-                     
-                        
                     
-                   
-                   
+                        <p>Please be sure to complete all the information on the pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
+                      </div>
                 </div>
-                
             </section>
         </div>
 

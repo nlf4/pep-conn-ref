@@ -576,6 +576,10 @@ div#profile .active {
         margin: 5px;
         padding-left: 10px;
     }
+
+    .warning {
+       text-align: center;
+    }
    
 }
 

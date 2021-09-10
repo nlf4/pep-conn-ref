@@ -41,9 +41,15 @@
                 <div class="user-panel">
                     <asp:label id="lblUser" runat="server" data-bs-toggle="dropdown" role="button" CssClass="dropdown-toggle"></asp:label>
                     <ul class="dropdown-menu account-dropdown" aria-labelledby="lblUser">
-                      <a class="dropdown-item" href="/profile.aspx">Profile</a>
-                      <a class="dropdown-item" href="/profilepassword.aspx">Password</a>
-                      <a class="dropdown-item" href="#">Agency</a>
+                        <li>
+                            <a class="dropdown-item" href="/profile.aspx">Profile</a>
+                        </li>
+                      <li>
+                          <a class="dropdown-item" href="/profilepassword.aspx">Password</a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="/profileagency.aspx">Agency</a>
+                      </li>
                     </ul>
                     <asp:Panel ID="loginPanel" runat="server" class="login-link">
                         <a href="/onlinereferral.aspx" class="user-login">Log In</a>

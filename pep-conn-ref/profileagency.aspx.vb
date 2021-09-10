@@ -1,4 +1,4 @@
-﻿Public Class profilepassword
+﻿Public Class profileagency
     Inherits System.Web.UI.Page
 
     Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -6,48 +6,26 @@
         Me.loginPanel.Visible = False
         Me.logoutPanel.Visible = True
 
-        Dim dt As DataTable
-        Dim sSQL As String = ""
-        Dim errMsg As String = ""
-        'Dim x
+        Dim ds As DataTable
+
         'Dim i As Integer
         If getSecurity(Session, "CWAdmin", "CONWEBUSER") <> 0 Then
         Else
             Response.Redirect(ConfigurationSettings.AppSettings("ROOT_DIRECTORY_SECURE") & "/onlinereferral.aspx")
         End If
         If Me.IsPostBack And Request("Update") > "" Then
-            sSQL = "exec usp_Users_PWDChange '" _
-                 & Replace(Request("frmXXUID"), "'", "''") & "' ,'" _
-                 & Replace(Me.frmXXOldPWD.Text, "'", "''") & "','" _
-                 & Replace(Me.frmXXNewPWD1.Text, "'", "''") & "','" _
-                 & Replace(Me.frmXXNewPWD2.Text, "'", "''") & "',1"
-            dt = requestDT(sSQL)
-            If dt.Rows.Count = 0 Then
-                Me.lblMsg.Text = "Sorry, there is issue changing your password, please contact PEP's IT Dept for further assistance. ."
-            Else
-                errMsg = mydrToString(dt.Rows(0), "ErrMsg")
-                If errMsg = "" Then
-                    Session("UID") = dt.Rows(0)("UID")
-                    Session("IID") = dt.Rows(0)("ID")
-                    Session("UName") = dt.Rows(0)("UName")
-                    Session("AgencyName") = dt.Rows(0)("AgencyName")
-                    Session("DaysPWDExpired") = dt.Rows(0)("DaysPWDExpired")
-                    Me.lblMsg.Text = "Your password has been changed. Plesae <a href='Referral.aspx'>click her</a> or link in left side bar to continue your referral."
-                Else
-                    Me.lblMsg.Text = errMsg
-                End If
-
-            End If
+            Me.lblMsg.Text = UpdateFromForm(Request, "usp_ConnWebUser_Update_AGENCY", "")
+            If Me.lblMsg.Text = "" Then Me.lblMsg.Text = "Record updated."
         End If
         'Me.lblUser.Text = Session("UName") & " - " & Session("AgencyName") & " - User Profile"
         'Me.lblLeftLink.Text = getSideLink("REFF")
-        'Me.LblTopLink.Text = getTopLink("PROFILE", "PWD")
+        'Me.LblTopLink.Text = getTopLink("PROFILE", "AGENCY")
         'If Session("IID") > "" Then
-        dt = requestDT("Select * from ConnWebUser where ID=" & Session("IID"))
+        ds = requestDT("Select * from ConnWebUser where ID=" & Session("IID"))
         'Me.f()
-        Call PaintScreen(Me, dt)
-        Me.frmXXOldPWD.Text = ""
-        Me.hiddenFormList.Text = hiddenTag("frmXXID", dt.Rows(0)("ID")) & hiddenTag("frmXXUID", Session("UID"))
+        Call PaintScreen(Me, ds)
+
+        Me.hiddenFormList.Text = hiddenTag("frmXXID", ds.Rows(0)("ID")) & hiddenTag("frmXXUserUID", Session("UID"))
     End Sub
 
     Public Function getSecurity(ByRef Session As System.Web.SessionState.HttpSessionState, ByVal sAppId As String, ByVal sFunctID As String) As Int32
@@ -278,6 +256,8 @@
 
     Function myDRTostring(ByRef dr As DataRow, ByVal idx As String) As String
         If dr.IsNull(idx) Then Return ""
+        'Me.lblMsg.Text = idx
+        'Return "placeholder"
         Return dr(idx) & ""
     End Function
 

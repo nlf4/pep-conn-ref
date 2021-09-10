@@ -14,17 +14,17 @@
     <body>
            
         <!-- Top Navbar -->
-        <nav class="main-header navbar navbar-light navbar-expand-md">
+        <nav class="main-header navbar navbar-light navbar-expand-lg">
+            <%--<div class="container-fluid"></div>--%>
                     
             <!-- Brand Logo -->
             <div class="logo-container">
                 <a href="index.aspx" class="brand-link">
-                    <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3">
+                    <img src="images/peplogo2.jpg" alt="PEP Logo" class="logo-image elevation-3"/>
                 </a>
             </div>
                         
-            <%-- <a href="#" class="brand-link">
-                &nbsp;<span class="brand-text font-weight-light" aria-autocomplete="none"></span></a>--%>
+           
             <div class="header-container">
                 <div class="menu-panel">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar1">
