@@ -83,13 +83,16 @@ Public Class onlinereferral
                 & Replace(sUID, "'", "''") & "','" _
                 & Replace(sPWD, "'", "''") & "',1"
         dt = requestDT(sSQL)
-        Dim sValue As String = Convert.ToString(dt.Rows(0))
-        If dt.Rows.Count = 0 Then
-            Return "Sorry username not found"
-        Else
-            Console.Write(dt.Rows(0))
 
+        If dt.Rows.Count > 0 Then
+            Dim sValue As String = Convert.ToString(dt.Rows(0))
+            Console.Write(dt.Rows(0))
+        Else
+            Return "Sorry username not found"
         End If
+
+
+
         '"Sorry, but your name is not on our system. Please verify your user name and/or password."
         'Dim Redist As String = myDRTostring(dt.Rows(0), "Redirest")
         'If Redist > "" Then

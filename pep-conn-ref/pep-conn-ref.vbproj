@@ -120,9 +120,11 @@
     <Content Include="index.aspx" />
     <Content Include="latestnews.aspx" />
     <Content Include="onlinereferral.aspx" />
+    <Content Include="passwordchange.aspx" />
     <Content Include="profile.aspx" />
     <Content Include="profileagency.aspx" />
     <Content Include="profilepassword.aspx" />
+    <Content Include="PWDChange.aspx" />
     <Content Include="referral.aspx" />
     <Content Include="referralclient.aspx" />
     <Content Include="referralclientCOMM.aspx" />
@@ -195,6 +197,13 @@
       <DependentUpon>onlinereferral.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="passwordchange.aspx.designer.vb">
+      <DependentUpon>passwordchange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="passwordchange.aspx.vb">
+      <DependentUpon>passwordchange.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="profile.aspx.designer.vb">
       <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
@@ -214,6 +223,13 @@
     </Compile>
     <Compile Include="profilepassword.aspx.vb">
       <DependentUpon>profilepassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PWDChange.aspx.designer.vb">
+      <DependentUpon>PWDChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PWDChange.aspx.vb">
+      <DependentUpon>PWDChange.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="referral.aspx.designer.vb">

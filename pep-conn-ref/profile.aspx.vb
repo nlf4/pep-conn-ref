@@ -1,7 +1,7 @@
 ﻿Public Class profile
     Inherits System.Web.UI.Page
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Put user code to initialize the page here
         Dim ds As DataTable
         'Dim x
@@ -15,8 +15,7 @@
             If Me.lblMsg.Text = "" Then Me.lblMsg.Text = "Record updated."
         End If
         Me.lblUser.Text = Session("UName")
-        Me.loginPanel.Visible = False
-        Me.logoutPanel.Visible = True
+        'Me.lblUser.Text = Session("UName") & " - " & Session("AgencyName") & " - User Profile"
         'If Request.QueryString("NEWUSER") = "YES" Then Me.lblUser.Text=Me.lblUser.Text & 
         'Me.lblLeftLink.Text = getSideLink("REFF")
         'Me.LblTopLink.Text = getTopLink("PROFILE", "PER")

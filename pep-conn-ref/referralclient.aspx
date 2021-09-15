@@ -5,9 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title>PEP Referral</title>
-		    <link href="style/style.css" type="text/css" rel="stylesheet">
-		    <!-- Font Awesome -->
-		    <link rel="stylesheet" href="style/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/images/pep_apple.png">
+	    <link href="../style/style.css" type="text/css" rel="stylesheet">
+	    <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
     <body>
         <%--<form id="form1" runat="server">--%>
@@ -99,207 +103,227 @@
             <section class="main-content">
                 <div class="main-text">
 
-       
-		<table height="90%" cellSpacing="0" cellPadding="0" border="0">
-			<tr>
-				<td vAlign="top" width="160" background="images/sidebarBg.jpg" height="179">
-					<table class="bodytext" background="images/sidebarBg.jpg">
-						<tr vAlign="top" height="70">
-							<td height="97"><asp:literal id="lblLeftLink" runat="server"></asp:literal></td>
-						</tr>
+					<h3>New Referral</h3>
+					<table height="90%" cellSpacing="0" cellPadding="0" border="0">
 						<tr>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td>
-						</tr>
-					</table>
-				</td>
-				<td width="1" rowSpan="2">&nbsp;</td>
-				<td class="bodyText" vAlign="top" width="597" rowSpan="2">
-					<table class="bodytext" width="100%">
-						<tr>
-							<td><asp:label id="Label1" runat="server" Height="5px">Label</asp:label></td>
-						</tr>
-						<tr>
-							<td>
-								<table width="100%">
+							<%--<td vAlign="top" width="160" background="images/sidebarBg.jpg" height="179">
+								<table class="bodytext" background="images/sidebarBg.jpg">
+									<tr vAlign="top" height="70">
+										<td height="97"><asp:literal id="lblLeftLink" runat="server"></asp:literal></td>
+									</tr>
 									<tr>
-										<td width="80%">&nbsp;</td>
-										<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+							</td>--%>
+							<%--<td width="1" rowSpan="2">&nbsp;</td>--%>
+							<td class="bodyText" vAlign="top" width="597" rowSpan="2">
+								<table class="bodytext" width="100%">
+									<tr>
+										<td><asp:label id="Label1" runat="server" Height="5px"></asp:label></td>
+									</tr>
+								<%--	<tr>
+										<td>
+											<table width="100%">
+												<tr>
+													<td width="80%">&nbsp;</td>
+													<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
+												</tr>
+											</table>
+										</td>
+									</tr>--%>
+						
+
+									<tr>
+										<td align="left"><a class="CenterLinks" href="Referral.aspx">< Back To Overview</a></td>
+										
+									</tr>
+
+									<tr>
+										<td>
+											<form id="frm" method="post" runat="server">
+												<asp:literal id="hiddenFormList" runat="server"></asp:literal>
+												<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
+												<table class="bodytext" width="100%">
+													<tr valign=top>
+														<td class="LabelLeftreq"><br /><font color="red">*</font>Child's Name:
+														</td>
+														<td nowrap='nowrap' colspan="3">
+														<table cellpadding=0 cellspacing=2 class=bodyText>
+														<tr>
+															<td><asp:textbox id="frmXXFName" runat="server" Width="110px"></asp:textbox><br /><sup><font color="red">*</font>First Name</sup></td>
+															<td><asp:textbox id="frmXXMI" runat="server" Width="20px"></asp:textbox><br /><sup>M.I.</sup></td>
+															<td><asp:textbox id="frmXXLName" runat="server" Width="110px"></asp:textbox><br /><sup><font color="red">*</font>Last Name</sup></td>
+                                 
+														<td><asp:textbox id="frmXXSuffix" runat="server" Width="110px"></asp:textbox><br /><sup>&nbsp;Suffix (Jr., III)</sup></td>
+														   </tr>
+														</table>
+														</td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq"><font color="red">*</font>DOB:
+														</td>
+														<td><asp:textbox id="frmXXDOB" runat="server" Width="100px"></asp:textbox>
+														</td>
+														<td class="LabelLeftreq">SSN:&nbsp;</td><td><asp:textbox onchange='changedMe();' id="frmXXSS" runat="server" Width="100px"></asp:textbox>
+																	
+																				</td>				
+																								</tr>
+
+													<tr>
+														<td class="LabelLeftreq"><font color="red">*</font>Gender:
+														</td>
+														<td nowrap='nowrap' colspan=3>
+														<asp:radiobuttonlist id="frmXXSex"  Repeatdirection=Horizontal runat="server" Width="100px" font-Size="X-Small"><asp:ListItem Value="M">Male</asp:ListItem><asp:ListItem Value="F">Female</asp:ListItem>
+															</asp:radiobuttonlist>
+															</td>
+													</tr>
+
+													<tr class="labelTop">
+														<td colSpan="4">Care Giver/Current address and phone numbers:</td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq"><font color="red">*</font>Name:&nbsp;</td>
+														<td ><asp:textbox id="frmXXCareGiver" runat="server" Width="140px"></asp:textbox></td>
+														<td class="LabelLeftreq"><font color="red">*</font>Relationship:&nbsp;</td>
+														<td ><asp:textbox id="frmXXCaregiverRelationship" runat="server" Width="120px"></asp:textbox></td>
+													</tr>
+														<tr>
+														<td class="LabelLeftreq"><font color="red">*</font>Address:&nbsp;
+														</td>
+														<td colSpan="3"><asp:textbox id="frmXXAddress" runat="server" Width="415px"></asp:textbox></td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq">Add. Line 2:&nbsp;
+														</td>
+														<td colSpan="3"><asp:textbox id="frmXXAddress2" runat="server" Width="415px"></asp:textbox></td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq"><font color="red">*</font>City:&nbsp;
+														</td>
+														<td colspan=3><asp:textbox id="frmXXCity" runat="server"></asp:textbox>&nbsp;&nbsp;<b><font color="red">*</font>State:</b>&nbsp;
+														<asp:textbox id="frmXXST" runat="server" Width="30px"></asp:textbox>&nbsp;&nbsp;<font color="red">*</font><b>Zip:&nbsp;</b>
+														<asp:textbox id="frmXXZip" runat="server" Width="90px"></asp:textbox></td>
+													<tr>
+    												<tr>
+														<td class="LabelLeftreq">Phone:<font color="red">*</font>&nbsp;
+														</td>
+														<td nowrap colspan=3><asp:textbox id="frmXXPhone" maxlength=20 runat="server" Width="128px"></asp:textbox>
+														<asp:textbox id="frmXXPhoneWork" maxlength=25 runat="server" Width="128px"></asp:textbox>
+														<asp:textbox id="frmXXPhoneCell" maxlength=25 runat="server" Width="128px"></asp:textbox>
+														</td>
+													</tr>
+
+													<tr class="labelTop">
+														<td colSpan="4">Legal Guardian&nbsp;
+                                                
+														</td>
+													</tr>
+													<tr><td colspan="4" align="center">
+														 <asp:CheckBox ID="frmXXLegalSameAddress" runat="server" /><b> The Care Giver is also the Legal Guardian.</b>
+														<sup><i>If checked, please skip this section.</i>.</sup>
+														</td></tr>
+													<tr>
+														<td class="LabelLeftreq">Name:&nbsp;</td>
+														<td ><asp:textbox id="frmXXLegalCareGiver" runat="server" Width="140px"></asp:textbox></td>
+														<td class="LabelLeftreq">Relationship:&nbsp;</td>
+														<td ><asp:textbox id="frmXXLegalCareGiverRelationship" runat="server" Width="120px"></asp:textbox></td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq">Address:&nbsp;
+														</td>
+														<td colSpan="3"><asp:textbox id="frmXXLegalAddress" runat="server" Width="415px"></asp:textbox></td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq">Add. Line 2:&nbsp;
+														</td>
+														<td colSpan="3"><asp:textbox id="frmXXLegalAddress2" runat="server" Width="415px"></asp:textbox></td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq">City:&nbsp;
+														</td>
+														<td colspan=3><asp:textbox id="frmXXLegalCity" runat="server"></asp:textbox>&nbsp;&nbsp;<b>State:</b>&nbsp;
+														<asp:textbox id="frmXXLegalSt" runat="server" Width="30px"></asp:textbox>&nbsp;&nbsp;<b>Zip:&nbsp;</b>
+															<asp:textbox id="frmXXLegalZip" runat="server" Width="90px"></asp:textbox></td>
+													<tr>
+    												<tr>
+														<td class="LabelLeftreq">Phone:&nbsp;
+														</td>
+														<td nowrap colspan=3><asp:textbox id="frmXXlegalPhone1" maxlength=20 runat="server" Width="128px"></asp:textbox>
+														<asp:textbox id="frmXXlegalPhone2" maxlength=25 runat="server" Width="128px"></asp:textbox>
+														<asp:textbox id="frmXXlegalPhone3" maxlength=25 runat="server" Width="128px"></asp:textbox>
+														</td>
+													</tr>
+													<tr class="labelTop">
+														<td colSpan="4">
+															Custody Information</td>
+													</tr>
+													<tr>
+														<td class="LabelLeftreq">Type Of Custody:&nbsp;
+														</td>
+														<td><asp:dropdownlist id="frmXXTypeOfCustody" runat="server"></asp:dropdownlist></td>
+														<td class="LabelLeftreq">Type of Insurance:&nbsp;
+														</td>
+														<td>
+														<asp:textbox id="frmXXTypeOfInsurance" maxlength=25 runat="server" Width="128px"></asp:textbox>
+													   </td>
+													</tr>
+
+													<tr>
+														<td align="right">
+															<nav aria-label="ref-page-navigation">
+															<ul class="pagination">
+																<%-- <li class="page-item disabled">
+																  <a class="page-link" href="#" aria-label="Previous">
+																	<span aria-hidden="true">&laquo;</span>
+																  </a>
+																</li>--%>
+																<li class="page-item active"><a class="page-link" href="#">1</a></li>
+																<li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+																<li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+																<%--<li class="page-item">
+																  <a class="page-link" href="#" aria-label="Next">
+																	<span aria-hidden="true">&raquo;</span>
+																  </a>
+																</li>--%>
+															</ul>
+														</nav>
+														</td>
+														<td align="right" colSpan="4">
+															<%--<input class="btn" type="submit" value="Save" name="SaveMe">&nbsp; 
+															<input class="btn" type="submit" value="Next" name="NextMe">--%>
+															 
+														
+										
+							
+															<asp:Button ID="saveRefForm1" class="ref-buttons" runat="server" Text="Save" name="SaveMe"/>
+															
+															<asp:Button ID="nextRefForm1" class="ref-buttons" runat="server" Text="Next" name="NextMe"/>
+														</td>
+											
+													</tr>
+													<%--<tr>
+														<td align="left" colSpan="4">Save button saves current page. Next button saves and 
+															moves to next page.</td>
+													</tr>--%>
+												</table>
+											</form>
+										</td>
+									</tr>
+									<%--<tr bgColor="blue" height="2">
+										<td></td>
+									</tr>--%>
+						
+									<tr>
+										<td class="ltBlue" vAlign="top" height="100%"></td>
 									</tr>
 								</table>
 							</td>
 						</tr>
-						<tr bgColor="blue" height="2">
-							<td></td>
-						</tr>
-						<tr>
-							<td>
-								<form id="frm" method="post" runat="server">
-									<asp:literal id="hiddenFormList" runat="server"></asp:literal>
-									<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
-									<table class="bodytext" width="100%">
-										<tr valign=top>
-											<td class="LabelLeftreq"><br /><font color="red">*</font>Child's Name:
-											</td>
-											<td nowrap='nowrap' colspan="3">
-                                            <table cellpadding=0 cellspacing=2 class=bodyText>
-                                            <tr>
-                                                <td><asp:textbox id="frmXXFName" runat="server" Width="110px"></asp:textbox><br /><sup><font color="red">*</font>First Name</sup></td>
-                                                <td><asp:textbox id="frmXXMI" runat="server" Width="20px"></asp:textbox><br /><sup>M.I.</sup></td>
-                                                <td><asp:textbox id="frmXXLName" runat="server" Width="110px"></asp:textbox><br /><sup><font color="red">*</font>Last Name</sup></td>
-                                 
-                                            <td><asp:textbox id="frmXXSuffix" runat="server" Width="110px"></asp:textbox><br /><sup>&nbsp;Suffix (Jr., III)</sup></td>
-                                               </tr>
-                                            </table>
-                                            </td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq"><font color="red">*</font>DOB:
-											</td>
-                                            <td><asp:textbox id="frmXXDOB" runat="server" Width="100px"></asp:textbox>
-                                            </td>
-											<td class="LabelLeftreq">SSN:&nbsp;</td><td><asp:textbox onchange='changedMe();' id="frmXXSS" runat="server" Width="100px"></asp:textbox>
-																	
-                                                                    </td>				
-                                                                                    </tr>
-
-										<tr>
-											<td class="LabelLeftreq"><font color="red">*</font>Gender:
-											</td>
-                                            <td nowrap='nowrap' colspan=3>
-                                            <asp:radiobuttonlist id="frmXXSex"  Repeatdirection=Horizontal runat="server" Width="100px" font-Size="X-Small"><asp:ListItem Value="M">Male</asp:ListItem><asp:ListItem Value="F">Female</asp:ListItem>
-												</asp:radiobuttonlist>
-                                                </td>
-										</tr>
-
-										<tr class="labelTop">
-											<td colSpan="4">Care Giver/Current address and phone numbers:</td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq"><font color="red">*</font>Name:&nbsp;</td>
-											<td ><asp:textbox id="frmXXCareGiver" runat="server" Width="140px"></asp:textbox></td>
-											<td class="LabelLeftreq"><font color="red">*</font>Relationship:&nbsp;</td>
-											<td ><asp:textbox id="frmXXCaregiverRelationship" runat="server" Width="120px"></asp:textbox></td>
-										</tr>
-											<tr>
-											<td class="LabelLeftreq"><font color="red">*</font>Address:&nbsp;
-											</td>
-											<td colSpan="3"><asp:textbox id="frmXXAddress" runat="server" Width="415px"></asp:textbox></td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq">Add. Line 2:&nbsp;
-											</td>
-											<td colSpan="3"><asp:textbox id="frmXXAddress2" runat="server" Width="415px"></asp:textbox></td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq"><font color="red">*</font>City:&nbsp;
-											</td>
-											<td colspan=3><asp:textbox id="frmXXCity" runat="server"></asp:textbox>&nbsp;&nbsp;<b><font color="red">*</font>State:</b>&nbsp;
-        <asp:textbox id="frmXXST" runat="server" Width="30px"></asp:textbox>&nbsp;&nbsp;<font color="red">*</font><b>Zip:&nbsp;</b>
-												<asp:textbox id="frmXXZip" runat="server" Width="90px"></asp:textbox></td>
-										<tr>
-    									<tr>
-											<td class="LabelLeftreq">Phone:<font color="red">*</font>&nbsp;
-											</td>
-											<td nowrap colspan=3><asp:textbox id="frmXXPhone" maxlength=20 runat="server" Width="128px"></asp:textbox>
-                                            <asp:textbox id="frmXXPhoneWork" maxlength=25 runat="server" Width="128px"></asp:textbox>
-                                            <asp:textbox id="frmXXPhoneCell" maxlength=25 runat="server" Width="128px"></asp:textbox>
-											</td>
-										</tr>
-
-										<tr class="labelTop">
-											<td colSpan="4">Legal Guardian&nbsp;
-                                                
-                                            </td>
-										</tr>
-                                        <tr><td colspan="4" align="center">
-                                             <asp:CheckBox ID="frmXXLegalSameAddress" runat="server" /><b> The Care Giver is also the Legal Guardian.</b>
-                                            <sup><i>If checked, please skip this section.</i>.</sup>
-                                            </td></tr>
-										<tr>
-											<td class="LabelLeftreq">Name:&nbsp;</td>
-											<td ><asp:textbox id="frmXXLegalCareGiver" runat="server" Width="140px"></asp:textbox></td>
-											<td class="LabelLeftreq">Relationship:&nbsp;</td>
-											<td ><asp:textbox id="frmXXLegalCareGiverRelationship" runat="server" Width="120px"></asp:textbox></td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq">Address:&nbsp;
-											</td>
-											<td colSpan="3"><asp:textbox id="frmXXLegalAddress" runat="server" Width="415px"></asp:textbox></td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq">Add. Line 2:&nbsp;
-											</td>
-											<td colSpan="3"><asp:textbox id="frmXXLegalAddress2" runat="server" Width="415px"></asp:textbox></td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq">City:&nbsp;
-											</td>
-											<td colspan=3><asp:textbox id="frmXXLegalCity" runat="server"></asp:textbox>&nbsp;&nbsp;<b>State:</b>&nbsp;
-											<asp:textbox id="frmXXLegalSt" runat="server" Width="30px"></asp:textbox>&nbsp;&nbsp;<b>Zip:&nbsp;</b>
-												<asp:textbox id="frmXXLegalZip" runat="server" Width="90px"></asp:textbox></td>
-										<tr>
-    									<tr>
-											<td class="LabelLeftreq">Phone:&nbsp;
-											</td>
-											<td nowrap colspan=3><asp:textbox id="frmXXlegalPhone1" maxlength=20 runat="server" Width="128px"></asp:textbox>
-                                            <asp:textbox id="frmXXlegalPhone2" maxlength=25 runat="server" Width="128px"></asp:textbox>
-                                            <asp:textbox id="frmXXlegalPhone3" maxlength=25 runat="server" Width="128px"></asp:textbox>
-											</td>
-										</tr>
-										<tr class="labelTop">
-											<td colSpan="4">
-												Custody Information</td>
-										</tr>
-										<tr>
-											<td class="LabelLeftreq">Type Of Custody:&nbsp;
-											</td>
-											<td><asp:dropdownlist id="frmXXTypeOfCustody" runat="server"></asp:dropdownlist></td>
-											<td class="LabelLeftreq">Type of Insurance:&nbsp;
-											</td>
-											<td>
-                                            <asp:textbox id="frmXXTypeOfInsurance" maxlength=25 runat="server" Width="128px"></asp:textbox>
-                                           </td>
-										</tr>
-
-										<tr>
-											<td align="right" colSpan="4"><input class="btn" type="submit" value="Save" name="SaveMe">
-												&nbsp; <input class="btn" type="submit" value="Next" name="NextMe">
-											</td>
-											<nav aria-label="ref-page-navigation">
-											  <ul class="pagination">
-                        
-												<li class="page-item active"><a class="page-link" href="#">1</a></li>
-												<li class="page-item disabled"><a class="page-link" href="#">2</a></li>
-												<li class="page-item disabled"><a class="page-link" href="#">3</a></li>
-												<li class="page-item"><a class="page-link" href="#">Next</a></li>
-											  </ul>
-											</nav>
-										</tr>
-										<tr>
-											<td align="left" colSpan="4">Save button saves current page. Next button saves and 
-												moves to next page.</td>
-										</tr>
-									</table>
-								</form>
-							</td>
-						</tr>
-						<tr bgColor="blue" height="2">
-							<td></td>
-						</tr>
-						<tr>
-							<td align="right"><a class="CenterLinks" href="logoff.aspx">[Log off]</a>&nbsp;&nbsp;<a class="CenterLinks" href="Referral.aspx">[Back 
-									To List]</a></td>
-						</tr>
-						<tr>
-							<td class="ltBlue" vAlign="top" height="100%"></td>
-						</tr>
 					</table>
-				</td>
-			</tr>
-		</table>
                    
                 </div>
                 

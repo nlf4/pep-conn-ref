@@ -35,7 +35,7 @@
 }
 
 .login-link {
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .title-panel {
@@ -46,7 +46,7 @@
 
 .user-panel {
     width: 30%;
-    justify-content: flex-end;
+    justify-content: space-around;
     display: flex;
     align-items: center;
 }
@@ -60,6 +60,7 @@
     padding: 8px 19px;
     transition: 0.3s;
     border-radius: 16px;
+    
 }
 
 .user-login:hover {
@@ -216,8 +217,10 @@ footer {
     line-height: 26px;
 }
 
-.main-text h2 {
+.main-text h2, .main-text h3 {
     text-align: center;
+    color: #4d4949;
+    margin-bottom: 20px;
 }
 
 .main-text a {
@@ -238,26 +241,29 @@ a{
 /*******************REFERRAL PAGE********************/
 
 .ref-buttons {
-    border: 1px solid gray;
-    padding: 8px 19px;
+    border: 1px solid #0260B3;
+    padding: 4px 12px;
     transition: 0.25s;
     border-radius: 16px;
     background-color: #0260B3;
     color: floralwhite;
-    font-size: 18px;
+    font-size: 14px;
     margin: 10px;
+    text-align: end;
 }
 
-.ref-buttons:hover {
-    background-color: white;
-    color: #0260B3;
-    cursor: pointer;
-}
+    .ref-buttons:hover {
+        background-color: white;
+        color: #0260B3;
+        cursor: pointer;
+        border: 1px solid #0260B3;
+    }
 
 .refForm {
     display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+    justify-content: flex-end;
+    margin: 10px;
+    width: 100%;
 }
 
 #refTable {
@@ -267,6 +273,10 @@ a{
     height: 500px;
     width: 700px;
     margin-right: 0;
+}
+
+.page-heading {
+    margin-bottom: 25px;
 }
 
 #headerRow {
@@ -353,6 +363,15 @@ tr {
     color: gray;
 }
 
+user-details-prof-pwd {
+    display: flex;
+    flex-direction: column;
+    width: 760px;
+    background-color: #E4F0FF;
+    border-radius: 15px;
+    color: gray;
+}
+
 .user-details form {
     display: flex;
     flex-direction: row;
@@ -367,12 +386,12 @@ tr {
 
 }
 
-.update-profile-btn {
+.update-profile-btn, .update-password-btn {
     background-color: #0260B3 !important;
     color: white !important;
 }
 
-.update-profile-btn:hover {
+.update-profile-btn:hover, .update-password-btn:hover {
     background-color: #3680c2 !important;
     color: white !important;
 }

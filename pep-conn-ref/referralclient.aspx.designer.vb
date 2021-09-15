@@ -23,15 +23,6 @@ Partial Public Class referralclient
     Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblLeftLink control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblLeftLink As Global.System.Web.UI.WebControls.Literal
-
-    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>
@@ -39,15 +30,6 @@ Partial Public Class referralclient
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''LblTopLink control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents LblTopLink As Global.System.Web.UI.WebControls.Literal
 
     '''<summary>
     '''frm control.
@@ -345,4 +327,22 @@ Partial Public Class referralclient
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents frmXXTypeOfInsurance As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''saveRefForm1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents saveRefForm1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''nextRefForm1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents nextRefForm1 As Global.System.Web.UI.WebControls.Button
 End Class

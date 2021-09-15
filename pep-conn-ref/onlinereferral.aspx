@@ -10,7 +10,7 @@
                 <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label><br />
                 <asp:label id="lblContent" runat="server"  Width="588px" Font-Size="Larger"></asp:label>
                 <div class="main-text">
-                    <h2>Make a Referral</h2>
+                    <h2 class="page-heading">Make a Referral</h2>
                     <p>The online process will allow you to refer a child to the PEP CONNECTIONS program.<br />
                         All data is submitted through a secure connection, and all information will be held in strict 
                         confidence. Currently, the referral program only allows Professional/Agency Referrals.<br />
@@ -28,12 +28,12 @@
 
                             <div class="login-input">
                                 <label for="UID">User ID:</label>
-                                <asp:TextBox ID="UID" runat="server">Lfurtado</asp:TextBox>
+                                <asp:TextBox ID="UID" runat="server">Nfurtado</asp:TextBox>
                             </div>
 
                             <div class="login-input">
                                 <label for="password">Password:</label>
-                                <asp:TextBox ID="password" runat="server" TextMode="Password" Text="PipFroMer6!"></asp:TextBox>
+                                <asp:TextBox ID="password" runat="server" TextMode="Password" Text=""></asp:TextBox>
                             </div>
 
                             <asp:Button ID="submitBtn" runat="server" Text="Log In"  />

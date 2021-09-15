@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
-        <title>PEP Referral</title>
+            <title>PEP Referral</title>
+            <link rel="icon" type="image/png" href="/images/pep_apple.png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		    <link href="style/style.css" type="text/css" rel="stylesheet">
 		    <!-- Font Awesome -->
 		    <link rel="stylesheet" href="style/all.min.css">
@@ -108,23 +110,24 @@
             <section class="main-content">
                 <div class="main-text">
 
-                    <div class="user-details">
+                    <div class="user-details-prof-pwd">
                        
                           <table class="bodytext" width="100%">
 							<tr>
 								<td>
 									<table class="bodytext" width="100%">
 										<tr>
-											<td><asp:label id="Label1" runat="server" Height="5px">Label</asp:label></td>
+                                            <h3> Password Settings</h3>
+											<td><asp:label id="Label1" runat="server" Height="5px"></asp:label></td>
 											<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
 										</tr>
 									</table>
 									<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
                                 </td>
 							</tr>
-							<tr bgcolor="blue" height="2">
+							<%--<tr bgcolor="gray" height="2">
 								<td></td>
-							</tr>
+							</tr>--%>
 							<tr>
 								<td>
 									<form id="frm" method="post" runat="server">
@@ -149,26 +152,26 @@
                                             <tr><td colspan="4"><hr /></td></tr>
                                             <tr>
 											<td colspan="4" align="right">
-												<input class="btn" type="submit" name="Update" value="Change Password" />
+                                                <input class="btn update-password-btn" type="submit" value="Change Password" name="update_password"/>
 											</td>
 											</tr>
-											<tr>
+											<%--<tr>
 												<td align="left" colspan="4">To change password, please provide current, new and confirming password then click "change password" button.</td>
-											</tr>
+											</tr>--%>
 										</table>
 									</form>
 								</td>
 							</tr>
-							<tr bgcolor="blue" height="2">
+							<%--<tr bgcolor="gray" height="2">
 								<td></td>
-							</tr>
-							<tr>
+							</tr>--%>
+							<%--<tr>
 								<td><a class="CenterLinks" href='logoff.aspx'>[Log off]</a>&nbsp;&nbsp;<a class="CenterLinks" href='Referral.aspx'>[Back 
 										To Referral]</a></td>
-							</tr>
+							</tr>--%>
 						</table>
                     
-                        <p>Please be sure to complete all the information on the pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
+                        <%--<p>Please be sure to complete all the information on the pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>--%>
                       </div>
                 </div>
             </section>

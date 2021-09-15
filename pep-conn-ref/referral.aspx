@@ -9,7 +9,7 @@
     <head runat="server">
         <title>PEP Referral</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/images/apple-icon.png">
+        <link rel="icon" type="image/png" href="/images/pep_apple.png">
 	    <link href="../style/style.css" type="text/css" rel="stylesheet">
 	    <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -114,21 +114,12 @@
             <section class="main-content">
                 <div class="main-text">
                     <asp:Label id="lblErrMsg" runat="server" ForeColor="Red" Visible="False">Label</asp:Label>
+                    <h3>Referral Overview</h3>
 
-                   
-                    <%--<form class="refForm" runat="server"> 
-                        <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral" PostBackUrl="referralclient.aspx"/>
-                        <asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>
-                    </form>--%>
+                     <div class="container-fluid">
 
-     
-
-<div class="container-fluid">
-
-    <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
-                                <asp:DataGrid id="DataGrid1" runat="server" Width="750px" AutoGenerateColumns="false" font-Size="Smaller"
-										    font-Names="Arial">
+                                <asp:DataGrid id="DataGrid1" runat="server" Width="750px" AutoGenerateColumns="false" font-Size="Smaller" font-Names="Arial">
                                     <AlternatingItemStyle font-Size="X-Small" ForeColor="#003399" BackColor="#E4F0FF"></AlternatingItemStyle>
                                     <ItemStyle font-Size="X-Small" ForeColor="#330099" BackColor="White"></ItemStyle>
 									<headerStyle font-Size="Larger" font-Names="Arial" font-Bold="true" ForeColor="White" BackColor="#0260B3"></headerStyle>
@@ -152,8 +143,17 @@
 											headerText="Delete"></asp:HyperLinkColumn>
 									</Columns>
                             </asp:DataGrid>
+                            
+
                         </div>
-                        <div class="tab-pane fade" id="newref" role="tabpanel" aria-labelledby="newref-tab">
+                        <form class="refForm" runat="server"> 
+                            <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral" PostBackUrl="referralclient.aspx"/>
+                        <%--<asp:Button ID="viewProfileBtn" class="ref-buttons" runat="server" Text="View My Profile" PostBackUrl="profile.aspx"/>--%>
+                         </form>
+
+
+
+                       <%-- <div class="tab-pane fade" id="newref" role="tabpanel" aria-labelledby="newref-tab">
                         <h3> NEWREF PAGE </h3>
                         </div>
                         <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
@@ -275,11 +275,11 @@
                         </div>
                         <div class="tab-pane fade" id="agency" role="tabpanel" aria-labelledby="agency-tab">
                          <h3> AGENCY PAGE </h3>
-                        </div>
+                        </div>--%>
                           
 
 
-  </div>
+ 
 </div>
 
             </div>  

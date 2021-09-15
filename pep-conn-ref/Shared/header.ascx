@@ -14,8 +14,8 @@
     <body>
            
         <!-- Top Navbar -->
-        <nav class="main-header navbar navbar-light navbar-expand-lg">
-            <%--<div class="container-fluid"></div>--%>
+        <nav class="main-header navbar navbar-light navbar-expand-md">
+            <div class="container-fluid">
                     
             <!-- Brand Logo -->
             <div class="logo-container">
@@ -36,9 +36,11 @@
                 </div>
                 <div class="user-panel">
                     <div class="login-link">
-                        <a href="/onlinereferral.aspx" class="user-login">Log In</a>
+                        <a href="/onlinereferral.aspx#loginForm" class="user-login">Log In</a>
                     </div>
                 </div>
+            </div>
+
             </div>
         </nav>
         <!-- / Top Navbar -->
@@ -53,10 +55,10 @@
 
 		                     <!-- Sidebar Menu -->    
                                 <div class="collapse navbar-collapse" id="collapsibleNavbar1">
-                                    <ul class="sidebar-list" role="menu" data-accordion="false">
+                                    <ul class="sidebar-list navbar-nav" role="menu" data-accordion="false">
                                         <li class="nav-item active-side">
-                                            <a href="#" class="nav-link">
-                                                <p>Connections Home</p>
+                                            <a href="#" class="nav-link">Connections Home
+                                                <%--<p>Connections Home</p>--%>
                                             </a>
                                         </li>
                                         <%--<li class="nav-item">
@@ -74,22 +76,23 @@
                                                 <p>Staff</p>
                                             </a>
                                         </li>--%>
-                                        <li class="nav-item">
-                                            <a href="#submenu1" class="nav-link" data-bs-toggle="collapse">
-                                                <p>Online Referral</p>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                               <%-- <p>Online Referral</p>--%>
+                                                Online Referral
                                             </a>
-                                            <ul class="collapse show nav flex-column ms-1 sidebar-list" id="submenu1" data-bs-parent="#menu">
-                                                <li class="nav-item w-100">
-                                                    <a href="/referral.aspx" class="nav-link px-0">Overview</a>
+                                            <ul class="dropdown-menu sidebar-list" aria-labelledby="navbarDropdown">
+                                                <li>
+                                                    <a href="/referral.aspx" class="dropdown-item">Overview</a>
                                                 </li>
-                                                <li class="nav-item w-100">
-                                                    <a href="/referralclient.aspx" class="nav-link px-0">New Referral</a>
+                                                <li>
+                                                    <a href="/referralclient.aspx" class="dropdown-item">New Referral</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/contact.aspx" class="nav-link">
-                                                <p>Contact Us</p>
+                                            <a href="/contact.aspx" class="nav-link"> Contact Us
+                                                <%--<p>Contact Us</p>--%>
                                             </a>
                                         </li>
                                     </ul>

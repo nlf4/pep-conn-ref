@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
-        <title>PEP Referral</title>
+            <title>PEP Referral</title>
+            <link rel="icon" type="image/png" href="/images/pep_apple.png">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		    <link href="style/style.css" type="text/css" rel="stylesheet">
 		    <!-- Font Awesome -->
 		    <link rel="stylesheet" href="style/all.min.css">
@@ -36,9 +38,9 @@
                                   <a class="dropdown-item" href="/profilepassword.aspx">Password</a>
                                   <a class="dropdown-item" href="/profileagency.aspx">Agency</a>
                                 </ul>
-                                <asp:Panel ID="loginPanel" runat="server" class="login-link">
+                                <%--<asp:Panel ID="loginPanel" runat="server" class="login-link">
                                     <a href="/onlinereferral.aspx" class="user-login">Log In</a>
-                                </asp:Panel>
+                                </asp:Panel>--%>
                                 <asp:Panel ID="logoutPanel" runat="server" class="login-link">
                                     <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
                                 </asp:Panel>
@@ -103,11 +105,11 @@
                 <div class="main-text">
                     <asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
                     <asp:literal id="hiddenFormList" runat="server"></asp:literal>
-                    <h2>USER PROFILE</h2>
+                    <h3>User Profile</h3>
 
                     
-                    <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    
+                     
                           
                     <div class="user-details">
                        
@@ -180,11 +182,11 @@
 									</form>
                         
                     </div>
-                    <p>Please be sure to complete all the information on the 
-													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
-                      </div>
+<%--                    <p>Please be sure to complete all the information on the 
+													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>--%>
+                   
                       
-                    </div>
+                   
 
                 </div>
 
