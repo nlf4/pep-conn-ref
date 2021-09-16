@@ -50,6 +50,9 @@
                       <li>
                           <a class="dropdown-item" href="/profileagency.aspx">Agency</a>
                       </li>
+                        <li>
+                          <a class="dropdown-item" href="/index.aspx">Log Out</a>
+                      </li>
                     </ul>
                     <asp:Panel ID="loginPanel" runat="server" class="login-link">
                         <a href="/onlinereferral.aspx" class="user-login">Log In</a>

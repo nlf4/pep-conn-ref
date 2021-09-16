@@ -1,7 +1,6 @@
 ﻿Public Class referralclient
     Inherits System.Web.UI.Page
 
-
     Private Function ValidateInput(ByVal sArea As String) As String
         If Session("REFID") = "" Then Response.Redirect("onlinereferral.aspx")
         Dim ds As DataTable

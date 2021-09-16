@@ -188,7 +188,7 @@
 											</tr>
                                 <tr><td colspan="4"><hr /></td></tr>
                                 <tr><td colspan="4">Password needs to be 8-15 characters.
-                        <br />Password must conatin at least 3 out of 4 basic character groups (Upper case, lower case, number, symbol).
+                        <br />Password must contain at least 3 out of 4 basic character groups (Upper case, lower case, number, symbol).
                         <br />Password cannot be the same as the login and cannot be re-used.</td></tr>
                                 <tr><td colspan="4"><hr /></td></tr>
 								<tr>
