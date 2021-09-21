@@ -14,7 +14,7 @@ Public Class referral
         End If
         Me.lblUser.Text = Session("UName")
         Me.loginPanel.Visible = False
-        Me.logoutPanel.Visible = True
+        'Me.logoutPanel.Visible = True
 
         'If IsNumeric(Session("DaysPWDExpired")) Then
         '    DaysPWDExpired = CLng(Session("DaysPWDExpired"))

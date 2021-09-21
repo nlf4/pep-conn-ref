@@ -14,7 +14,7 @@
     <body>
            
         <!-- Top Navbar -->
-        <nav class="main-header navbar navbar-light navbar-expand-md">
+        <nav class="main-header navbar navbar-light ">
             <div class="container-fluid">
                     
             <!-- Brand Logo -->
@@ -55,33 +55,23 @@
 
 		                     <!-- Sidebar Menu -->    
                                 <div class="collapse navbar-collapse" id="collapsibleNavbar1">
-                                    <ul class="sidebar-list navbar-nav" role="menu" data-accordion="false">
+                                    <ul class="navbar-nav">
                                         <li class="nav-item active-side">
-                                            <a href="#" class="nav-link">Connections Home
+                                            <a href="/index.aspx" class="nav-link">Connections Home
                                                 <%--<p>Connections Home</p>--%>
                                             </a>
                                         </li>
-                                        <%--<li class="nav-item">
-                                            <a href="/latestnews.aspx" class="nav-link ">
-                                                <p>Latest News</p>
-                                            </a>
-                                        </li>--%>
                                         <li class="nav-item">
                                             <a href="/admissioncriteria.aspx" class="nav-link">
                                                 <p>Admission Criteria</p>
                                             </a>
                                         </li>
-                                       <%-- <li class="nav-item">
-                                            <a href="/staff.aspx" class="nav-link">
-                                                <p>Staff</p>
-                                            </a>
-                                        </li>--%>
-                                        <li class="nav-item dropdown">
+                                        <li class="nav-item dropdown" id="ref-dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                                <%-- <p>Online Referral</p>--%>
                                                 Online Referral
                                             </a>
-                                            <ul class="dropdown-menu sidebar-list" aria-labelledby="navbarDropdown">
+                                            <ul class="dropdown-menu">
                                                 <li>
                                                     <a href="/referral.aspx" class="dropdown-item">Overview</a>
                                                 </li>

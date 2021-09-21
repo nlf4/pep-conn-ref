@@ -7,8 +7,7 @@
 
 <header:Header id="MainHeader" runat="server" />
             <section class="main-content">
-                <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label><br />
-                <asp:label id="lblContent" runat="server"  Width="588px" Font-Size="Larger"></asp:label>
+               
                 <div class="main-text">
                     <h2 class="page-heading">Make a Referral</h2>
                     <p>The online process will allow you to refer a child to the PEP CONNECTIONS program.<br />
@@ -44,7 +43,8 @@
                            </form>
 
                         </div>
-
+                     <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label><br />
+                <asp:label id="lblContent" runat="server"  Width="588px" Font-Size="Larger"></asp:label>
                 </div>
                 
             </section>

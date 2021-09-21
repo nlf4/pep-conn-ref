@@ -23,24 +23,6 @@ Partial Public Class onlinereferral
     Protected WithEvents MainHeader As Global.System.Web.UI.UserControl
 
     '''<summary>
-    '''lblMsg control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblContent control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblContent As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''loginForm control.
     '''</summary>
     '''<remarks>
@@ -93,6 +75,24 @@ Partial Public Class onlinereferral
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''lblMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblContent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblContent As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''test control.

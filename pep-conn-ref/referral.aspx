@@ -121,7 +121,7 @@
 
                      <div class="container-fluid">
 
-                        <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                        
                                 <asp:DataGrid id="DataGrid1" runat="server" Width="750px" AutoGenerateColumns="false" font-Size="Smaller" font-Names="Arial">
                                     <AlternatingItemStyle font-Size="X-Small" ForeColor="#003399" BackColor="#E4F0FF"></AlternatingItemStyle>
                                     <ItemStyle font-Size="X-Small" ForeColor="#330099" BackColor="White"></ItemStyle>
@@ -146,8 +146,46 @@
 											headerText="Delete"></asp:HyperLinkColumn>
 									</Columns>
                             </asp:DataGrid>
-                            
 
+                         <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Child (Tracking #)</th>
+                                  <th scope="col">Draft Date</th>
+                                  <th scope="col">Submit Date</th>
+                                  <th scope="col">Status</th>
+                                  <th scope="col">Print</th>
+                                  <th scope="col">Delete</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">test</th>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">test</th>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">test</th>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                  <td>test</td>
+                                </tr>
+                              
+                              </tbody>
+                            </table>
                         </div>
                         <form class="refForm" runat="server"> 
                             <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral" PostBackUrl="referralclient.aspx"/>
@@ -156,136 +194,9 @@
 
 
 
-                       <%-- <div class="tab-pane fade" id="newref" role="tabpanel" aria-labelledby="newref-tab">
-                        <h3> NEWREF PAGE </h3>
-                        </div>
-                        <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
-                         <h3> ACCOUNT PAGE </h3>
-                        </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            
-                            <asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
-                    <asp:literal id="hiddenFormList" runat="server"></asp:literal>
-                    <h2>USER PROFILE</h2>
+                     
 
-                   
-                   
-                          
-                    <div class="user-details">
-                       
-                        <form id="frm" method="post" runat="server">
-                            <div class="details-col-1">
-										<asp:literal id="Literal1" runat="server"></asp:literal>
-										        <div class="input-row">
-                                                    <label>UserID:</label>
-												    <asp:textbox id="frmXXUID" runat="server" ReadOnly="True"></asp:textbox>
-										        </div>
-												
-												
-											    <div class="input-row">
-												<label>First Name:</label>
-												<asp:textbox id="frmXXFirstName" runat="server"></asp:textbox>
-												</div>
-
-											    <div class="input-row">
-                                                <label>Salutation:</label>
-												<asp:textbox id="frmXXSolutation" runat="server"></asp:textbox>
-												</div>
-
-											    <div class="input-row">
-                                                <label>Phone:</label>
-												<asp:textbox id="frmXXPhone" runat="server"></asp:textbox>
-												</div>
-
-                                                <div class="input-row">
-												<label>Fax:</label>
-												<asp:textbox id="frmXXFax" runat="server"></asp:textbox>
-												</div>
-
-											    <div class="input-row">
-                                                <label>Licensure:</label>
-												<asp:textbox id="frmXXLicensure" runat="server" Width="415px"></asp:textbox>
-											    </div>
-                                            </div>
-                                            <div class="details-col-2">
-                                                <div class="input-row">
-                                                <label>Professional Name:</label>
-												<asp:textbox id="frmXXProfessionName" runat="server"></asp:textbox>
-                                                </div>
-
-                                                <div class="input-row">
-                                                <label>Last Name:</label>
-												<asp:textbox id="frmXXLastName" runat="server"></asp:textbox>
-                                                </div>
-
-                                                <div class="input-row">
-                                                <label>Title:</label>
-												<asp:textbox id="frmXXTitle" runat="server"></asp:textbox>
-                                                </div>
-
-                                                <div class="input-row">
-                                                <label>Mobile:</label>
-												<asp:textbox id="frmXXCell" runat="server"></asp:textbox>
-                                                </div>
-
-                                                <div class="input-row">
-                                                <label>Email:</label>
-												<asp:textbox id="frmXXeMail" runat="server"></asp:textbox>
-                                                </div>
-
-                                                <div class="input-row">
-                                                    <input class="btn" type="submit" value="Update" name="Update"/>
-                                                </div>
-                                            
-                                            </div>	
-									</form>
-                                </div>
-                              <p>Please be sure to complete all the information on the pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
-
-                        </div>
-                        <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
-                            
-                             <table class="bodytext" width="100%">
-							<tr>
-								<td>
-									<table class="bodytext" width="100%">
-										<tr>
-											<td><asp:label id="Label1" runat="server" Height="5px">Label</asp:label></td>
-											<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
-										</tr>
-									</table>
-									<asp:label id="Label2" runat="server" ForeColor="Red"></asp:label></td>
-							</tr>
-							<tr bgColor="blue" height="2">
-								<td></td>
-							</tr>
-							<tr>
-								<td>
-									
-								</td>
-							</tr>
-							<tr bgcolor="blue" height="2">
-								<td></td>
-							</tr>
-							<tr>
-								<td><a class="CenterLinks" href='logoff.aspx'>[Log off]</a>&nbsp;&nbsp;<a class="CenterLinks" href='Referral.aspx'>[Back 
-										To Referral]</a></td>
-							</tr>
-						</table>
-                  
-                      </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="agency" role="tabpanel" aria-labelledby="agency-tab">
-                         <h3> AGENCY PAGE </h3>
-                        </div>--%>
-                          
-
-
- 
-</div>
-
-            </div>  
-        </section>
-    </div>
+                    </div> 
+                </section>
+             </div>
 <footer:Footer id="test" runat="server" />

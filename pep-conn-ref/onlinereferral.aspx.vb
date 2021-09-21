@@ -88,7 +88,7 @@ Public Class onlinereferral
             Dim sValue As String = Convert.ToString(dt.Rows(0))
             Console.Write(dt.Rows(0))
         Else
-            Return "Sorry username not found"
+            Return "Sorry incorrect username/password combination"
         End If
 
 
