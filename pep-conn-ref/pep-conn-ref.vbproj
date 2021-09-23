@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admissioncriteria.aspx" />
+    <Content Include="CMSShow.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="footer.html" />
     <Content Include="forgetpassword.aspx" />
@@ -141,6 +142,13 @@
     </Compile>
     <Compile Include="admissioncriteria.aspx.vb">
       <DependentUpon>admissioncriteria.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CMSShow.aspx.designer.vb">
+      <DependentUpon>CMSShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSShow.aspx.vb">
+      <DependentUpon>CMSShow.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="contact.aspx.designer.vb">

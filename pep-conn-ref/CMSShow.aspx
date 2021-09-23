@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="forgetpassword.aspx.vb" Inherits="pep_conn_ref.forgetpassword" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CMSShow.aspx.vb" Inherits="pep_conn_ref.CMSShow" %>
 
 <!DOCTYPE html>
 
@@ -101,37 +101,14 @@
           
             <section class="main-content">
                 <div class="main-text">
-                    <h2>Forgot Your Password?</h2>
-                    <form id="frm" method="post" class="pwd-reset-form" runat="server">
-						<asp:label id="lblContent" runat="server">Label</asp:label>
-                        
-                        <p>Please enter your user ID and email and we'll send you a reset link. If you do not have email address or cannot access your email at this moment, please contact our IT department at <a href='tel:+12163614400'>216-361-4400</a>.</p>
-                        <div class="input-row">
-                            <label>User ID:</label>
-                            <asp:textbox id="frmXXUID" runat="server"></asp:textbox>
-						</div>
-                        <div class="input-row">
-                             <label>Email:</label>
-						    <asp:textbox id="frmXXEmail" runat="server"></asp:textbox>
-                        </div>
-                        <div class="button-row">
-                            <asp:button id="btnPasswordReset" runat="server" Text="Reset My Password" CssClass="btn"></asp:button>
-                        </div>
-                        
-                        
-                        <h3>Forgot your User ID?</h3>
-                        <p>Please enter your email and we will mail you the associated user ID.</p>
-                        <div class="input-row">
-                            <label>Email:</label>
-                            <asp:textbox id="frmXXEmailFGUID" runat="server"></asp:textbox><br />
-                        </div>
-                        <div class="button-row">
-                            <asp:button id="btnUIDInquery" runat="server" Text="Send My User ID" CssClass="btn"></asp:button>
-                        </div>
-                        
-						<asp:Label id="lblMsg" runat="server" ForeColor="Red"></asp:Label>
-								
-					</form>
+                    <div id="pwd-reset-sent">
+                        <h2>Check your inbox!</h2>
+                        <img height="80px" src="/images/mail-sent.svg" />
+                        <p>PEP just sent an email to your email address with the associated User ID/Name.
+                        Please use this to <a href="onlinereferral.aspx">sign in</a> to our website.
+                        If you have forgotten your password, you can <a href="forgetpassword.aspx">click here</a> to reset it.</p>
+                        <p>Feel free to contact PEP IT staff if you have any questions at <a href='tel:+12169127276'>216-912-7276</a>.</p>
+                    </div>
                 </div>
             </section>
         </div>

@@ -10,6 +10,9 @@ Public Class forgetpassword
         If Request.Form("btnPasswordReset") & "" > "" Then
             If Me.frmXXEmail.Text = "" Then Return "Email is a required field"
         End If
+        If Request.Form("btnUIDInquery") & "" > "" Then
+            If Me.frmXXEmailFGUID.Text = "" Then Return "Email is a required field"
+        End If
         Return ""
     End Function
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -49,15 +52,15 @@ Public Class forgetpassword
                 End If
             End If
         End If
-        dt = requestDT("exec usp_ConnWebContent_get 'SIGNON','FORGET'")
-        For i = 0 To dt.Rows.Count - 1
-            If i = 0 Then
-                Me.lblContent.Text = dt.Rows(i)("Contents")
-            Else
-                Me.lblContent.Text = Me.lblContent.Text & "<BR><br>" & dt.Rows(i)("Contents")
-            End If
-        Next
-        'Me.lblContent.Text = Me.lblContent.Text & "<br>"
+        'dt = requestDT("exec usp_ConnWebContent_get 'SIGNON','FORGET'")
+        'For i = 0 To dt.Rows.Count - 1
+        '    If i = 0 Then
+        '        Me.lblContent.Text = dt.Rows(i)("Contents")
+        '    Else
+        '        Me.lblContent.Text = Me.lblContent.Text & "<BR><br>" & dt.Rows(i)("Contents")
+        '    End If
+        'Next
+        Me.lblContent.Text = ""
         'Me.lblLeftLink.Text = getSideLink("REFF")
     End Sub
     Public Function requestDT(ByVal sSql As String) As DataTable

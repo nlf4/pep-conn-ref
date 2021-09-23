@@ -346,11 +346,37 @@ tr {
     line-height: 20px;
 }
 
-#submitBtn:hover {
+#btnPasswordReset, #btnUIDInquery {
+    border: 1px solid #0260B3;
+    padding: 8px 19px;
+    transition: 0.25s;
+    border-radius: 18px;
+    background-color: #0260B3;
+    color: floralwhite;
+    font-size: 14px;
+    margin-top: 20px;
+ 
+    line-height: 20px;
+}
+
+#submitBtn:hover, #btnPasswordReset:hover, #btnUIDInquery:hover {
     cursor: pointer;
     background-color: #468ac7;
     border: 1px solid #468ac7;
 }
+
+#pwd-reset-sent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#pwd-reset-sent p {
+    margin-top: 25px;
+    width: 50%;
+}
+
 
 #forgot-pwd-link {
     margin-left: 70px;
@@ -391,7 +417,13 @@ user-details-prof-pwd {
     display: flex;
     flex-direction: row;
     margin: 10px;
+}
 
+.pwd-reset-form .input-row {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    width: 35%;
 }
 
 .update-profile-btn, .update-password-btn {
@@ -413,9 +445,22 @@ user-details-prof-pwd {
     padding-left: 15px;
 }
 
+.pwd-reset-form input {
+    flex: 2;
+    line-height: 25px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
 .user-details label {
     flex: 1;
     line-height: 35px;
+}
+
+.pwd-reset-form label {
+    flex: 1;
+    line-height: 25px;
 }
 
 .details-col-1 {

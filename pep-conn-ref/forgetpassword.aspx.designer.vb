@@ -50,6 +50,15 @@ Partial Public Class forgetpassword
     Protected WithEvents frmXXEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''btnPasswordReset control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnPasswordReset As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''frmXXEmailFGUID control.
     '''</summary>
     '''<remarks>
@@ -59,13 +68,13 @@ Partial Public Class forgetpassword
     Protected WithEvents frmXXEmailFGUID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnPasswordReset control.
+    '''btnUIDInquery control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnPasswordReset As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnUIDInquery As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lblMsg control.
