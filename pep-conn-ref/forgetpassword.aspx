@@ -105,29 +105,30 @@
                     <form id="frm" method="post" class="pwd-reset-form" runat="server">
 						<asp:label id="lblContent" runat="server">Label</asp:label>
                         
-                        <p>Please enter your user ID and email and we'll send you a reset link. If you do not have email address or cannot access your email at this moment, please contact our IT department at <a href='tel:+12163614400'>216-361-4400</a>.</p>
+                        <p>Please enter your user ID and email and we'll send you a reset link. If you do not have an email address or cannot access your email at this moment, please contact our IT department at <a href='tel:+12163614400'>216-361-4400</a>.</p>
                         <div class="input-row">
-                            <label>User ID:</label>
-                            <asp:textbox id="frmXXUID" runat="server"></asp:textbox>
+                            <div class="input-col col1">
+                                <asp:textbox id="frmXXUID" runat="server" placeholder="User ID"></asp:textbox>
+                                <asp:textbox id="frmXXEmail" runat="server" placeholder="Email"></asp:textbox>
+                            </div>
+                            <div class="input-col col2">
+                                <asp:button id="btnPasswordReset" runat="server" Text="Reset My Password" CssClass="btn"></asp:button>
+                            </div>
 						</div>
-                        <div class="input-row">
-                             <label>Email:</label>
-						    <asp:textbox id="frmXXEmail" runat="server"></asp:textbox>
-                        </div>
-                        <div class="button-row">
-                            <asp:button id="btnPasswordReset" runat="server" Text="Reset My Password" CssClass="btn"></asp:button>
-                        </div>
                         
                         
                         <h3>Forgot your User ID?</h3>
                         <p>Please enter your email and we will mail you the associated user ID.</p>
                         <div class="input-row">
-                            <label>Email:</label>
-                            <asp:textbox id="frmXXEmailFGUID" runat="server"></asp:textbox><br />
+                            <div class="input-col col1">
+                                <asp:textbox id="frmXXEmailFGUID" runat="server" placeholder="Email"></asp:textbox>
+                            </div>
+                            <div class="input-col col2">
+                                 <asp:button id="btnUIDInquery" runat="server" Text="Send My User ID" CssClass="btn"></asp:button>
+                            </div>
+                            
                         </div>
-                        <div class="button-row">
-                            <asp:button id="btnUIDInquery" runat="server" Text="Send My User ID" CssClass="btn"></asp:button>
-                        </div>
+                        
                         
 						<asp:Label id="lblMsg" runat="server" ForeColor="Red"></asp:Label>
 								

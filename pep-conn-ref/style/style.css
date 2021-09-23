@@ -127,8 +127,9 @@ div.sidebar {
     margin: .8rem 0 .8rem 0 !important;
 }
 
-p {
-    
+#loginForm p {
+    text-align: center;
+    margin-top: 15px
 }
 
 nav ul {
@@ -379,7 +380,7 @@ tr {
 
 
 #forgot-pwd-link {
-    margin-left: 70px;
+    
     color: #0260B3;
 }
 
@@ -419,12 +420,15 @@ user-details-prof-pwd {
     margin: 10px;
 }
 
-.pwd-reset-form .input-row {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    width: 35%;
+
+.pwd-reset-form {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   text-align: center;
 }
+
+
 
 .update-profile-btn, .update-password-btn {
     background-color: #0260B3 !important;
@@ -445,11 +449,33 @@ user-details-prof-pwd {
     padding-left: 15px;
 }
 
+.pwd-reset-form .input-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+
+}
+
+.input-col.col1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    
+}
+
 .pwd-reset-form input {
     flex: 2;
     line-height: 25px;
     border: none;
     border-bottom: 1px solid black;
+    padding: 2px 8px;
+}
+
+.pwd-reset-form p {
+    width: 70%;
+    margin: 15px auto;
 }
 
 
@@ -605,7 +631,7 @@ div#profile .active {
     }
 
     form {
-        width: 200px;
+       /* width: 200px;*/
     }
 
     #forgot-pwd-link {
@@ -653,6 +679,11 @@ div#profile .active {
     .warning {
        text-align: center;
     }
+
+    #pwd-reset-sent p {
+       
+        width: 80%;
+    }
    
 }
 
@@ -663,6 +694,12 @@ div#profile .active {
         width: 100px;
         margin-left: 70%;
     }
+
+    #pwd-reset-form {
+        width: 100% !important;
+    }
+
+    
     
 }
 
@@ -707,16 +744,18 @@ div#profile .active {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #loginForm {
-        width: 90%;
+        
     }
 
     .login-form-container {
-        width: 60%;
+        width: 70%;
     }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .login-form-container {
+        width: 50%;
+    }
 }
 /* Extra extra large devices (large laptops and desktops, 1400px and up) */
 @media only screen and (min-width: 1400px) {

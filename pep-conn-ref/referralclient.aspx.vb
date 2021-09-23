@@ -397,6 +397,7 @@
         Next
     End Sub
     Function myDRTostring(ByRef dr As DataRow, ByVal idx As String) As String
+        'Console.WriteLine(idx)
         If dr.IsNull(idx) Then Return ""
         Return dr(idx) & ""
     End Function

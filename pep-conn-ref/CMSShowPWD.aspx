@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CMSShow.aspx.vb" Inherits="pep_conn_ref.CMSShow" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CMSShowPWD.aspx.vb" Inherits="pep_conn_ref.CMSShowPWD" %>
 
 <!DOCTYPE html>
 
@@ -104,9 +104,8 @@
                     <div id="pwd-reset-sent">
                         <h2>Check your inbox!</h2>
                         <img height="80px" src="/images/mail-sent.svg" />
-                        <p>PEP just sent an email to your email address with the associated User ID/Name.
-                        Please use this to <a href="onlinereferral.aspx">sign in</a> to our website.
-                        If you have forgotten your password, you can <a href="forgetpassword.aspx">click here</a> to reset it.</p>
+                        <p>We just sent you an email with instructions to reset your password.
+                        Once you have done this, you can continue to use our website.</p>
                         <p>If you have any questions, please contact PEP’s IT Dept at ITDept@pepcleve.org or call <a href='tel:+12163614400,109'>216-361-4400 x109</a>.</p>
                        
                     </div>
@@ -119,3 +118,7 @@
         </footer>
     </body>
 </html>
+
+
+
+

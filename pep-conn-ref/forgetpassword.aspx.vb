@@ -25,11 +25,12 @@ Public Class forgetpassword
         If Me.Page.IsPostBack Then
             Me.lblMsg.Text = ValidateInput()
             If Me.lblMsg.Text = "" Then
-                If Request.Form("btnResetPWD") & "" > "" Then
+                If Request.Form("btnPasswordReset") & "" > "" Then
                     sSQL = "exec usp_Users_PWDReset '" _
-                        & Replace(Me.frmXXUID.text, "'", "''") & "' ,'" _
+                        & Replace(Me.frmXXUID.Text, "'", "''") & "' ,'" _
                         & Replace(Me.frmXXEmail.Text, "'", "''") & "',0,1"
                     Url = "CMSShow.aspx?AREA=SIGNON&ID=PWDReset"
+                    Url = "CMSShowPWD.aspx"
                 End If
                 If Request.Form("btnUIDInquery") & "" > "" Then
                     sSQL = "exec usp_Users_UID_Inquery '" _
@@ -63,26 +64,6 @@ Public Class forgetpassword
         Me.lblContent.Text = ""
         'Me.lblLeftLink.Text = getSideLink("REFF")
     End Sub
-    Public Function requestDT(ByVal sSql As String) As DataTable
-        'Dim tDict As System.Collections.Specialized.NameValueCollection
-        'tDict = CType(System.Configuration.ConfigurationSettings.AppSettings("APpValues/General"), System.Collections.Specialized.NameValueCollection)
-        Dim cn As New SqlClient.SqlConnection(ConfigurationSettings.AppSettings("CONNECTIONSTRING"))   '("Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;password='';Initial Catalog=pepdev;Data Source=.;") 'Application("ConnectionString"))
-        'cn.p()
-        evalSQLSTM(sSql)
-
-        Dim selectCMD As New SqlClient.SqlCommand(sSql, cn)
-        'selectCMD.CommandText = sSql
-        'selectCMD.Connection = cn
-        Dim DA As New SqlClient.SqlDataAdapter
-        '= New SqlClient.SqlDataAdapter()
-        DA.SelectCommand = selectCMD
-        'cn.Open()
-        Dim ds As DataSet = New DataSet
-        DA.Fill(ds, "Table0")
-        cn.Close()
-        Return ds.Tables(0)
-        'cn.Close()
-    End Function
 
     Public Sub evalSQLSTM(ByRef sSQL As String)
         Dim sRetv As String = UCase(sSQL)
@@ -112,5 +93,27 @@ Public Class forgetpassword
             'addLog("Possible instrusion")
         End If
     End Sub
+    Public Function requestDT(ByVal sSql As String) As DataTable
+        'Dim tDict As System.Collections.Specialized.NameValueCollection
+        'tDict = CType(System.Configuration.ConfigurationSettings.AppSettings("APpValues/General"), System.Collections.Specialized.NameValueCollection)
+        Dim cn As New SqlClient.SqlConnection(ConfigurationSettings.AppSettings("CONNECTIONSTRING"))   '("Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;password='';Initial Catalog=pepdev;Data Source=.;") 'Application("ConnectionString"))
+        'cn.p()
+        evalSQLSTM(sSql)
+
+        Dim selectCMD As New SqlClient.SqlCommand(sSql, cn)
+        'selectCMD.CommandText = sSql
+        'selectCMD.Connection = cn
+        Dim DA As New SqlClient.SqlDataAdapter
+        '= New SqlClient.SqlDataAdapter()
+        DA.SelectCommand = selectCMD
+        'cn.Open()
+        Dim ds As DataSet = New DataSet
+        DA.Fill(ds, "Table0")
+        cn.Close()
+        Return ds.Tables(0)
+        'cn.Close()
+    End Function
+
+
 
 End Class
