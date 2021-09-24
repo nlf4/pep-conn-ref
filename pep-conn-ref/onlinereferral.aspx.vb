@@ -53,24 +53,24 @@ Public Class onlinereferral
         Dim adapter As New SqlDataAdapter(command)
 
         Dim table As New DataTable()
-        lblErrorMessage.Text = "you have clicked login"
+        'lblErrorMessage.Text = "you have clicked login"
 
         'adapter.SelectCommand = command
         adapter.Fill(table)
 
-        If table.Rows.Count() <= 0 Then
+        'If table.Rows.Count() <= 0 Then
 
-            lblErrorMessage.Text = "user id not found"
-        Else
-            lblErrorMessage.Text = "user id found"
+        'lblErrorMessage.Text = "user id not found"
+        'Else
+        'lblErrorMessage.Text = "user id found"
 
-            'Dim frm As New VBNET_SQL_Insert_Update_Delete()
+        'Dim frm As New VBNET_SQL_Insert_Update_Delete()
 
-            'Me.Hide()
+        'Me.Hide()
 
-            'frm.Show()
+        'frm.Show()
 
-        End If
+        'End If
     End Sub
 
     Private Function validateUser(ByVal sUID As String, ByVal sPWD As String) As String

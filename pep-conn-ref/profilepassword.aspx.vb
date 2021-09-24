@@ -32,7 +32,7 @@
                     Session("UName") = dt.Rows(0)("UName")
                     Session("AgencyName") = dt.Rows(0)("AgencyName")
                     Session("DaysPWDExpired") = dt.Rows(0)("DaysPWDExpired")
-                    Me.lblMsg.Text = "Your password has been changed. Plesae <a href='Referral.aspx'>click her</a> or link in left side bar to continue your referral."
+                    Me.lblMsg.Text = "Your password has been changed. Plesae <a href='Referral.aspx'>click here</a> or link in left side bar to continue your referral."
                 Else
                     Me.lblMsg.Text = errMsg
                 End If

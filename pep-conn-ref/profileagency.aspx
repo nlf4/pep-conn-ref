@@ -75,21 +75,11 @@
                                             <p>Connections Home</p>
                                         </a>
                                     </li>
-                                    <%--<li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <p>Latest News</p>
-                                        </a>
-                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/admissioncriteria.aspx" class="nav-link">
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
-                                    <%--<li class="nav-item">
-                                        <a href="/staff.aspx" class="nav-link">
-                                            <p>Staff</p>
-                                        </a>
-                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/onlinereferral.aspx" class="nav-link">
                                             <p>Online Referral</p>
@@ -109,55 +99,16 @@
             
             <section class="main-content">
                 <div class="main-text">
-
                     <div class="user-details">
                        
-                        <table cellSpacing="0" cellPadding="0" border="0">
-			<tbody>
-				<tr>
-					<td width="160" height="53"><IMG height="53" src="images/logo.gif" width="160"></td>
-					<td class="title" id="ContentCONN" align="middle" width="612" background="images/titleBg1.jpg" height="53">&nbsp;&nbsp;PEP 
-						 Referral System</td>
-				</tr>
-				<tr>
-					<td width="160" height="9"><IMG height="10" src="images/divider_top.gif" width="160"></td>
-					<td width="612" height="9"><IMG height="9" src="images/pixel.gif" width="1"></td>
-				</tr>
-			</tbody></table>
-		<table height="90%" cellSpacing="0" cellPadding="0" border="0">
-			<tbody>
-				<tr>
-					<td vAlign="top" width="160" background="images/sidebarBg.jpg" height="179">
-						<table class="bodytext" background="images/sidebarBg.jpg">
-							<tr vAlign="top" height="70">
-								<td height="97"><asp:literal id="lblLeftLink" runat="server"></asp:literal></td>
-							</tr>
-							<tr>
-								<td></td>
-							</tr>
-							<tr>
-								<td></td>
-							</tr>
-						</table>
-					</td>
-					<td width="17" rowSpan="2">&nbsp;</td>
-					<td class="bodyText" vAlign="top" width="597" rowSpan="2">
-						<table class="bodytext" width="100%">
-							<tr>
-								<td>
-									<table class="bodytext" width="100%">
-										<tr>
-											<td><asp:label id="Label1" runat="server" Height="5px">Label</asp:label></td>
-											<td align="right"><asp:literal id="LblTopLink" runat="server"></asp:literal></td>
-										</tr>
-									</table>
-									<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label></td>
-							</tr>
-							<tr bgColor="blue" height="2">
-								<td></td>
-							</tr>
-							<tr>
-								<td>
+                        <asp:literal id="lblLeftLink" runat="server"></asp:literal>
+							
+				        <asp:label id="Label1" runat="server" Height="5px">Label</asp:label>
+						
+                        <asp:literal id="LblTopLink" runat="server"></asp:literal>
+										
+						<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
+							
 									<form id="frm" method="post" runat="server">
 										<asp:literal id="hiddenFormList" runat="server"></asp:literal>
 										<table class="bodytext" width="100%">
@@ -190,7 +141,7 @@
 											</tr>
 											<tr>
 												<td colspan="4" align="right">
-													<INPUT class="btn" type="submit" name="Update" value="Update">
+													<input class="btn" type="submit" name="Update" value="Update">
 												</td>
 											</tr>
 											<TR>
@@ -199,22 +150,8 @@
 											</TR>
 										</table>
 									</form>
-								</td>
-							</tr>
-							<tr bgcolor="blue" height="2">
-								<td></td>
-							</tr>
-							<tr>
-								<td><a class="CenterLinks" href='logoff.aspx'>[Log off]</a>&nbsp;&nbsp;<a class="CenterLinks" href='Referral.aspx'>[Back 
-										To Referral]</a></td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td class="ltBlue" vAlign="top" height="100%"><br>
-						<IMG src="images/pixel.gif" width="1"></td>
-				</tr>
+							
+				
 			</tbody></table>
                         <p>Please be sure to complete all the information on the pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>
                       </div>

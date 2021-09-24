@@ -105,7 +105,7 @@
                         <h2>Check your inbox!</h2>
                         <img height="80px" src="/images/mail-sent.svg" />
                         <p>We just sent you an email with instructions to reset your password.
-                        Once you have done this, you can continue to use our website.</p>
+                        Once you have done this, you can <a href="onlinereferral.aspx">log in</a> and continue to use our website.</p>
                         <p>If you have any questions, please contact PEP’s IT Dept at ITDept@pepcleve.org or call <a href='tel:+12163614400,109'>216-361-4400 x109</a>.</p>
                        
                     </div>

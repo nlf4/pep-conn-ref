@@ -21,11 +21,12 @@
         'Me.lblLeftLink.Text = getSideLink("REFF")
         'Me.LblTopLink.Text = getTopLink("PROFILE", "AGENCY")
         'If Session("IID") > "" Then
-        ds = requestDT("Select * from ConnWebUser where ID=" & Session("IID"))
-        'Me.f()
-        Call PaintScreen(Me, ds)
+        Console.Write(Session("IID"))
+        'ds = requestDT("Select * from ConnWebUser where ID=" & Session("IID"))
 
-        Me.hiddenFormList.Text = hiddenTag("frmXXID", ds.Rows(0)("ID")) & hiddenTag("frmXXUserUID", Session("UID"))
+        'Call PaintScreen(Me, ds)
+
+        'Me.hiddenFormList.Text = hiddenTag("frmXXID", ds.Rows(0)("ID")) & hiddenTag("frmXXUserUID", Session("UID"))
     End Sub
 
     Public Function getSecurity(ByRef Session As System.Web.SessionState.HttpSessionState, ByVal sAppId As String, ByVal sFunctID As String) As Int32
