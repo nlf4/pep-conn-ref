@@ -219,12 +219,31 @@ footer {
     width: 80%;
 }
 
+.contact-main-content {
+    margin: 50px 60px 0 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .main-text {
     margin: 20px 100px 20px 44px;
     width: 70%;
     padding: 10px;
     line-height: 26px;
 }
+
+div.contact-main-text {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+
 
 .main-text h2, .main-text h3, .main-text h4 {
     text-align: center; 
@@ -762,6 +781,26 @@ div#profile .active {
 
     #btnRegister {
         width: 100%;
+    }
+
+    div.contact-main-text {
+        width: 100%;
+        flex-direction: column;
+        height: 500px;
+        align-items: center;
+    }
+
+    .contact-main-content {
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    div.contact-main-text .contact-item {
+        width: 50%;
+    }
+
+    div.contact-main-text .contact-item h3 {
+        text-align: center;
     }
    
 }

@@ -140,7 +140,7 @@
 										<asp:BoundColumn DataField="StatusDesc" headerText="Status">
 											<headerStyle Width="160px"></headerStyle>
 										</asp:BoundColumn>
-										<asp:HyperLinkColumn Text="[print]" Target="_blank" DataNavigateUrlField="ID" DataNavigateUrlFormatString="ReferralPrint.aspx?ID={0}"
+										<asp:HyperLinkColumn Text="Print" Target="_blank" DataNavigateUrlField="ID" DataNavigateUrlFormatString="ReferralPrint.aspx?ID={0}"
 											headerText="Print"></asp:HyperLinkColumn>
 										<asp:HyperLinkColumn Text="Delete" DataNavigateUrlField="DelID" DataNavigateUrlFormatString="javascript:deleteMe(&quot;{0}&quot;);"
 											headerText="Delete"></asp:HyperLinkColumn>
@@ -200,3 +200,13 @@
                 </section>
              </div>
 <footer:Footer id="test" runat="server" />
+        <script language="javascript" type="text/javascript">
+			    function deleteMe(sID) {
+			        if (sID == 0) {
+			            alert("Referrals already submitted cannot be deleted.");
+			            return;
+			        }
+	                if (!window.confirm("Are you sure you want to delete this client from your list?")) return;
+	                window.location="ReferralDel.aspx?ID=" + sID;	
+                }
+        </script>

@@ -132,6 +132,8 @@
     <Content Include="referralclient.aspx" />
     <Content Include="referralclientCOMM.aspx" />
     <Content Include="referralclientMental.aspx" />
+    <Content Include="referraldel.aspx" />
+    <Content Include="referralprint.aspx" />
     <Content Include="staff.aspx" />
     <Content Include="style\all.min.css" />
     <Content Include="style\font-awesome.css" />
@@ -282,6 +284,20 @@
     </Compile>
     <Compile Include="referralclientMental.aspx.vb">
       <DependentUpon>referralclientMental.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="referraldel.aspx.designer.vb">
+      <DependentUpon>referraldel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referraldel.aspx.vb">
+      <DependentUpon>referraldel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="referralprint.aspx.designer.vb">
+      <DependentUpon>referralprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="referralprint.aspx.vb">
+      <DependentUpon>referralprint.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="staff.aspx.designer.vb">
