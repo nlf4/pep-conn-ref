@@ -108,7 +108,7 @@ div.sidebar {
     color: #6460a4c7;
     line-height: 18px;
     width: 100%;
-    padding: 3px 0;
+    padding: 0;
     transition: 0.3s;
     border-bottom: 1px solid #7C92C6;
     cursor: pointer;
@@ -226,7 +226,8 @@ footer {
     line-height: 26px;
 }
 
-.main-text h2, .main-text h3 {
+.main-text h2, .main-text h3, .main-text h4 {
+    text-align: center; 
     text-align: center;
     color: #4d4949;
     margin-bottom: 20px;
@@ -245,6 +246,57 @@ a{
     display: flex;
     flex-direction: row;
     min-height: 900px;
+}
+
+
+/*******************AGENCY PAGE********************/
+
+.agency-details, .register-details {
+    display: flex;
+    flex-direction: column;
+    width: 760px;
+    background-color: #E4F0FF;
+    border-radius: 15px;
+    color: gray;
+}
+
+.register-details {
+   margin: 30px auto;
+    width: 70%;
+    background-color: #E4F0FF;
+    border-radius: 15px;
+    color: gray;
+    padding: 40px;
+}
+
+.register-details input {
+    width: 60%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: 5px auto;
+    font-size: 14px;
+    padding: 2px 8px;
+    margin-right: 8px;
+}
+
+.register-details .input-row {
+    margin: 3px;
+}
+
+#frmXXFirstName, #frmXXLastName {
+    flex-basis: 1
+}
+/*.agency-details form {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    padding: 25px;
+}*/
+.agency-form, .register-form {
+    display: flex;
+    flex-direction: column;
 }
 
 /*******************REFERRAL PAGE********************/
@@ -347,7 +399,7 @@ tr {
     line-height: 20px;
 }
 
-#btnPasswordReset, #btnUIDInquery {
+#btnPasswordReset, #btnUIDInquery, #btnUpdateAgency, #btnRegister {
     border: 1px solid #0260B3;
     padding: 8px 19px;
     transition: 0.25s;
@@ -356,15 +408,18 @@ tr {
     color: floralwhite;
     font-size: 14px;
     margin-top: 20px;
- 
     line-height: 20px;
 }
 
-#submitBtn:hover, #btnPasswordReset:hover, #btnUIDInquery:hover {
-    cursor: pointer;
-    background-color: #468ac7;
-    border: 1px solid #468ac7;
-}
+    #btnRegister {
+        width: 100px;
+    }
+
+    #submitBtn:hover, #btnPasswordReset:hover, #btnUIDInquery:hover, #btnUpdateAgency:hover, #btnRegister:hover {
+        cursor: pointer;
+        background-color: #468ac7;
+        border: 1px solid #468ac7;
+    }
 
 #pwd-reset-sent {
     display: flex;
@@ -681,8 +736,32 @@ div#profile .active {
     }
 
     #pwd-reset-sent p {
-       
         width: 80%;
+    }
+
+    .register-details {
+        width: 110%;
+        padding: 25px 10px;
+        align-items: center; 
+    }
+
+    .register-details form {
+        width: 90%;
+    }
+
+    .register-details .input-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .register-details input {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    #btnRegister {
+        width: 100%;
     }
    
 }

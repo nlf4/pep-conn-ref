@@ -125,9 +125,6 @@
 									<asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
                                 </td>
 							</tr>
-							<%--<tr bgcolor="gray" height="2">
-								<td></td>
-							</tr>--%>
 							<tr>
 								<td>
 									<form id="frm" method="post" runat="server">

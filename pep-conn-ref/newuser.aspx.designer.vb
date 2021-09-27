@@ -11,52 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class profileagency
+Partial Public Class newuser
 
     '''<summary>
-    '''lblUser control.
+    '''MainHeader control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''loginPanel control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents loginPanel As Global.System.Web.UI.WebControls.Panel
-
-    '''<summary>
-    '''logoutPanel control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents logoutPanel As Global.System.Web.UI.WebControls.Panel
-
-    '''<summary>
-    '''Label1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblMsg control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents MainHeader As Global.System.Web.UI.UserControl
 
     '''<summary>
     '''frm control.
@@ -68,13 +32,31 @@ Partial Public Class profileagency
     Protected WithEvents frm As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''hiddenFormList control.
+    '''frmXXFirstName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents hiddenFormList As Global.System.Web.UI.WebControls.Literal
+    Protected WithEvents frmXXFirstName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXLastName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXLastName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''frmXXUID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXUID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''frmXXAgencyName control.
@@ -86,65 +68,65 @@ Partial Public Class profileagency
     Protected WithEvents frmXXAgencyName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXAgencyAddress1 control.
+    '''frmXXeMail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmXXAgencyAddress1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents frmXXeMail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXAgencyAddress2 control.
+    '''frmXXeMail2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmXXAgencyAddress2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents frmXXeMail2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXAgencyCity control.
+    '''frmXXPWD control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmXXAgencyCity As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents frmXXPWD As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXAgencyState control.
+    '''frmXXPWDCONFIRM control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmXXAgencyState As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents frmXXPWDCONFIRM As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''frmXXAgencyZip control.
+    '''btnRegister control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmXXAgencyZip As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnRegister As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''frmXXAgencyPhone control.
+    '''lblMsg control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmXXAgencyPhone As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''frmXXAgencyFax control.
+    '''test control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents frmXXAgencyFax As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents test As Global.System.Web.UI.UserControl
 End Class

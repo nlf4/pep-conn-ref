@@ -17,8 +17,8 @@
                         <ol>
                             <li>If you are a parent or guardian and would like to refer your child to the Connections program, please contact the Intake Department at <a href="tel:+12163612441">216-361-2441</a>. A staff person will assist you with the referral process.</li>
                             <li>If you are a professional with a pre-established user name and password, please sign in by filling in the boxes below and then click the sign in button.</li>
-                            <li>If you are new to our system (have not previously registered), please click to Register as one of our users.</li>
-                            <li>If you are a return user but forgot your password or user name, please click the link to reset your password or inquire about you user ID/Name.</li>
+                            <li>If you are new to our system (have not previously registered), please click <a href="/newuser.aspx">here</a> to register as one of our users.</li>
+                            <li>If you are a return user but forgot your password or user name, please click <a href="/forgetpassword.aspx">here</a> to reset your password or inquire about you user ID/Name.</li>
                         </ol>
                     <p>Please Note - The PEP Connections Referral screens have changed. Please contact PEP's IT Staff at <a href="tel:+12163614400">216-361-4400</a> or the Intake Department at <a href="tel:+12163612441">216-361-2441</a> for any concerns with the new referral screens.</p>
                         

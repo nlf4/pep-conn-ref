@@ -121,6 +121,7 @@
     <Content Include="forgetpassword.aspx" />
     <Content Include="index.aspx" />
     <Content Include="latestnews.aspx" />
+    <Content Include="newuser.aspx" />
     <Content Include="onlinereferral.aspx" />
     <Content Include="passwordchange.aspx" />
     <Content Include="profile.aspx" />
@@ -205,6 +206,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="newuser.aspx.designer.vb">
+      <DependentUpon>newuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newuser.aspx.vb">
+      <DependentUpon>newuser.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="onlinereferral.aspx.designer.vb">
       <DependentUpon>onlinereferral.aspx</DependentUpon>
