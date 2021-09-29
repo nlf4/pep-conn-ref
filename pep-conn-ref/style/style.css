@@ -8,7 +8,7 @@
     padding-right: 0 !important;
     padding-left: 0 !important;
     height: 100%;
-    flex-wrap: unset !important;
+    flex-wrap: wrap !important;
 }
 
 .main-header {
@@ -19,6 +19,15 @@
     height: 70px;
     box-shadow: -4px 4px 5px 1px rgba(0,0,0,0.33);
     padding-bottom: 0;
+}
+
+.menu-panel {
+    margin-left: 8px;
+}
+
+ul.dropdown-menu.show {
+    inset: 0px auto auto 0px;
+    margin: 0px;
 }
 
 .logo-image {
@@ -82,6 +91,41 @@
     background-color: #7C92C6 !important;
 }
 
+.dropdown-menu.show li:hover {
+    /*background-color: #7C92C6;*/
+}
+
+.dropdown-menu.show li:hover a {
+    color: white;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: darkgray;
+    
+}
+
+.dropdown-item {
+    margin: 0 !important;
+}
+
+ul.dropdown-menu.show {
+    position: unset !important;
+    transform: none !important;
+}
+
+.dropdown-item {
+    margin: 0;
+}
+
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+ul.navbar-nav li:hover a.dropdown-item {
+    color: darkgray;
+}
+
 .navbar-toggler {
     color: white !important;
     border: none !important;
@@ -96,10 +140,15 @@ div.sidebar {
     height: inherit;
 }
 
+a.nav-link {
+    padding: .2rem 1rem;
+    
+    }
+
 
 .sidebar-list a {
     text-decoration: none;
-    color: #6460a4c7;
+    color: #696c78;
     transition: 0.3s;
 }
 
@@ -136,6 +185,24 @@ nav ul {
     list-style: none;
     width: 100%;
     /*padding-left: 15px;*/
+}
+
+ul.navbar-nav a {
+    margin-left: 10px;
+    color: #696c78;
+}
+
+ul.navbar-nav li {
+    transition: 0.3s;
+}
+
+
+ul.navbar-nav li:hover, ul.navbar-nav li.active-side {
+    background-color: #7C92C6;
+}
+
+ul.navbar-nav li:hover a, ul.navbar-nav li.active-side a {
+    color: white;
 }
 
 ul.sidebar-list {
@@ -187,7 +254,7 @@ ul {
 
 
 footer {
-    width: 100vw;
+    width: 100%;
     height: 60px;
     background-color: #0260B3;
     display: flex;
@@ -227,8 +294,12 @@ footer {
     align-items: center;
 }
 
+.contact-main-content h2 {
+    margin-bottom: 50px;
+}
+
 .main-text {
-    margin: 20px 100px 20px 44px;
+    margin: 20px 70px 20px 75px;
     width: 70%;
     padding: 10px;
     line-height: 26px;
@@ -268,9 +339,9 @@ a{
 }
 
 
-/*******************AGENCY PAGE********************/
+/*******************AGENCY & REGISTRATION PAGES********************/
 
-.agency-details, .register-details {
+.register-details {
     display: flex;
     flex-direction: column;
     width: 760px;
@@ -279,8 +350,25 @@ a{
     color: gray;
 }
 
+.agency-details {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #E4F0FF;
+    border-radius: 15px;
+    color: gray;
+    margin: 10px auto;
+}
+
+
+
+.agency-details label {
+   margin-right: 8px;
+   width: 25%;
+}
+
 .register-details {
-   margin: 30px auto;
+    margin: 30px auto;
     width: 70%;
     background-color: #E4F0FF;
     border-radius: 15px;
@@ -313,12 +401,60 @@ a{
     width: 700px;
     padding: 25px;
 }*/
-.agency-form, .register-form {
+.register-form {
     display: flex;
     flex-direction: column;
 }
 
+.agency-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.agency-form-row {
+    width: 80%;
+}
+
+.agency-form-row.row2 {
+    display: flex;
+}
+
+.agency-form-row.row3 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-row-item {
+    flex-basis: 50%;
+}
+
+.form-row-item.item2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row-item.item2 .item2-row1 .input-row:first-of-type input {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.item2-row1 .state {
+    width: 30%;
+}
+
+.item2-row1 .zip {
+    width: 70%;
+}
+
+.item2-row1 {
+    display: flex;
+}
+
 /*******************REFERRAL PAGE********************/
+
+
 
 .ref-buttons {
     border: 1px solid #0260B3;
@@ -430,15 +566,17 @@ tr {
     line-height: 20px;
 }
 
-    #btnRegister {
-        width: 100px;
-    }
+#btnRegister, #btnUpdateAgency {
+    width: 100px;
+}
 
-    #submitBtn:hover, #btnPasswordReset:hover, #btnUIDInquery:hover, #btnUpdateAgency:hover, #btnRegister:hover {
-        cursor: pointer;
-        background-color: #468ac7;
-        border: 1px solid #468ac7;
-    }
+      
+
+#submitBtn:hover, #btnPasswordReset:hover, #btnUIDInquery:hover, #btnUpdateAgency:hover, #btnRegister:hover {
+    cursor: pointer;
+    background-color: #468ac7;
+    border: 1px solid #468ac7;
+}
 
 #pwd-reset-sent {
     display: flex;
@@ -463,6 +601,20 @@ tr {
 }
 
 /*******************PROFILE PAGE********************/
+
+.success-alert {
+    text-align: center !important;
+    margin-bottom: 10px;
+    /*position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;*/
+}
+
 .user-details {
     display: flex;
     flex-direction: row;
@@ -521,6 +673,15 @@ user-details-prof-pwd {
     border: none;
     box-shadow: -0.5px 0.5px 1px 0px rgb(0 0 0 / 15%);
     padding-left: 15px;
+}
+
+.agency-details input {
+    width: 75%;
+    line-height: 25px;
+    border: none;
+    padding-left: 15px;
+    border-radius: 10px;
+    
 }
 
 .pwd-reset-form .input-row {
@@ -614,6 +775,8 @@ div#profile .active {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
+    
+
     .main-content {
         margin: 0;
         width: 100%;
@@ -686,6 +849,8 @@ div#profile .active {
     .sidebar-list li {
       margin-left: 0;
     }
+
+  
 
     .nav-item {
         text-align: center;
@@ -797,13 +962,23 @@ div#profile .active {
 
     div.contact-main-text .contact-item {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     div.contact-main-text .contact-item h3 {
         text-align: center;
     }
+
+    ul.dropdown-menu.show {
+        text-align: center;
+    }
+
    
 }
+
 
 /* Small devices (portrait tablets and large phones, 676px and up) */
 @media only screen and (min-width: 676px) {
@@ -898,9 +1073,9 @@ div#profile .active {
         left: auto;
     }
 
-    .dropdown-menu > li:hover {
+    /*.dropdown-menu > li:hover {
         background-color: #f1f1f1
-    }
+    }*/
 
         .dropdown-menu > li:hover > .submenu {
             display: block;
@@ -910,10 +1085,10 @@ div#profile .active {
 
 /* ============ small devices ============ */
 @media (max-width: 991px) {
-    .dropdown-menu .dropdown-menu {
+    /*.dropdown-menu .dropdown-menu {
         margin-left: 0.7rem;
         margin-right: 0.7rem;
         margin-bottom: .5rem;
-    }
+    }*/
 }
 /* ============ small devices .end// ============ */

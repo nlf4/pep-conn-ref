@@ -42,7 +42,7 @@
                                     <a href="/onlinereferral.aspx" class="user-login">Log In</a>
                                 </asp:Panel>--%>
                                 <asp:Panel ID="logoutPanel" runat="server" class="login-link">
-                                    <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
+                                    <a href="/logout.aspx" class="user-login">Log Out</a>
                                 </asp:Panel>
                     
                          </div>
@@ -69,21 +69,11 @@
                                             <p>Connections Home</p>
                                         </a>
                                     </li>
-                                   <%-- <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <p>Latest News</p>
-                                        </a>
-                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/admissioncriteria.aspx" class="nav-link">
                                             <p>Admission Criteria</p>
                                         </a>
                                     </li>
-                                    <%--<li class="nav-item">
-                                        <a href="/staff.aspx" class="nav-link">
-                                            <p>Staff</p>
-                                        </a>
-                                    </li>--%>
                                     <li class="nav-item">
                                         <a href="/onlinereferral.aspx" class="nav-link">
                                             <p>Online Referral</p>
@@ -104,20 +94,19 @@
             <section class="main-content">
                 <div class="main-text">
                     <asp:label id="lblMsg" runat="server" ForeColor="Red"></asp:label>
-                    <asp:literal id="hiddenFormList" runat="server"></asp:literal>
+                    <asp:panel id="panelAlert" runat="server" class="success-alert">
+                      <asp:literal id="hiddenFormList" runat="server"></asp:literal>
+                    </asp:panel>
+                    
                     <h3>User Profile</h3>
 
-                    
-                    
-                     
-                          
                     <div class="user-details">
                        
                         <form id="frm" method="post" runat="server">
                             <div class="details-col-1">
 										<asp:literal id="Literal1" runat="server"></asp:literal>
 										        <div class="input-row">
-                                                    <label>UserID:</label>
+                                                    <label>User ID:</label>
 												    <asp:textbox id="frmXXUID" runat="server" ReadOnly="True"></asp:textbox>
 										        </div>
 												
@@ -177,16 +166,10 @@
                                                     <input class="btn update-profile-btn" type="submit" value="Update" name="Update"/>
                                                 </div>
                                             
-                                            </div>
-													
+                                            </div>		
 									</form>
                         
                     </div>
-<%--                    <p>Please be sure to complete all the information on the 
-													pages linked&nbsp;with buttons above. Click Update button for each page.&nbsp;</p>--%>
-                   
-                      
-                   
 
                 </div>
 

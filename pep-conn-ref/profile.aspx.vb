@@ -25,7 +25,10 @@
         Call PaintScreen(Me, ds)
         Me.hiddenFormList.Text = hiddenTag("frmXXID", ds.Rows(0)("ID")) & hiddenTag("frmXXUserUID", Session("UID"))
         If Request.QueryString("NEWUSER") = "YES" Then
-            Me.hiddenFormList.Text = Me.hiddenFormList.Text & ". You are registered to use our web site. Please take a moment to complete the rest of the information."
+            panelAlert.Visible = True
+            Me.hiddenFormList.Text = Me.hiddenFormList.Text & "Your account has been successfully created. Please take a moment to fill in the rest of your details."
+        Else
+            panelAlert.Visible = False
         End If
     End Sub
 

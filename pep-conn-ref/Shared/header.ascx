@@ -58,17 +58,14 @@
                                     <ul class="navbar-nav">
                                         <li class="nav-item active-side">
                                             <a href="/index.aspx" class="nav-link">Connections Home
-                                                <%--<p>Connections Home</p>--%>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/admissioncriteria.aspx" class="nav-link">
-                                                <p>Admission Criteria</p>
+                                            <a href="/admissioncriteria.aspx" class="nav-link">Admission Criteria
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown" id="ref-dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                                               <%-- <p>Online Referral</p>--%>
                                                 Online Referral
                                             </a>
                                             <ul class="dropdown-menu">

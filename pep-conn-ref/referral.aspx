@@ -28,7 +28,6 @@
                 </a>
             </div>
                         
-          
             <div class="header-container">
                 <div class="menu-panel">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar1">

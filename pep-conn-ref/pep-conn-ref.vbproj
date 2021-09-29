@@ -121,6 +121,7 @@
     <Content Include="forgetpassword.aspx" />
     <Content Include="index.aspx" />
     <Content Include="latestnews.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="newuser.aspx" />
     <Content Include="onlinereferral.aspx" />
     <Content Include="passwordchange.aspx" />
@@ -188,6 +189,13 @@
     </Compile>
     <Compile Include="latestnews.aspx.vb">
       <DependentUpon>latestnews.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />

@@ -113,6 +113,15 @@ Partial Public Class profileagency
     Protected WithEvents frmXXAgencyCity As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''frmXXAgencyPhone control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents frmXXAgencyPhone As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''frmXXAgencyState control.
     '''</summary>
     '''<remarks>
@@ -129,15 +138,6 @@ Partial Public Class profileagency
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents frmXXAgencyZip As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''frmXXAgencyPhone control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents frmXXAgencyPhone As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''frmXXAgencyFax control.
