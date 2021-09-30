@@ -194,12 +194,13 @@ ul.navbar-nav a {
 
 ul.navbar-nav li {
     transition: 0.3s;
+    padding: 10px 0;
 }
 
 
-ul.navbar-nav li:hover, ul.navbar-nav li.active-side {
-    background-color: #7C92C6;
-}
+    ul.navbar-nav li:hover:not(.dropdown-menu-item), ul.navbar-nav li.active-side {
+        background-color: #7C92C6;
+    }
 
 ul.navbar-nav li:hover a, ul.navbar-nav li.active-side a {
     color: white;
@@ -697,7 +698,7 @@ user-details-prof-pwd {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    
+    width: 250px;
 }
 
 .pwd-reset-form input {
@@ -775,7 +776,9 @@ div#profile .active {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
-    
+    .container-fluid {
+        align-items: unset !important;
+    }
 
     .main-content {
         margin: 0;

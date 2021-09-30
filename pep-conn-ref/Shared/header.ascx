@@ -69,10 +69,10 @@
                                                 Online Referral
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li>
+                                                <li class="dropdown-menu-item">
                                                     <a href="/referral.aspx" class="dropdown-item">Overview</a>
                                                 </li>
-                                                <li>
+                                                <li class="dropdown-menu-item">
                                                     <a href="/referralclient.aspx" class="dropdown-item">New Referral</a>
                                                 </li>
                                             </ul>
