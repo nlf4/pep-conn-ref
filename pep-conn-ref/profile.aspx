@@ -75,7 +75,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/onlinereferral.aspx" class="nav-link">
+                                        <a href="/referral.aspx" class="nav-link">
                                             <p>Online Referral</p>
                                         </a>
                                     </li>

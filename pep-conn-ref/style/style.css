@@ -25,7 +25,7 @@
     margin-left: 8px;
 }
 
-ul.dropdown-menu.show {
+ul.dropdown-menu.show.sidebar {
     inset: 0px auto auto 0px;
     margin: 0px;
 }
@@ -76,7 +76,7 @@ ul.dropdown-menu.show {
     border: 1px solid white;
     padding: 8px 19px;
     transition: 0.3s;
-    border-radius: 16px;
+    border-radius: 22px;
     
 }
 
@@ -108,9 +108,19 @@ ul.dropdown-menu.show {
     margin: 0 !important;
 }
 
-ul.dropdown-menu.show {
-    position: unset !important;
-    transform: none !important;
+/*ul.dropdown-menu.show {*/
+    /* position: unset !important; */
+    /*transform: none !important;
+}
+
+ul.dropdown-menu.show {*/
+    /* inset: 0px auto auto 0px; */
+    /*margin: 0px;
+}*/
+
+ul .dropdown-menu.show.sidebar {
+position: unset !important;
+transform: none !important;
 }
 
 .dropdown-item {
@@ -198,9 +208,9 @@ ul.navbar-nav li {
 }
 
 
-    ul.navbar-nav li:hover:not(.dropdown-menu-item), ul.navbar-nav li.active-side {
-        background-color: #7C92C6;
-    }
+ul.navbar-nav li:hover:not(.dropdown-menu-item), ul.navbar-nav li.active-side {
+    background-color: #7C92C6;
+}
 
 ul.navbar-nav li:hover a, ul.navbar-nav li.active-side a {
     color: white;
@@ -317,9 +327,8 @@ div.contact-main-text {
 
 
 
-.main-text h2, .main-text h3, .main-text h4 {
+.main-text h2, .main-text h3, .main-text h4, .register-main-text h4 {
     text-align: center; 
-    text-align: center;
     color: #4d4949;
     margin-bottom: 20px;
 }
@@ -342,14 +351,24 @@ a{
 
 /*******************AGENCY & REGISTRATION PAGES********************/
 
+.register-main-text {
+    margin: 20px 70px 20px 75px;
+    width: 70%;
+    padding: 10px;
+    line-height: 30px;
+}
+
 .register-details {
     display: flex;
     flex-direction: column;
-    width: 760px;
+    margin: 30px auto;
+    width: 70%;
     background-color: #E4F0FF;
     border-radius: 15px;
     color: gray;
+    padding: 40px;
 }
+
 
 .agency-details {
     display: flex;
@@ -368,14 +387,6 @@ a{
    width: 25%;
 }
 
-.register-details {
-    margin: 30px auto;
-    width: 70%;
-    background-color: #E4F0FF;
-    border-radius: 15px;
-    color: gray;
-    padding: 40px;
-}
 
 .register-details input {
     width: 60%;
@@ -386,7 +397,12 @@ a{
     margin: 5px auto;
     font-size: 14px;
     padding: 2px 8px;
-    margin-right: 8px;
+  
+}
+
+.register-details input:first-of-type {
+  
+    margin-right: 10px;
 }
 
 .register-details .input-row {
@@ -678,10 +694,10 @@ user-details-prof-pwd {
 
 .agency-details input {
     width: 75%;
-    line-height: 25px;
+    line-height: 35px;
     border: none;
     padding-left: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     
 }
 

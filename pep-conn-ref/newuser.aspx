@@ -5,7 +5,7 @@
 
 	<header:Header id="MainHeader" runat="server" />
             <section class="main-content">
-                <div class="main-text">
+                <div class="register-main-text">
 					<div class="register-details">
                     
 						<form id="frm" class="register-form" method="post" runat="server">

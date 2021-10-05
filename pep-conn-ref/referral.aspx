@@ -53,12 +53,12 @@
                           <a class="dropdown-item" href="/index.aspx">Log Out</a>
                       </li>
                     </ul>
-                    <asp:Panel ID="loginPanel" runat="server" class="login-link">
+                   <%-- <asp:Panel ID="loginPanel" runat="server" class="login-link">
                         <a href="/onlinereferral.aspx" class="user-login">Log In</a>
                     </asp:Panel>
                     <asp:Panel ID="logoutPanel" runat="server" class="login-link">
                         <a href="/onlinereferral.aspx" class="user-login">Log Out</a>
-                    </asp:Panel>
+                    </asp:Panel>--%>
                     
                 </div>
             </div>
@@ -67,52 +67,42 @@
 
         <div class="wrapper">     
 
-		        <!-- Main Sidebar Container -->
+		       <!-- Main Sidebar Container -->
                     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-   
-                        <!-- Sidebar -->
-                        <%--<div class="sidebar">--%>
 
-		                     <!-- Sidebar Menu -->    
-                                <div class="collapse navbar-collapse" id="collapsibleNavbar1">
-                                    <ul class="sidebar-list" role="menu" data-accordion="false">
-                                        <li class="nav-item active-side">
-                                            <a href="#" class="nav-link">
-                                                <p>Connections Home</p>
-                                            </a>
-                                        </li>
-                                        <%--<li class="nav-item">
-                                            <a href="/latestnews.aspx" class="nav-link ">
-                                                <p>Latest News</p>
-                                            </a>
-                                        </li>--%>
-                                        <li class="nav-item">
-                                            <a href="/admissioncriteria.aspx" class="nav-link">
-                                                <p>Admission Criteria</p>
-                                            </a>
-                                        </li>
-                                       <%-- <li class="nav-item">
-                                            <a href="/staff.aspx" class="nav-link">
-                                                <p>Staff</p>
-                                            </a>
-                                        </li>--%>
-                                        <li class="nav-item">
-                                            <a href="/onlinereferral.aspx" class="nav-link">
-                                                <p>Online Referral</p>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="/contact.aspx" class="nav-link">
-                                                <p>Contact Us</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <!-- Sidebar -->
+                        <div class="sidebar">
+                        
+		                     <!-- Sidebar Menu -->
+                            <nav class="nav-sidebar">
+                               <ul class="sidebar-list" role="menu" data-accordion="false">
+                                    <li class="nav-item">
+                                        <a href="/index.aspx" class="nav-link">
+                                            <p>Connections Home</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/admissioncriteria.aspx" class="nav-link">
+                                            <p>Admission Criteria</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/onlinereferral.aspx" class="nav-link">
+                                            <p>Online Referral</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/contact.aspx" class="nav-link">
+                                            <p>Contact Us</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                             <!-- /Sidebar-menu -->
-                        <%--</div>--%>
+                        </div>
                         <!-- /Sidebar -->
                     </aside>
-            
+
             <section class="main-content">
                 <div class="main-text">
                     <asp:Label id="lblErrMsg" runat="server" ForeColor="Red" Visible="False">Label</asp:Label>
@@ -146,7 +136,7 @@
 									</Columns>
                             </asp:DataGrid>
 
-                         <table class="table table-striped">
+<%--                         <table class="table table-striped">
                               <thead>
                                 <tr>
                                   <th scope="col">Child (Tracking #)</th>
@@ -184,7 +174,7 @@
                                 </tr>
                               
                               </tbody>
-                            </table>
+                            </table>--%>
                         </div>
                         <form class="refForm" runat="server"> 
                             <asp:Button ID="newReferralBtn" class="ref-buttons" runat="server" Text="New Referral" PostBackUrl="referralclient.aspx"/>

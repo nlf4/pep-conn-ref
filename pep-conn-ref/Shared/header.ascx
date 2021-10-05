@@ -68,7 +68,7 @@
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                                 Online Referral
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu sidebar">
                                                 <li class="dropdown-menu-item">
                                                     <a href="/referral.aspx" class="dropdown-item">Overview</a>
                                                 </li>
